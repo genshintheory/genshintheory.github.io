@@ -19,7 +19,7 @@
 <ul><li>This gives a 0.9 times multiplier to incoming damage.</li>
 <li>Viridescent Venerer -40% RES (for Hydro, Pyro, Electro, Cryo) gives -30% RES or a 1.15 multiplier to incoming damage. So VV increases damage by <img src="https://wikimedia.org/api/rest_v1/media/math/render/png/40e3a6fa852b8f1d6fd91a207c0c2c82f4688bdd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:15.501ex; height:2.843ex;" alt="{\displaystyle 1.15/.9\approx 1.278}" /> times. If the enemy has more than 10% base RES, this number will be greater. If they have less than 10% base RES, this number will be smaller.
 <ul><li>Superconduct also lowers Physical RES by 40% so it gives a similar damage increase.</li></ul></li>
-<li>Zhongli shield -20% all RES gives -10% RES or a 1.05 multiplier. So his shield increases damage by <img src="https://wikimedia.org/api/rest_v1/media/math/render/png/48ce7211773bff7ff1fc5411d98d19737a20e287" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:15.501ex; height:2.843ex;" alt="{\displaystyle 1.05/.9\approx 1.167}" /> times.</li></ul>
+<li>Zhongli shield -20% all RES gives -10% RES or a 1.05 multiplier. So his shield increases damage by \( 1.05/.9\approx 1.167 \) times.</li></ul>
 <h2><span class="mw-headline" id="Bennett_Buff">Bennett Buff</span></h2>
 <p>Notes on Bennett's burst (Fantastic Voyage) ATK buff:
 </p>
@@ -30,7 +30,7 @@
 <p>Suppose Bennett's Base ATK is <i>a</i> (for a well-invested Bennett, this can be within the range 600-900; for example a Level 90 Bennett with a Level 90 Skyward Blade will have around <img src="https://wikimedia.org/api/rest_v1/media/math/render/png/7e66ff6a108430471014f73427630355d2ed6872" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:7.816ex; height:2.176ex;" alt="{\displaystyle a\approx 800}" /> Base ATK; this can be increased further if one uses an Aquila Favonia instead).
 </p><p>If one has a C5 Bennett with level 12 Q, the buff gives
 </p>
-<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/ccf20cec3fae4f4c73771da4846410d0b0d476a8" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:36.431ex; height:2.843ex;" alt="{\displaystyle {\text{Bennett Buff}}=(1.12+.2)a=1.32a}" /></dd></dl>
+<dl><dd>\( {\text{Bennett Buff}}=(1.12+.2)a=1.32a \)</dd></dl>
 <p>extra ATK to party members within Bennett's field. For a well-invested Bennett, it can usually give at least 1000 extra ATK to characters.
 </p><p>If a character has 2000 ATK initially, then Bennett's buff can increase it to 3000 ATK (increasing damage by 1.5 times).
 </p><p>Actual numbers may be more or less, but this is just to give a ballpark estimate for how much Bennett can increase damage. For some characters who gain other ATK boosts, Bennett's buff may not work as effectively or may hit diminishing returns.
@@ -40,12 +40,12 @@
 </p><p>The buff will last 10 seconds and can be procced once every 20 seconds.
 </p><p>If one combines TTDS with Bennett's buff, then Bennett's ATK boost is added after the TTDS buff is factored in. That is, for the calculation, let <i>A</i> be the target character's base ATK. Then the buffed attack is:
 </p>
-<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/ba25dd7e1e4408b7e88715a33a2d5f5e7f939f6b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; margin-right: -0.153ex; width:58.431ex; height:2.843ex;" alt="{\displaystyle A(1+{\text{ATK }}\%+{\text{TTDS Buff}})+{\text{Flat ATK}}+{\text{Bennett Buff}}}" /></dd></dl>
+<dl><dd>\( A(1+{\text{ATK }}\%+{\text{TTDS Buff}})+{\text{Flat ATK}}+{\text{Bennett Buff}}} \)</dd></dl>
 <p>Example: for a character with say 2000 ATK and ATK% sands and a well-invested Bennett, combining TTDS with Bennett (use Bennett Q, swap to TTDS character, swap to DPS) can give around 3600 ATK (actual number in game may be more or less), increasing damage by around 1.8 times.
 </p><p>The total damage gain will be the damage gain from TTDS plus the damage gain of Bennett's ATK boost:
 </p>
 <div style="overflow-x:scroll;">
-<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/210382607577857f27b9cf868f6c7f8dfd03fdbd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -5.505ex; width:115.565ex; height:12.176ex;" alt="{\displaystyle {\begin{aligned}{\text{ATK Increase Ratio}}={\frac {\text{Buffed ATK}}{\text{Initial ATK}}}&amp;={\frac {A(1+{\text{ATK }}\%+{\text{TTDS Buff}})+{\text{Flat ATK}}}{A(1+{\text{ATK }}\%)+{\text{Flat ATK}}}}+{\frac {\text{Bennett Buff}}{A(1+{\text{ATK }}\%)+{\text{Flat ATK}}}}\\&amp;={\text{TTDS ATK Increase Ratio}}+{\frac {\text{Bennett Buff}}{\text{Initial ATK}}}\end{aligned}}}" /></dd></dl>
+<dl><dd>$$\begin{aligned}{\text{ATK Increase Ratio}}={\frac {\text{Buffed ATK}}{\text{Initial ATK}}}&amp;={\frac {A(1+{\text{ATK }}\%+{\text{TTDS Buff}})+{\text{Flat ATK}}}{A(1+{\text{ATK }}\%)+{\text{Flat ATK}}}}+{\frac {\text{Bennett Buff}}{A(1+{\text{ATK }}\%)+{\text{Flat ATK}}}}\\&amp;={\text{TTDS ATK Increase Ratio}}+{\frac {\text{Bennett Buff}}{\text{Initial ATK}}}\end{aligned}$$</dd></dl>
 </div>
 <h2><span class="mw-headline" id="Defense">Defense</span></h2>
 <dl><dd><i>See also: <a href="defense.html" title="Defense">Defense</a></i></dd></dl>
