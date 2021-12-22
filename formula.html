@@ -51,27 +51,27 @@
 <dl><dd><i>See also: <a href="defense.html" title="Defense">Defense</a></i></dd></dl>
 <p>Suppose a character is level 90, and an enemy is level 100. Based on DEF, incoming damage is then multiplied by:
 </p>
-<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/8d98b34806b487071fe22ca2fd51b1ebc1c0d387" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:27.432ex; height:2.843ex;" alt="{\displaystyle d=190/390\approx 0.487\approx 1/2}" /></dd></dl>
+<dl><dd>\(d=190/390\approx 0.487\approx 1/2 \)</dd></dl>
 <p>or is roughly halved.
 </p><p>Suppose that an attack ignores a portion <i>x</i> of DEF. Then the multiplier becomes:
 </p>
-<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/fea86f3301e6873f7b70f9144aab4718033ec08e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.671ex; width:32.061ex; height:6.009ex;" alt="{\displaystyle d&#39;={\frac {190}{200(1-x)+190}}\approx {\frac {1}{2-x}}}" /></dd></dl>
+<dl><dd>\( d&#39;={\frac {190}{200(1-x)+190}}\approx {\frac {1}{2-x}}}\)</dd></dl>
 <p>The damage increase becomes
 </p>
-<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/a1aac4128628ba2582c20d118312ac58cde20dd9" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.671ex; width:28.461ex; height:6.343ex;" alt="{\displaystyle R={\frac {d&#39;}{d}}\approx {\frac {2}{2-x}}={\frac {1}{1-x/2}}}" /></dd></dl>
+<dl><dd>\(R={\frac {d&#39;}{d}}\approx {\frac {2}{2-x}}={\frac {1}{1-x/2}}}\)</dd></dl>
 <p>For example:
 </p>
 <ul><li>If an attack ignores 60% of DEF, the damage increase becomes <img src="https://wikimedia.org/api/rest_v1/media/math/render/png/6e7a0aac76a158e1212fdbc3f74e78e7cd3aa535" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:19.504ex; height:2.843ex;" alt="{\displaystyle 1/(1-.6/2)\approx 1.43}" /> (overall damage increased by around 43%)</li>
 <li>Hypothetically, an attack that ignores 100% of DEF will double the damage.</li></ul>
 <p>Usually <i>x</i> will be smaller than 1 so we can approximate further with a taylor expansion
 </p>
-<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/bb80e94d2694259ab34fdb4444ef876599de6ec1" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.671ex; width:39.034ex; height:6.009ex;" alt="{\displaystyle R\approx {\frac {1}{1-x/2}}\approx 1+x/2+(x/2)^{2}+\ldots }" /></dd></dl>
+<dl><dd>\( R\approx {\frac {1}{1-x/2}}\approx 1+x/2+(x/2)^{2}+\ldots \)</dd></dl>
 <p>So a very rough rule of thumb is that if a portion <i>x</i> of DEF is reduced or ignored, then damage will increase by at least <i>x</i>/2.
 </p><p>Note that actual values in game may be more or less, so do not take the value out of context.
 </p>
 <h2><span class="mw-headline" id="Notes">Notes</span></h2>
 <div class="mw-references-wrap"><ol class="references">
-<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">Total attack is <img src="https://wikimedia.org/api/rest_v1/media/math/render/png/c75cdabf5b40bb05926158b5c6865b38ca9ac540" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:38.816ex; height:2.843ex;" alt="{\displaystyle ({\text{Base ATK}})(1+{\text{ATK }}\%)+{\text{Flat ATK}}}" /></span>
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">Total attack is \(({\text{Base ATK}})(1+{\text{ATK }}\%)+{\text{Flat ATK}}}\)</span>
 </li>
 </ol></div>
 </body>
