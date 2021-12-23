@@ -78,6 +78,19 @@
 <p>So a very rough rule of thumb is that if a portion <i>x</i> of DEF is reduced or ignored, then damage will increase by at least <i>x</i>/2.
 </p><p>Note that actual values in game may be more or less, so do not take the value out of context.
 </p>
+    
+    <h2><span class="mw-headline" id="idot">Increased damage over time</span></h2>
+    <p>Some characters like Xiao or Yoimiya will gain greater damage bonus over time through their passives.
+      Some weapon or artifact sets also have this feature of "accelerated" damage over time.
+      The impact of this on DPS can be approximated as follows.
+      If they gain \(b\) more damage bonus every \(t\) seconds (rate \(r=b/t\)) for a max damage bonus of \(nb\)
+      then the increase in damage is
+      $$(b+2b+\ldots+nb)/(nt) = bn(n+1)/(2nt) = b(n+1)/(2t) = r(n+1)/2$$
+      This can be approximated as an integral too
+      $$\frac{1}{T}\int_0^T rt \ dt = rT/2$$
+      The integral approximation becomes more accurate the more hits there are (such as for a rapid fire C6 Yoimiya).
+    </p>
+    
 <h2><span class="mw-headline" id="Notes">Notes</span></h2>
 <div class="mw-references-wrap"><ol class="references">
 <li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span>
