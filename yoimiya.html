@@ -55,7 +55,8 @@
 </p>
 <h3><span class="mw-headline" id="Auto-Attack">Auto-Attack</span></h3>
 <p>Yoimiya has the highest Normal Attack scalings among all Bow users.
-  Yoimiya is a ranged unit that is effective when there are many enemies spread far apart and far away from each other (e.g. Floor 9 of the Version 2.0-2.3 abyss).
+  Yoimiya is a ranged unit that is effective when there are many enemies spread far apart and far away from each other 
+  (e.g. Floor 9 of the Version 2.0-2.3 abyss or the Version 2.3 dungeon event).
   She is useful in hunting down Specters.
   Because she auto-attacks, people do not have to worry as much about aiming and missing, as is usually the problem with Ganyu.
 </p><p>
@@ -66,6 +67,8 @@
 <p>This is multiplicative with her normal attacks. It is one of the few multiplicative buffs in the game.
   Casting it also deals poise damage, which can pop Mona's bubble and break Electro crystals.
   </p><p>With one of her passives, she gains more Pyro DMG Bonus over time.
+  She gains a stack on hit for a max of 10 stacks.
+  Each stack gives 2% Pyro DMG Bonus and lasts for 3 seconds.
   </p>
   
   <h3><span class="mw-headline" id="Elemental_Burst">Elemental Burst</span></h3>
@@ -132,9 +135,22 @@
 
   <h2><span class="mw-headline" id="Calculations">Calculations</span></h2>
 <p>Here we assume talent levels 10-10-10. 
-  We assume Yoimiya has a Pyro DMG Bonus goblet and is running 4 piece Shimenawa (which gives 50% Damage Bonus).
+  We assume Yoimiya has a Pyro DMG Bonus goblet and is running 4 piece Shimenawa (which gives 50% Damage Bonus),
+  so her total DMG Bonus during her skill is at least \(96.6\)%.
+  Within the 10s duration of her skill (which has an 18s cd), she can do her whole 7-hit NA combo around 3 times.
+  At level 10, the total NA scaling is \(762.27\), which will have a multiplier buff of \(161.74\) from her skill.
+  The DPS is then
 </p>
-<dl><dd>\( \)</dd></dl>
+<dl><dd>\(x = 3*1.966*1.6174*762.27/18 = 403.98 \)</dd></dl>
+  <p>This is higher than Ganyu, C6 Xiangling with vape, and Hu Tao without vape.
+    From her passive she will have around 6-7 stacks in a given moment considering her 7-hit NA sequence takes ~3 seconds and each stack lasts 3 seconds.
+    This will give her around 12-14% extra Pyro DMG Bonus on average.
+    With C6 it becomes easier to gain the full 10 stacks for a total of 20% extra Pyro DMG Bonus.
+  </p><p>
+  To get a fairer comparison with Hu Tao with vape, we would have to consider Yoimiya's DPS with vaporize, overload, or vapeload.
+  But without reactions, Yoimiya's NA DPS is already higher than Ganyu and Hu Tao,
+  though less than Eula, Raiden, and Xiao.
+  </p>
 
 </body>
 </html>
