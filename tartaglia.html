@@ -8,8 +8,12 @@
   </head>
   
 <body>
-  <div class="mw-parser-output"><p>Tartaglia (alias Childe, original name Ajax) is the game's premier enabler, who can function both as a DPS and as a support. The duality extends to his own kit, where he can switch between ranged and melee stance with his skill. This duality makes him one of the more versatile units in the game.
-</p><p>Being the first character with a 2nd rerun and appearing in Mondstadt, Liyue, and Inazuma, Tartaglia embodies a different kind of universality, an element that exists across the world. In the game's own words, he represents a force with the ambition to 'conquer the world'.
+  <div class="mw-parser-output"><p>Tartaglia (alias Childe, original name Ajax) is the game's premier enabler, who can function both as a DPS and as a support. 
+    The duality extends to his own kit, where he can switch between ranged and melee stance with his skill. 
+    This duality makes him one of the more versatile units in the game.
+</p><p>Being the first character with a 2nd rerun and appearing in Mondstadt, Liyue, and Inazuma, 
+    Tartaglia embodies a different kind of universality, an element that exists across the world. 
+    In the game's own words, he represents a force with the ambition to 'conquer the world'.
 </p>
 <div id="toc" class="toc"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
 <ul>
@@ -79,13 +83,45 @@
 </p><p>These other teams are more for fun or exploration, but are also viable in Abyss:
 </p>
 <ul><li>Xiao-Childe-Bennett-Venti</li>
-<li>Childe-Yoimiya-Bennett (with the last spot being flex: Anemo unit, Xiangling, Beidou, etc.)</li></ul>
+<li>Childe-Yoimiya-Bennett (with the last spot being flex: Anemo unit, Xiangling, Beidou, etc.)</li>
+    </ul>
+    
+    <h2 id="Calculations">Calculations</h2>
+    <p>We assume level 10 E on Childe at level 90 with 4 piece HoD and a Hydro DMG goblet 
+      (for a total DMG Bonus of \(28.8+61.6+30=120.4%\) 
+      for normal/charged attacks during melee stance). 
+    </p><p>
+      For now, we ignore other buffs such as VV or Bennett, and we assume no burst for Childe and ignore Riptide 
+      (though with these factors, the team will do more damage). 
+      Because Childe applies hydro too fast, most of the time he will not be vaporizing his normal attacks.
+    </p><p>
+      We assume he does a 6 hit combo (N6) with no charged attack (note that depending on the weapon, 
+      other combos involving mixing in a charged attack can be more optimal, 
+      but will not differ too drastically in application). 
+      The total scaling for the 6 hit combo is 642.77 at level 10. 
+      The damage scaling for this combo is then
+      $$z_C = (1+1.204)*642.77 = 1416.66508$$
+      We assume he can do this around 4 times within 15 seconds.
+      The cooldown will be \(15+6=21\) seconds.
+      The DPS is
+      $$x = 4z_C/21 \approx 269.84$$
+      Childe's main role is as an enabler.
+    </p>
+    
 <h2><span class="mw-headline" id="Trivia">Trivia</span></h2>
-<ul><li>Tartaglia's name in Chinese is 达达利亚 where the first two characters 达达 represent something particularly special in China's history and symbolic of Tartaglia himself. Depending on the time and place, Tartaglia can even be said to represent an alternate side of China, especially the type of China during the Yuan and Qing dynasties.
+<ul>
+  <li>Tartaglia's name in Chinese is 达达利亚 where the first two characters 达达 represent something particularly special in China's history and symbolic of Tartaglia himself. 
+    Depending on the time and place, Tartaglia can even be said to represent an alternate side of China, especially the type of China during the Yuan and Qing dynasties.
 <ul><li>A Persian historian once wrote that the Mongol emperor Chenggis Khan (the universal ruler) had red/orange hair and blue eyes. Tartaglia also has orange hair and blue eyes. Some people who live in parts of China's north and west actually do have these characteristics, and they may still be ethnically Han.</li>
 <li>Tartaglia himself plays a big role in the story of Liyue. Even though he is the main antagonist in that archon quest, he is also made a playable character with his own story quest. There are multiple sides to Tartaglia, a duality.</li></ul></li>
 <li>Tartaglia's Hydro vision aligns with his blue eyes but also signifies a kind of connection to the western nation of Fontaine. Moreover, as Rhodeia says, water can take on many shapes and as long as rivers flow, water will exist forever. The Hydro element is symbolic of what Tartaglia represents in relation to Liyue, a kind of element that has existed throughout the ages, taking on various forms in history.</li>
-<li>In a game titled 原神 <i>Yuanshen</i>, there could be a symbolic reason why in the Genshin Liyue poster, Tartaglia is at the top.</li></ul>
+<li>In a game titled 原神 <i>Yuanshen</i>, there could be a symbolic reason why in the Genshin Liyue poster, Tartaglia is at the top.</li>
+  <li>It is funny how some American idiots have no idea about the history of Tataria.
+    This whole time they thought this guy was just some Ed Sheeran or some Marco Polo (he very well could be)
+    when in reality this represents the type of warrior behind the rise of the greatest land empire in history.
+  </li>
+    </ul>
+    
   </body>
   
 </html>
