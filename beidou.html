@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+<link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+
+    <title>Beidou</title>
+
+  </head>
+ 
+<body>
+  <div id="includedContent"></div>
+<p><b>Beidou</b> (北斗) is captain of the Crux fleet and is a better dps than Keqing.
+</p>
+
+<h2>Talents</h2>
+<h3>Elemental Skill</h3>
+<p>Like Yun Jin's skill, this is a parry.
+  At Lv13, the scaling on a perfect parry (or when max of 2 hits taken) is
+  $$258.4+680 = 938.4$$
+  which is quite high for a 7.5s cd.
+  Basically a perfect parry will quadruple the damage compared to not parrying at all.
+  The skill also has greater AoE on a perfect parry.
+</p>
+
+<h3>Elemental Burst</h3>
+<p>Her q will bounce between multiple enemies. Her C2 increases the number of discharges.
+  At level 13, the scaling on a lightning discharge is \(d_0 = 204\)%.
+  There is at most one discharge per second,
+  and discharges proc when normal and charged attacks hit
+  (it can proc on Tartaglia's E attacks but not Raiden's Q attacks;
+  this is Genshin's way of balancing Raiden).
+  </p><p>
+  Each time it procs it will jump to up to 3 targets (which can be the same) per second.
+  With her C2, it can jump to up to 5 targets per second.
+  This means the total damage per enemy is bounded above by a constant.
+  The burst lasts 15 seconds with an 80 energy cost and 20s cd.
+  </p><p>
+    Suppose Beidou is Lv. 90 (has 24% Electro DMG bonus from ascending)
+    with 4 piece Emblem with Electro DMG Bonus goblet and 200% ER.
+    The total DMG Bonus on the burst is
+    \( 200(.25) + 46.6 + 24 = 120.6 \)
+    The MV on a discharge is then
+    $$d = 2.206d_0 = 450.024$$
+    and this can occur at most once every second.
+    In practice it is possible to proc the discharge around 10-12 times.
+    With fast attackers like Yoimiya etc. it is possible to proc it more.
+    Slower attackers like claymores will proc it less.
+    So against a single target, if it procs around 11 times on average, for 15s with a 20s cd, the DPS is
+    $$x_1 = 11d/20 = 247.5132$$
+    Beidou excels more in AoE situations, when there is more than one enemy.
+    Note the calculation does not factor the initial hit of the burst (scaling 258.4% which averages to around +13 DPS).
+  </p><p>
+    For 1 enemy, scaling is d.
+    For 2 enemies, scaling per enemy is 5d/2 as now the discharge can start bouncing between enemies.
+    For \(n\ge 2\) enemies, the scaling per enemy is \(5d/n\).
+  </p><p>
+    So Beidou's DPS per enemy peaks when there are exactly 2 enemies.
+    This situation happens in various domains and iterations of the Spiral Abyss.
+    In this case the DPS becomes
+    $$x_2 = 5x_1/2 = 618.783$$
+    So Beidou has high DPS without reactions, and this is an off-field ability.
+  </p><p>
+    Note for more than 2 enemies the damage per enemy decreases (scaling is sub-linear).
+    For example, for 3 enemies the DPS is
+    $$x_3 = 5x_1/3 = 412.522$$
+  </p><!---->
+  <p>
+  It may be shocking how high Beidou's dps is for a 4 star.
+  Even without reactions, she beats many 5 star characters including Hu Tao and Ganyu.
+  As an Electro DPS Beidou is clearly better than Keqing,
+  and in AoE situations can even be a better DPS than the Raiden Shogun.
+  Her burst is simply broken.
+  </p><p>
+  Note that Beidou's Q has normal ICD (follows a 3 hit rule),
+  so due to how frequently the discharges attack in a given second,
+  usually she will be the one triggering Electro reactions,
+  meaning her EM is factored into the reaction,
+  unless she is paired with a character that can attack faster than or keep up with Beidou (a C6 Yoimiya might).
+  However, since Beidou does so much damage herself, 
+  usually one wants to build more CRIT, ATK, DMG Bonus than EM for Beidou.
+</p>
+  <p>
+  The first hit of Beidou's q applies 4C electro (when she slams her sword into the ground).
+  The discharges apply 1A electro.
+  Her q snapshots and also provides DMG reduction.
+  With her C1 her q generates a shield that scales with her HP.
+</p>
+<p>
+  For how much damage and utility it provides, her Q Stormbreaker easily qualifies as one of the best bursts in game
+  and solidifies her position as one of the best sub-DPS characters.
+  </p>
+
+<h2>Build</h2>
+<p>4 piece Emblem (released in Version 2.0) is her bis.
+</p><p>
+  ATK sands, Electro DMG goblet, CRIT circlet.
+  Substats: CRIT > ATK, ER.
+</p>
+
+<h3>Weapons</h3>
+<p>
+  5 stars: Wolf, Skyward Pride.
+  4 stars: Sea lord, Serpent Spine, Favonius.
+</p>
+
+<h2>Teams</h2>
+<p>
+  Fireworks team, taser team, Eula-Beidou-Raiden team.
+  One of her best supports is Fischl.
+  </p>
+  
+</body>
+</html>
