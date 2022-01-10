@@ -25,7 +25,56 @@
 </p>
 
 <h2>Talents</h2>
-<p>Her buffs scale with her ATK.</p>
+
+<h3>Elemental Skill</h3>
+<p>This is the core of her support abilities.
+  Using her E will buff Cryo attacks by giving bonus damage that scales with her total ATK.
+  This bonus damage is added after multiplying ATK and scaling but is multiplied by DMG Bonus, CRIT, RES, DEF modifiers, etc.
+  $$(ATK*scaling + bonus)*(1+\text{DMG Bonus %})*CRIT$$
+  The bonus part above scales with Shenhe's ATK (82.18% ATK at Lv10) and applies to Cryo attacks.
+  Yun Jin has a similar buff except the bonus scales with DEF and applies to normal attacks.
+  
+  The effect of the above on damage is
+  $$1 + \frac{bonus}{ATK*scaling} = 1 + \frac{.8218(\text{Shenhe ATK})}{\text{Character ATK}*scaling} \approx 1 + \frac{1}{scaling}$$
+  Since Shenhe will usually be built with high ATK, the above simplification assumes that around 
+  80% of Shenhe's ATK will be equal to the ATK of whatever dps carry she is supporting.
+  This is a very rough estimate and may be more or less in practice.
+  But the general result is that the lower the scaling on the Cryo attack, the bigger the buff,
+  and conversely the higher the scaling (like for one big nuke) the lower the buff.
+  The scaling can be 100-200% for Cryo attacks broken into smaller parts
+  such as normal attacks from Ayaka's infused CA
+  or the ice blade hits from Chongyun's burst.
+  In this case, Shenhe's buff can almost double the damage of the attack (if the scaling is 100% then the buff is 2 times).
+  This kind of buff is more broken than Bennett's buff (which can increase damage around 1.5 times).
+  To balance this, Shenhe's buff has a quota of 5/7 Cryo hits and only applies to Cryo.
+  So it limits the amount of times the buff applies and for what type of moves, or else Shenhe would just be infinitely broken.
+</p><p>
+  With one of her passives, her E can also buff the damage of normal/charged/plunging attacks, skills, and bursts by 15% 
+  depending on whether it is pressed or held.
+</p>
+
+<h3>Elemental Skill</h3>
+<p>
+  Her Q will lower the Cryo/Physical RES of the enemy by 15%, but this is less than Anemo VV, Superconduct, Zhongli shield, and Eula E.
+  With her passive, it will also increase Cryo DMG by 15%.
+  With her C2, it increases the CRIT DMG of Cryo by 15% (a similar effect to C6 Sara, C6 Gorou, or C6 Itto).
+</p>
+
+<h2>Constellations</h2>
+<p>C1 gives an extra charge to E.
+  C2 gives CRIT DMG to Cryo.
+  C3 gives +3 E.
+  C4 gives extra damage to Shenhe's E cast.
+  C5 gives +3 Q.
+  C6 removes the trigger quota for NA/CA.
+</p>
+<p>
+  Her C6 is pretty broken for Ayaka, but not really needed for Ganyu.
+  The reason is Ganyu's CA is split into a few large chunks, whereas Ayaka's CA is split into several smaller chunks.
+  So Shenhe buffs Ayaka a lot more than Ganyu.
+  Second reason is that Ganyu attacks slow enough that a 5/7 quota is enough to last for the cd of Shenhe's E,
+  especially if Shenhe gets 2 charges at C1.
+  </p>
 
 <h2>Build</h2>
 <p>2 piece Glad, 2 piece Shimenawa OR 4 piece Blizzard Strayer.
@@ -33,14 +82,28 @@
   ATK/ER sands, ATK/Cryo DMG goblet, ATK/CRIT circlet.
   Substats: ATK, CRIT > ER.
 </p><p>
-  Calamity Queller, Skyward Spine, PJWS, Homa, Deathmatch, Blackcliff, Catch, Crescent Pike, Starglitter.
+  5 stars: Calamity Queller, Skyward Spine, PJWS, Homa. 
+  4 stars: Deathmatch, Blackcliff, Catch, Crescent Pike, Starglitter, Lithic.
 </p>
 
 <h2>Teams</h2>
 <p>
-  She can support Eula, Ayaka, Ganyu teams.
-  She can be used on Physical, Freeze, reverse melt teams.
+  She can support Chongyun, Ayaka, Eula, Ganyu teams.
+  She is best used as a support for Chongyun and Ayaka specifically.
+  As explained above, she does not buff Ganyu as much as Ayaka.
+  Also Eula cannot really use the Cryo damage bonus she provides since most of Eula's damage is physical.
+  Eula can only really benefit from the RES shred on Shenhe's Q and the burst/normal attack bonus from her E passive.
+  Shenhe can also work with Kaeya, Rosaria, Aloy and even other Cryo characters like Qiqi.
 </p>
+<p>
+  She can be used on Physical, Freeze, reverse melt teams.
+  Examples include:
+</p>
+<ul>
+<li>Shenhe Chongyun Xingqiu Kazuha</li>
+<li>Shenhe Mona Ayaka Kazuha</li>
+<li>Shenhe Ayaka Kokomi Venti</li>
+</ul>
   
 </body>
 </head>
