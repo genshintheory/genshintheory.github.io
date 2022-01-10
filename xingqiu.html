@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+    
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+<link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+
+    <title>Xingqiu</title>
+
+  </head>
+ 
+<body>
+  <div id="includedContent"></div>
+<p><b>Xingqiu</b> (行秋) is a Hydro support character and friend of Chongyun.
+</p>
+
+<h2>Talents</h2>
+
+<h3>Elemental Burst</h3>
+<p>
+	The reason Xingqiu is used is for his off field Hydro application through his burst.
+</p>
+<p>
+Constellation Lv. 6 increases the damage of every third sword rain attack during this Talent's duration (creates 5 sword rains). 
+Xingqiu regenerates 3 Energy when the third Rain Sword attack hits enemies.
+Normally, sword rain alternates between firing 2 swords and 3 swords. 
+With C6, the order is 2 swords → 3 swords → 5 swords.
+There is usually a 1s delay between successive waves.
+The burst lasts 15s.
+</p><p>
+Without any Constellations, this skill at Talent Level 10 has a scaling of 97.7% per sword. 
+On average, there are 25 instances of Rain Sword DMG, resulting in a total scaling of 2442.5%.
+At C6, this skill at Talent Level 13 has a scaling of 115% per sword. 
+On average, there are \(10*5 = 50\) instances of Rain Sword DMG, resulting in a total scaling of 5750%.
+</p><p>
+	We assume Xingqiu has a Hydro DMG Bonus goblet.
+	He gets 20% Hydro DMG through his passive.
+	The total DMG Bonus on the burst is
+	$$46.6 + 20 = 66.6$$
+	The burst has a 20 second cd, so the DPS at C0 is
+	$$x_0 = 1.666*2442.5/20 = 203.46025$$
+	and the DPS at C6 is
+	$$x_6 = 1.666*5750/20 = 478.975$$
+  Note this is really all single target damage.
+  Other characters will have a greater advantage in AoE situations.
+</p><p>
+Childe and Xingqiu are sometimes compared.
+A C0 Childe can do more damage than a C0 Xingqiu.
+At C6, Xingqiu may be competitive in single target damage with a C0 Childe.
+However, Childe has better AoE, has Riptide, and his Hydro application does not cost energy whereas Xingqiu's Hydro application does.
+</p>
+
+</body>
+</head>
