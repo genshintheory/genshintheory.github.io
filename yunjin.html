@@ -53,6 +53,79 @@
   Yun Jin can help boost those as well.
   She can also work with Razor, Kokomi, etc.
 </p>
-  
+
+<h2>Calculations</h2>
+<p>
+  The buff from Yun Jin scales with her DEF.
+  At Lv13 Q and assuming there are at least 3 different elements in her team (which gives another 7.5% DEF scaling)
+  the total bonus is \(68.34+7.5 = 75.84\).
+  As in Shenhe's case, the effect of Yun Jin's buff on damage is
+  $$1 + \frac{bonus}{ATK*scaling} = 1 + \frac{.7584(\text{Yun Jin DEF})}{\text{Character ATK}*scaling}$$
+  The buff is bigger for attacks broken into parts with smaller scaling,
+  such as the normal attacks of Yoimiya.
+  If the scaling is 100%, Yun Jin's DEF is 2000, and the character's ATK is 2000,
+  then the buff is about 1.7584 times more damage.
+  In Yoimiya's case, the scaling on her normals on average is within the range of 100%,
+  so Yun Jin can basically multiply Yoimiya's damage by 1.76 times,
+  which is more broken than the buff provided by Bennett (about 1.5 times)
+  and simply knocks Zhongli out of the park (about 1.17 times from RES shred).
+</p><p>
+  The caveat is that it only applies to normal attacks (not even charged or plunging),
+  whereas Bennett's ATK buff applies to everything.
+  But Yun Jin's buff is a bit more applicable than Shenhe's buff (which is only for Cryo, but for all types of attacks).
+  So Bennett is still a top tier support and top 1 or 2 buffers in the game.   
+  But the fact that Yun Jin's buff is comparable to the mighty Bennett's, 
+  even exceeding Bennett's buff in certain situations, reflects highly of Ms. Yun.  
+</p><p>
+  Both characters have an energy cost of 60 and scale with ER.
+  Although Bennett can heal and does not have a quota, his circle is fixed in space, 
+  whereas Yun Jin's flag buff follows the character around, wherever they go, and she can create crystallize shields.
+  Bennett and Yun Jin both buff the character and provide some defensive value, 
+  but they do it in different ways.
+</p><p>
+  So why not use both?
+</p><p>
+  Let's say we use both characters (on say a Yoimiya-Bennett-Yun Jin team).
+  To simplify we ignore the effects of Pyro resonance
+  and assume that Bennett gives 1000 ATK to Yoimiya, bringing Yoimiya's ATK from 2000 to 3000.
+  This ATK increase multiplies damage by 1.5.
+  Then Yun Jin's buff will increase damage by
+  $$1 + \frac{.7584(2000)}{3000*1} = 1.5056$$
+  which is basically another 1.5 times multiplied to Bennett's buff.
+  In total Yoimiya gets a buff of 
+  $$1.5 * 1.5056 = 2.2584$$
+  so Yun Jin and Bennett together can double Yoimiya's damage on average,
+  which is quite broken.
+  This is more than melting every shot.
+  That's great, but most characters can use Bennett, so we will remove the 1.5 buff from Bennett
+  as it can apply to most other characters.
+  Yoimiya still gets a 1.5 times buff from Yun Jin (after accounting for Bennett)
+  which is equivalent to vaporizing every shot without the ICD restriction.
+  So Yun Jin is basically Yoimiya's Xingqiu or Hydro support.
+</p><p>
+  Previously Yoimiya had a dps of around 404.
+  With Yun Jin's buff this increases to around 
+  $$x = 608.2624$$
+  This puts C0 Yoimiya above C1 Hu Tao.
+  So in retrospect the 2.4 update releasing Yun Jin and Shenhe
+  were basically customized buffs to Yoimiya and Ayaka.
+</p><p>
+  Note the above is based on a average analysis, assuming that the average scaling of Yoimiya's normal attacks is 100%.
+  The actual average is \(762.7/7 \approx 108.96\) which is slightly more
+  but does not affect the final result too much.
+  For an exact result, the effect of Yun Jin's buff needs to be calculated for each separate hit in Yoimiya's 7-hit sequence.
+  For hits less than 100% the buff will be greater, and for hits more than 100% the buff will be less.
+  4 of the 7 hits are less than 100% whereas 3 of the 7 are above 100%.
+  The average only gives a rough estimate.
+</p><p>
+  This damage does not factor in reactions.
+  The team consists of Yoimiya-Yun Jin-Bennett.
+  The 4th slot can be Raiden, Fischl (for Overload) or Xingqiu.
+</p><p>
+  Lastly, the trigger quota of 30 hits is usually more than enough for the relevant characters.
+  For example, Yoimiya can do 21 hits (3 times her 7-hit combo) within the duration of her E.
+  And both Yun Jin and Bennett's buffs last 12s, long enough for the duration of Yoimiya's E.
+</p>
+
 </body>
 </html>
