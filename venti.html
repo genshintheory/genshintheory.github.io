@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>  
+
+  <link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+
+    <title>Venti</title>
+ 
+ </head>
+
+<body>
+  <div id="includedContent"></div>
+
+  <p><b>Venti</b> is the Anemo Archon of Mondstadt.
+    Most dps showcases involving groups of small enemies are simply Venti showcases.
+  </p>
+
+  <h2>Talents</h2>
+
+  <h3>Elemental Burst: Wind's Grand Ode</h3>
+  <p>
+    Venti is used for his Q. 
+    The burst provides CC vacuum that pulls in enemies
+    and can also do elemental absorption.
+    The absorption priority is 
+    Pyro > Hydro > Electro > Cryo / Frozen
+    as for most Anemo characters except the Anemo Traveler 
+    (Cryo / Frozen > Pyro > Hydro > Electro).
+  </p><p>
+    There are 20 ticks of Anemo damage and 16 ticks of the infused element.
+    These ticks of damage can crit.
+    There is also additional swirl damage.
+    With one of Venti's passives, he can refund 15 energy for himself and party members matching the infused element.
+    As Venti ascends with ER, in practice it is very easy for Venti to spam his burst on cd.    
+  </p><p>
+    Gravity and lifting:
+    The Q vacuum field pulls enemies within a 15m radius and can also lift them.
+    The Q starts doing damage within a .2m radius (the 'inner radius').
+    The strength of the pull and whether they are lifted depends on 
+    1) the weight of the enemy 2) the level of Venti.
+    Venti's level needs to be at least above the enemy's level minus 20 for it to be lifted.
+    Then the weight of the enemy needs to be below a certain threshold (<= 100, units unspecified).
+    Certain heavy enemies (such as the Unusual Hilichurl) can be lifted after being staggered 
+    or hit by certain attacks with vertical impulse (i.e. Jean's E or Venti's E).
+    The exact mechanics involve the Interruption Resistance / poise system.
+  </p><p>
+    Even if Venti does not lift the enemies,
+    that is actually good for Xiao since then Xiao can plunge on the enemy within Venti's ult.
+    Even if it does lift enemies, Xiao can jump and cycle within Venti's burst.
+  </p>
+
+  <h3>Elemental Skill</h3>
+  <p>
+    His E is also an ability that can lift enemies. It also has pretty high scaling.
+  </p>
+
+  <h2>Constellations</h2>
+  <p>
+    Venti is somewhat different from the other premier Anemo supports Sucrose and Kazuha when it comes to constellations.
+    Venti's constellations give more Anemo RES shred (and even Physical RES shred).
+    This Anemo RES shred is basically amazing for one character: Xiao.
+  </p><p>
+    With C2 using his E can reduce Anemo and Physical RES by 12%.
+    If the enemies are lifted then the lose an additional 12%, bringing it to -24% total.
+    With C6 his Q reduces Anemo RES by 20% as well as RES for the infused element in the Q by 20%.
+    So in total, Venti can give: -44% Anemo RES, -24% Physical RES, -60% elemental RES to infused element (vv + c6).
+    So C6 Venti powercreeps Zhongli for almost everything except Geo RES
+    and arguably becomes a more powerful universal RES shredder.
+  </p><p>
+    For Xiao specifically, while he can make use of the full -44% Anemo RES shred,
+    if the enemy is light enough to be lifted it will probably be destroyed by Venti's Q anyways.
+    So in practice, Xiao will probably take advantage of 12% Anemo RES shred from Venti E and 20% Anemo RES shred from Q
+    for heavier enemies, giving 32% Anemo RES shred.
+    So for Anemo RES shred support for Xiao, C6 Venti and C4 Jean are similar.
+    C4 Jean gives -40% Anemo RES within her Q.
+  </p>
+
+  <h2>Build</h2>
+  <p>4 piece VV is bis. 
+    While 4p emblem can be used to buff burst, VV -40% RES shred and increased swirl damage is usually more valuable.
+  </p><p>
+    Full EM (support): since the Version 1.6 swirl buffs, much of the Q damage comes from swirl.
+    Venti crit build involves ATK, Anemo DMG, CRIT.
+  </p><p>
+    Weapons: Elegy of End, Stringless, Windblume Ode.
+  </p>
+
+  <h2>Teams</h2>
+  <p>
+    Similar to Bennett, Venti is the type of character that can be used on any team.
+    He can battery Xiao and reduce Anemo RES with C2/C6.
+    He can be used as vv shred in vaporize, melt, and freeze teams
+    He can also be used in EC taser teams (such as Venti-Kazuha-Fischl-Barbara/Xingqiu).
+    He can be used in any team that needs more CC, vv shred, and even be used as a battery.
+    He works well with Raiden for generating a lot of energy.
+  </p>
+
+  <h2>Calculations</h2>
+  <p>
+    Lv10 Q, 4p vv, 61.6 anemo dmg bonus
+    $$x_b = (1.616*20*67.68 + 16*33.84)/15 = 181.92384$$
+    Factoring in VV shred gives
+    $$x_b = (1.616*20*67.68 + 16*33.84*1.278)/15 = 191.958528$$
+    This is without swirl. So building crit on Venti is not recommended.
+    Venti's edge comes from his swirl damage, and building EM will make him do more damage through his swirl.
+    The 1.6 swirl buffs further boosted his damage too.    
+  </p>
+
+  <h3>Swirl</h3>
+  <p>
+    Venti's Q has its own ICD of 1s reset/3 hit rule (the standard is 2.5s/3 hit)
+    on both the Anemo and infused ticks.
+    The burst lasts 8s.
+    There will be around 7 swirls
+    (with the Anemo ticks swirling the infused element or an element applied to the ult).
+    In AoE situations there will be 2 instances of swirl damage per enemy (scaling \(2n\))
+    resulting in around 14 total instances of swirl damage per enemy.
+    At Lv90 base swirl damage is 868.
+    Furthermore swirl damage is increased by 60% when running 4 vv.
+    EM gives an additive bonus of
+    $$Y = 1600/(1+2000/EM)$$
+    Say Venti has 165 EM (from Stringless) then this gives 
+    $$Y(165) = 121.9399538106\%$$
+    So in total one swirl gives
+    $$z_s = 868*(1+1.219+.6) = 2446.892$$
+    The dps from swirl is then
+    $$d_s = 14z_s/15 = 2283.7658666667$$
+  </p>
+  <p>
+    If running 500 EM (achievable) then the EM bonus is
+    $$Y(500) = 320\%$$
+    so one swirl has damage
+    $$z_s = 868*(1+3.2+.6) = 4166.4$$
+    and the dps is
+    $$d_s = 3888.64$$
+    Factoring in -40% RES from vv gives
+    $$1.278d_s = 4969.68192$$
+    This is actual damage.
+    The scale conversion from mv to actual damage is roughly 1 to 4000.
+    So the above adds roughly \(x_s = 120\%\) more to Venti's mv, bringing it to around 
+    $$x_b + x_s \approx 300$$
+  </p><p>
+    Damage-wise, as a sub-DPS, Venti is around Xiangling level (which is to say, pretty good).
+    When they say Venti can do so much damage that he is basically a dps, that is sort of true.
+    But Venti's true strength is his CC, bringing enemies close enough together
+    to make attacking all of them simultaneously much easier in practice.
+    Moreover it is an off field ability that can lift and immobilize enemies while also acting as a self-funding energy battery.
+    For mobs of many small enemies, Venti is undisputably the king of sub-DPS AoE,
+    defeating them in a literal breeze.
+  </p>
+  <p>
+    Note swirl damage is transformative, unaffected by ATK, CRIT, and enemy DEF,
+    but affected by enemy RES and character level.
+    The bubble pop from 4p ocean clam is calculated similarly, but is affected by enemy RES and healing amount.
+    Swirl does elemental damage corresponding to the element infused in the swirl.
+    For example if one swirls Pyro, the swirl damage will do Pyro damage.
+    Moreover, if the enemy has lower Pyro RES (e.g. via vv), the Pyro swirl will do more damage.
+  </p>  
+
+</body>
+</html>
