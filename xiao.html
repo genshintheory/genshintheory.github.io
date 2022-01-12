@@ -92,7 +92,7 @@
 <ol><li>C1: gives an extra charge for E, gives some extra damage and terrain traversal</li>
 <li>C2: gives more energy generation, which is ok</li>
 <li>C3: increases level of E by 3, which is great for C6</li>
-<li>C4: increases DEF by 100% when under 50% HP. This makes it a bit more comfy to fight under 50% HP, but is usually not needed if running Xiao with a shield and if using Bennett. Still it can make running Xiao with Homa an even more viable option now.</li>
+<li>C4: increases DEF by 100% when under 50% HP. This makes it a bit more comfy to fight under 50% HP, but is usually not needed if running Xiao with a shield and if using Bennett. Still it can make running Xiao with Homa an even more viable option now, and it can make Xiao as tanky as Itto.</li>
 <li>C5: increases level of Q by 3</li>
 <li>C6: This is the best C6 in the game and is what takes Xiao several leagues above all other DPS. If there is any character worth C6-ing it is Xiao. And if you're considering pulling for Xiao constellations, you may as well go all the way to C6.</li></ol>
 <h2><span class="mw-headline" id="Build">Build</span></h2>
@@ -100,8 +100,11 @@
 <p>Since Version 1.3, Xiao has not had a dedicated artifact set made for him. His current best in slot is:
 </p>
 <ul>
-  <li>2 piece Viridescent Venerer, 2 piece Gladiator (2 piece Gladiator can be replaced with 2 piece Shimenawa for the ATK increase)</li>
-  <li>2 piece Shimenawa, 2 piece Gladiator</li>
+  <li>2 piece Viridescent Venerer, 2 piece Gladiator: 2 piece Gladiator can be replaced with 2 piece Shimenawa for the ATK increase.
+    This is bis for C6 Xiao who wants the 15% dmg bonus on his E (note the massive ~100% dmg bonus from his Q applies to just his plunging and infused attacks). At C6 most of Xiao's damage is from his E.
+    For C0-C5 it can also be bis if the substats are good.
+  </li>
+  <li>2 piece Shimenawa, 2 piece Gladiator: for C0-C5 it can be competitive with 2 vv 2 glad</li>
   </ul>
 <p>Which one is better depends on substats. The reason 2 Shime 2 Glad can be best in slot is that Xiao has so much damage bonus already,
   so getting more ATK may balance his stats a bit more.
@@ -150,10 +153,11 @@
 </p><p>Regarding Anemo RES shred, at C0, Zhongli is the best option for reducing Anemo RES by 20%.
   But at higher constellations, C4 Jean and obviously C6 Venti powercreep Zhongli in reducing Anemo RES.
   Even C6 Anemo Traveler reduces Anemo RES by 20%.
-  C6 Venti reduces Anemo RES by up to 44%, which makes him one of the best boosters to Xiao's damage.  
-  So Venti makes Zhongli look like a joke.
+  C6 Venti reduces Anemo RES by up to 44%, which makes him one of the best boosters to Xiao's damage.
+  C4 Jean reduces Anemo RES by 40% within her Q, which is also amazing.
+  So Venti and Jean make Zhongli look like a joke.
   At higher constellations, a C6 Zhongli is really only used for his shield and healing for Xiao.
-  Xiao's best C6 supports are still Venti, Zhongli, Bennett.
+  Xiao's best C6 supports are still Venti/Jean, Zhongli, Bennett.
   It's just that a C6 Venti will boost Xiao's damage more than Zhongli.
   </p><p>
   Some people complain whenever Venti cannot lift enemies with his ultimate.
@@ -230,6 +234,20 @@
   <p>
     Note these calculations do not factor in Xiao's 2 passives which further increase his DMG Bonus.
     So in practice, he can do more damage than this.
+  </p>
+  <p>
+    One of his passives increases damage of E by 15% each time it is used, up to 3 stacks for a total of 45% bonus.
+    Each stack lasts 7s, and its duration is refreshed when a new stack is gained.
+    Given how fast Xiao attacks with his E, it is very easy to have the max bonus of 45% for basically the whole duration
+    (use Xiao's E 3 times before casting his Q to get max stacks).
+    Recomputing the dps gives
+  </p>
+  <dl><dd>\( y=404*(1+1.0885+.616)+4*537*(1+.616+.45)=5530.386 \)</dd></dl>
+  <dl><dd>\(y/2.5 = 2212.1544\)</dd></dl>
+  <p>This is around a ~20% increase in dps, which is pretty significant.</p>
+  <p>
+    Lastly Xiao has a passive that increases all damage by 5% over time, up to 25%.
+    This has not yet been factored into the calculations, but it would basically increase his dps even further.
   </p>
 
   <h2><span class="mw-headline" id="Trivia">Trivia</span></h2>
