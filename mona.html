@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>  
+
+  <link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+
+    <title>Mona</title>
+ </head>
+ 
+<body>
+  <div id="includedContent"></div>
+
+  <p><b>Mona</b> provides a universl DMG bonus through her burst, which also does massive damage.</p>
+
+  <h2>Talents</h2>
+  <p>
+    The core of her kit is her q.
+    Mona ascends with ER and has a 60 energy cost burst, similar to Bennett, Yun Jin, Venti, etc.
+    The q will apply a bubble to enemies within a 10m radius, applying hydro.
+    It can also lift small enemies (weight < 100).
+    When the bubble pops, it will create a huge aoe explosion
+    and also trigger the omen effect, boosting dmg bonus by a lot.
+    The omen lasts up to 5s (increases with talent level)
+    but can be extended if the enemy is frozen (omen extension).
+  </p><p>
+    The bubble lasts 8s before automatically popping.
+    The bubble can be popped once the enemy has taken enough poise damage (stagger).
+    Even things like Yoimiya's E cast can pop the bubble.
+  </p><p>
+    A common party trick with Bennett is to cast Bennett's q, cast Mona's q,
+    wait 2.5s (for the icd from Mona's initial hydro application to reset),
+    then apply a pyro attack on an enemy affected by the bubble.
+    The bubble will then explode, applying hydro again, vaporizing, and deal 2x damage.
+  </p><p>
+    Her e is a taunt that provides off field hydro application.
+    The taunt does aoe damage and taunts within a 5m radius.
+  </p><p>
+    Mona also has an alternate sprint. 
+    Funnily enough it was disabled during the 2nd Windtrace event in Version 2.4
+    after it was used in the 1st Windtrace event to hide from others.
+    Ayaka's alternate sprint was also disabled during the event.
+  </p>
+
+  <h2>Constellations</h2>
+  <p>Her C2 and C6 increase her ca damage, for if you use her as a dps.
+    Her C1 increases hydro reaction damage and extends frozen duration all by 15%.
+    Her C4 increases crit rate of party members that hit enemies affected by the omen by 15%.
+  </p>
+
+  <h2>Build</h2>
+  <p>4 piece Emblem, ATK-Hydro DMG-CRIT.
+    Weapons: Widsith / Skyward Atlas / Solar Pearl (build damage on her).
+    Noblesse, Heart of Depth also viable.
+    Some hardcore Mona mains have also tried prototype amber (to give her healing abilities).
+    Some ER catalysts are ok (but Mona usually has enough ER herself that it is not that needed).
+    TTDS is also ok for boosting ATK, though her Q can usually do a lot of damage that building her own damage is usually better.
+  </p>
+
+  <h2>Teams</h2>
+  <p>
+    Because of the universal buff from her q, 
+    she can be used on basically any team for extra damage and dmg bonus, 
+    making Mona a pretty versatile unit.
+    That added to her AoE and extra cc through her taunt, 
+    she is usually one of the best options (if not the best option) as an off field hydro support
+    for freeze teams especially because of the omen extension through freeze.
+  </p>
+
+  <h2>Calculations</h2>
+  <p>
+    Mona's q can increase all dmg bonus by 60% at level 10. It applies to her own q pop.
+    This is a universal buff, working for any character no matter what element or ability.
+    Among other talents that increase DMG bonus specifically, there is also Kazuha's poetics of fuubutsu 
+    (but the dmg bonus is not as much and only applies to pyro/hydro/electro/cryo).
+    If a typical dps character has say 80% dmg bonus (some characters have way more like Xiao), 
+    the effect of Mona's buff is to increase this to 140% dmg bonus which can increase overall dps by
+    $$2.4/1.8 \approx 1.33$$
+    which is a good increase in damage, comparable to a TTDS ATK buff.
+  </p>
+  <p>
+    We assume level 10 q with 4 piece emblem, 200% ER, and a hydro dmg goblet for a total dmg bonus of
+    $$200(.25+.2) + 46.6 + 60 = 196.6$$
+    factoring in the 60% bonus from Mona's omen as well as Mona's passive which increases hydro dmg by 20% of her ER.
+    (Note there is a limit of 75% dmg bonus from the emblem set but no such limit on Mona's passive.)
+    Needless to say, Mona is a character that gets a ridiculous amount of DMG bonus innately (similar to Xiao and Raiden).
+    If Mona vaporizes each bubble pop and spams her q on cd, her dps is
+    $$x_b = 2*796.32*2.966/15 = 314.918016$$
+    Mona's burst is one of the strongest nukes in the game.
+    Without vaporizing (say in a freeze team)
+    $$x_b = 796.32*2.966/15 = 157.459008$$
+  </p>
+
+</body>
+</html>
