@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--<link rel="import" href="header.html">-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+<script type="text/javascript" src="js/calculator.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+
+    <title>Calculator</title>
+
+  </head>
+  
+<body>
+  <div id="includedContent"></div>
+  Enter First Number :
+<br>
+<input type="text" id="Text1" name="TextBox1">
+<br>Enter Second Number :
+<br>
+<input type="text" id="Text2" name="TextBox2">
+<br>Result :
+<br>
+<input type="text" id="txtresult" name="TextBox3">
+<br>
+<input type="button" name="clickbtn" value="Display Result" onclick="add_number()">
+
+</body>
+</html>
