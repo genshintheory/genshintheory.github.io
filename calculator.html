@@ -24,17 +24,72 @@
   
 <body>
   <div id="includedContent"></div>
-  Enter First Number :
+
+<h2>Calculator</h2>
+  ATK
 <br>
 <input type="text" id="Text1" name="TextBox1">
-<br>Enter Second Number :
+<br>DMG Bonus%
 <br>
 <input type="text" id="Text2" name="TextBox2">
-<br>Result :
+<br>Incoming damage
 <br>
 <input type="text" id="txtresult" name="TextBox3">
 <br>
 <input type="button" name="clickbtn" value="Display Result" onclick="add_number()">
+
+<h2>Outgoing damage formula</h2>
+<p>Outgoing damage is calculated as
+  $$\text{Outgoing damage} = \underbrace{[((\text{base ATK})(1+\text{ATK}\%) + \text{flat ATK} + \text{ATK buff})\times\text{scaling}
+  +\text{bonus damage}]}_{\text{base damage}}\times(1 + \text{DMG Bonus}\%)\times(\text{CRIT multiplier})$$
+</p><p>
+  Scaling may sometimes contain multiple parts, such as the multiplicative buff from Yoimiya's skill.
+  ATK buff can be things like a Bennett buff.
+  Bonus damage is added after multplied by scaling and can be things like Shenhe and Yun Jin buffs.
+  Bonus damage different from DMG Bonus which is multiplied by scaling.
+</p><p>
+  Note for non-crit the CRIT multiplier is 1
+  $$\text{CRIT multiplier} = 1$$
+  For crit hits the CRIT multiplier is CRIT DMG
+  $$\text{CRIT multiplier} = 1 + \text{crit damage}$$
+  For expected crit we have a multiplier
+  $$\text{CRIT multiplier} = 1 + \text{crit rate}*\text{crit damage}$$
+  where crit rate r and crit damage d are expressed in decimal form.
+  This is derived by taking the expected value \( 1(1-r) + (1+d)r = 1 + rd \).
+</p>
+
+<h2>Incoming damage formula</h2>
+<p>
+  The incoming damage received by a target is then
+  $$\text{Incoming damage} = (\text{Outgoing damage})\times (\text{DEF modifier})\times (\text{RES modifier})$$
+  <a href=defense.html>Defense</a> depends on level, and can be estimated to be 0.5 without any DEF modifiers (like DEF shred).
+  See the corresponding <a href=defense.html>Defense</a> article and the <a href=formula.html>formula</a> article for more info.
+</p><p>
+  The formula for resistance is
+  $$\text{RES modifier} = \begin{cases}  
+  1 - RES/2 & RES < 0 \\
+  1 - RES & 0 < RES < .75 \\
+  \frac{1}{4RES + 1} & RES > .75
+  \end{cases}$$
+</p><p>
+  This function was designed to be continuous and decreasing in RES (more RES means lower multiplier).
+  As RES goes to infinity, the function approaches 0.
+  There is a RES for each element and physical.
+  Most enemies will have 10% RES to everything, giving a .9 multiplier.
+  Of course, there are exceptions. Some enemies have increased or decreased RES to certain elements.
+</p>
+
+<h2>Reaction damage</h2>
+<p>
+  For incoming damage will be an extra multiplier for melt and vaporize as well as an associated reaction bonus from EM and other sources.
+  However, transformative reactions are handled by a different equation.
+  $$\text{Transformative reaction damage} = (\text{base damage (level dependent)})\times(\text{reaction dmg bonus})\times(\text{RES modifier})$$
+</p>
+
+<h2>Disclaimer</h2>
+<p>
+  Do not take these equations out of context.
+</p>
 
 </body>
 </html>
