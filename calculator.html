@@ -26,21 +26,43 @@
   <div id="includedContent"></div>
 
 <h2>Calculator</h2>
-  ATK
+<!--input-->
+Total ATK
 <br>
 <input type="text" id="atk" name="TextBox1">
+<br>Talent%
+<br>
+<input type="text" id="scal" name="TextBoxS">
+<br>DMG Increase
+<br>
+<input type="text" id="dmgincrease" name="TextBoxD">
 <br>DMG Bonus%
 <br>
 <input type="text" id="dmgbonus" name="TextBox2">
-<br>Incoming damage
+<br>CRIT DMG%
+<br>
+<input type="text" id="cd" name="TextBoxCD">
+
+<br>
+<br><!--output-->
+<input type="button" name="clickbtn" value="Display Result" onclick="dmg()">
+<br>Outgoing damage (no crit)
 <br>
 <input type="text" id="txtresult" name="TextBox3">
+<br>Incoming damage (no crit)
 <br>
-<input type="button" name="clickbtn" value="Display Result" onclick="add_number()">
+<input type="text" id="indmg" name="TextBox4">
+<br>Incoming damage (crit)
+<br>
+<input type="text" id="indmg_crit" name="TextBox5">
+<br>MV%
+<br>
+<input type="text" id="mv" name="TextBoxMV">
+
 
 <h2>Outgoing damage formula</h2>
 <p>Outgoing damage is calculated as
-  $$\text{Outgoing damage} = \underbrace{[((\text{base ATK})(1+\text{ATK}\%) + \text{flat ATK} + \text{ATK buff})\times\text{scaling}
+  $$\text{Outgoing damage} = \underbrace{[(\underbrace{(\text{base ATK})(1+\text{ATK}\%) + \text{flat ATK} + \text{ATK buff})}_{\text{Total ATK}} \times\text{scaling}
   +\text{bonus damage}]}_{\text{base damage}}\times(1 + \text{DMG Bonus}\%)\times(\text{CRIT multiplier})$$
 </p><p>
   Scaling may sometimes contain multiple parts, such as the multiplicative buff from Yoimiya's skill.
@@ -81,7 +103,7 @@
 
 <h2>Reaction damage</h2>
 <p>
-  For incoming damage will be an extra multiplier for melt and vaporize as well as an associated reaction bonus from EM and other sources.
+  For outgoing damage there will be an extra multiplier for melt and vaporize as well as an associated reaction bonus from EM and other sources.
   However, transformative reactions are handled by a different equation.
   $$\text{Transformative reaction damage} = (\text{base damage (level dependent)})\times(\text{reaction dmg bonus})\times(\text{RES modifier})$$
 </p>
