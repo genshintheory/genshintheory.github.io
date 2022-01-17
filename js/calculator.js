@@ -7,6 +7,17 @@ function dmg() {
     var cr = parseFloat(document.getElementById("cr").value) || 5;
     var cd = parseFloat(document.getElementById("cd").value) || 50;
 
+    // bounds
+    if (cr < 0) {
+        cr = 0;
+    } else if (cr > 100) {
+        cr = 100;
+    }
+
+    if (cd < 0) {
+        cd = 0;
+    }
+
     var outdmg = (atk * (scal/100) + dmgincrease) * (1 + dmgbonus/100);
     var indmg = outdmg*.5*.9;
     var indmg_crit = indmg * (1 + cd/100);
