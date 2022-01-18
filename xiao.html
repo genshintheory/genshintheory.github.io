@@ -22,10 +22,10 @@
   
 <body>
   <div id="includedContent"></div>
-<h1>Xiao</h1>
+<h1>Xiao (魈)</h1>
 
 <div class="mw-parser-output"><dl><dt>Effective Version 2.2</dt></dl>
-<p>Xiao is an Anemo polearm user and yaksha guardian of Liyue with the highest DPS potential in the game.
+<p><b>Xiao</b>, formerly Alatus, is an Anemo polearm user and yaksha guardian of Liyue with the highest DPS potential in the game.
 </p><p>With the highest base ATK in the game, Xiao is a top-tier AoE unit that excels at plunging attacks. He is very agile and excellent for exploration as well.
 </p>
 <div id="toc" class="toc"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
@@ -89,12 +89,15 @@
 </p>
   
 <h2><span class="mw-headline" id="Constellations">Constellations</span></h2>
-<ol><li>C1: gives an extra charge for E, gives some extra damage and terrain traversal</li>
-<li>C2: gives more energy generation, which is ok</li>
-<li>C3: increases level of E by 3, which is great for C6</li>
-<li>C4: increases DEF by 100% when under 50% HP. This makes it a bit more comfy to fight under 50% HP, but is usually not needed if running Xiao with a shield and if using Bennett. Still it can make running Xiao with Homa an even more viable option now, and it can make Xiao as tanky as Itto.</li>
-<li>C5: increases level of Q by 3</li>
-<li>C6: This is the best C6 in the game and is what takes Xiao several leagues above all other DPS. If there is any character worth C6-ing it is Xiao. And if you're considering pulling for Xiao constellations, you may as well go all the way to C6.</li></ol>
+<ol>
+  <li>C1: gives an extra charge for E, gives some extra damage and terrain traversal</li>
+  <li>C2: gives more energy generation, which is ok</li>
+  <li>C3: increases level of E by 3, which is great for C6</li>
+  <li>C4: increases DEF by 100% when under 50% HP. This makes it a bit more comfy to fight under 50% HP, but is usually not needed if running Xiao with a shield and if using Bennett. Still it can make running Xiao with Homa an even more viable option now, and it can make Xiao as tanky as Itto.</li>
+  <li>C5: increases level of Q by 3</li>
+  <li>C6: This is the best C6 in the game and is what takes Xiao several leagues above all other DPS. If there is any character worth C6-ing it is Xiao. And if you're considering pulling for Xiao constellations, you may as well go all the way to C6.</li>
+</ol>
+
 <h2><span class="mw-headline" id="Build">Build</span></h2>
 <h3><span class="mw-headline" id="Artifacts">Artifacts</span></h3>
 <p>Since Version 1.3, Xiao has not had a dedicated artifact set made for him. His current best in slot is:
@@ -139,6 +142,7 @@
 <p>Xiao excels individually and can dish out high DPS even alone. Unlike some other units like Hu Tao (who relies on Xingqiu), Xiao is not too reliant on supports.
 </p><p>That said, his teammates can also further boost his damage, and Xiao's versatility gives him more freedom and flexibility in choosing teams.
 </p>
+
 <h3><span class="mw-headline" id="Supports">Supports</span></h3>
 <p>Here are some of Xiao's best supports:
 </p>
@@ -210,13 +214,14 @@
 <h3><span class="mw-headline" id="C0">C0</span></h3>
 <p>The scaling for one high plunge attack during his burst is
 </p>
-<dl><dd>\( x=404*(1+.952+.616)=1037.472 \)</dd></dl>
+<dl><dd>\( z=404*(1+.952+.616)=1037.472 \)</dd></dl>
 <p>We assume Xiao does 10 high plunge attacks for the duration of his 15 second burst (so 1 high plunge every 1.5 seconds). The total scaling is then 
 </p>
-<dl><dd>\( 10x=10374.72 \)</dd></dl>
+<dl><dd>\( 10z=10374.72 \)</dd></dl>
 <p>This DPS is
 </p>
-<dl><dd> \( x/1.5=691.648\) </dd></dl>
+<dl><dd> \( x_0 = z/1.5=691.648\) </dd></dl>
+
 <h3><span class="mw-headline" id="C6">C6</span></h3>
 <p>Note that the Q gains 3 levels so the buff becomes 108.85% damage bonus. The E also gains 3 levels.
 </p><p>From the previous section, we assume 1 high plunge takes 1.5 seconds. After high plunging, Xiao then spams his E say for 4 times at minimum (though he can reach 5-6) within the next second. So a rotation takes 2.5 seconds and consists of the 2 parts:
@@ -228,7 +233,7 @@
 <dl><dd>\(6y=27382.716\)</dd></dl>
 <p>The DPS is
 </p>
-  <dl><dd>\(y/2.5 = 1825.5144\)</dd></dl>
+  <dl><dd>\(x_6 = y/2.5 = 1825.5144\)</dd></dl>
 <p>So Xiao's DPS is nearly tripled at C6 compared to C0.
 </p>
   <p>
@@ -243,15 +248,35 @@
     Recomputing the dps gives
   </p>
   <dl><dd>\( y=404*(1+1.0885+.616)+4*537*(1+.616+.45)=5530.386 \)</dd></dl>
-  <dl><dd>\(y/2.5 = 2212.1544\)</dd></dl>
+  <dl><dd>\(x_6 = y/2.5 = 2212.1544\)</dd></dl>
   <p>This is around a ~20% increase in dps, which is pretty significant.</p>
   <p>
     Lastly Xiao has a passive that increases all damage by 5% over time, up to 25%.
     This has not yet been factored into the calculations, but it would basically increase his dps even further.
   </p>
 
+  <h3>Midair plunge damage (pierce damage)</h3>
+  <p>
+    For some bigger enemies (e.g. bosses like the vishaps or maguu kenki)
+    Xiao can also do some additional 'pierce' or 'midair' damage while plunging.
+    Basically if Xiao plunges on top of the enemy's hitbox, he will do another instance of damage before hitting the ground.
+    There have been some interesting tricks using this. 
+    For example, using the Geo Traveler's ultimate and then plunging on top of the ridges 
+    can make Xiao enter an 'infinite loop' of plunging.
+  </p><p>
+    This pierce plunge damage has scaling 161.76% at NA Level 10.
+    It becomes significant against the bigger enemies as mentioned before and contributes a decent amount of dps.
+    Specifically, compared to a high plunge multiplier of 404%, the midair plunge damage is about 40% of that value.
+    So if we assume Xiao can do one instance of midair plunge damage for each high plunge,
+    then we get a dps increase of around 40% (a 1.4 multiplier, which is quite significant).
+    For C0 Xiao, this increases his single-target dps against bigger bosses to
+    $$1.4x_0 = 968.3072$$
+    Even without the midair plunge damage, C0 Xiao's single target dps is already the highest among C0 units (and having it be aoe is a bonus).
+    With the midair plunge damage, C0 Xiao's dps is even higher than many C6 units.
+  </p>
+
   <h2><span class="mw-headline" id="Trivia">Trivia</span></h2>
-<ul>
+  <ul>
   <li>In the English version of the game in the fight against Osial, Xiao says that his name means 'Swiftness'. 
   His name in Chinese 魈 refers to a kind of demon. 
   But the English localization basically illustrates that for Xiao, speed is a huge part of his DPS and kit.</li>
