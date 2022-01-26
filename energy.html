@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>  
+
+  <link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+
+    <title>Energy</title>
+ </head>
+ 
+<body>
+  <div id="includedContent"></div>
+
+  <p>Notes on energy mechanics, apps to Raiden Shogun</p>
+
+  <h2>Energy and ER</h2>
+  <p>
+    Character bursts cost energy, usually between 40 to 90.
+    Characters can gain energy from using their skills or by attacking and defeating enemies.
+    Character elemental skills and enemies can generate particles/orbs.
+    Orbs usually give more energy than particles.
+    Particles are either elemental or 'white'.
+    Character skills can generate usually between 1-5 elemental particles.
+    Some weapons can generate white particles through the passive.
+  </p><p>
+    Each elemental particle will fill the energy gauge of all party members.
+    If the character is off field they will usually receive less energy than on field characters.
+    As for on field characters:
+  </p><p>
+    If the particle is white then the on field character can regenerate 2 energy per particle.<br>
+    If the particle is of the matching element as that of the on field character, they can generate 3 energy per particle.<br>
+    If the particle is of a different element from that of the on field character, they can generate 1 energy per particle.
+  </p><p>
+    Because of the increased energy gain from matching elements,
+    some carries usually like to be accompanied by a battery of the same element:
+    for example, Xiao with Sucrose, Xiangling with Bennett, Itto with Gorou, Eula with Diona, and so on.
+  </p><p>
+    Characters also have an attribute called ER or Energy Recharge.
+    ER can increase the amount of energy gained by a character.    
+    For example, if a character has 200% ER they gain 2 times more energy than normal.
+    The base ER is 100%.
+    ER can be increased through artifacts, weapons, passives, constellations, etc.
+  </p>
+
+  <h2>Raiden Shogun</h2>
+  <p>Raiden's Q at Lv10 will regenerate 2.5 energy per hit (icd 1s) up to 5 times for a total of 12.5 energy.
+    Raiden's passive also gives her 0.6% greater energy restoration from the Q for each 1% of ER above 100% she has.
+    So if Raiden has 200% ER (very possible with Emblem set, Catch, and her level ascension giving ER),
+    then the passive gives her 60% greater energy restoration from her Q resulting in
+    \(12.5*1.6 = 20\) energy.
+    From testing this is unaffected by a character's ER. 
+    This is a flat gain of 20 energy, and it is the same for all party members.
+  </p><p>
+    So Raiden's burst basically cuts the energy cost of all bursts by ~20.
+    By comparison, Venti can refund 15 energy, and Childe can refund 20 energy for himself.
+    The difference is that Raiden's energy generation is 'universal' and will apply to all party members without condition.
+  </p><p>
+    Usually, Raiden uses her E before her Q.
+    Her E can generate on average .4 electro particles every .9s.
+    Her Q lasts 7s so during that time her E will generate ~3.11 electro particles, which gives 9.33 energy to Raiden.
+    If Raiden has 200% ER as before, then her E can generate ~18.67 energy during her Q.
+    So in total Raiden can restore 
+    \( 20 + 18.67 = 38.67 \)
+    energy during her burst.
+    Subtracting this from 90, the effective cost of Raiden's burst is basically ~50 energy.
+  </p><p>
+    In general, if Raiden's ER is \(\epsilon \ge 1\), then the energy generated for herself during her Q (with her E active) is
+    $$\begin{align}
+    E &= 12.5(1 + .6(\epsilon - 1)) + 9.33\epsilon \\
+    &= 5 + 7.5\epsilon + 9.33\epsilon \\
+    &= 5 + 16.83 \epsilon
+    \end{align}$$
+    For Raiden to recharge her burst alone (reach \(E = 90\)), she would need \(\epsilon \approx 5\) or around 500% ER, which is infeasible.
+    Fortunately, in practice, attacking and defeating enemies will generate white particles/orbs 
+    which will further generate energy for Raiden, allowing her to spam her burst on cd more easily (with even 200% ER).
+    But even then, Raiden's q lasts 7s and has a 18s cd, meaning 11s downtime without cd modifiers (like Chongyun field or Anemo resonance).
+    Note that Raiden's C6 does not reduce her own cd (so it is more of a support-oriented constellation), 
+    though it can help her gain Chakra stacks faster.
+  </p><p>
+    The above calculation can consider the energy generated during the 18s cd of her Q.
+    This time her E will generate around \(18(.4/.9) = 8 \) electro particles or 24 energy for Raiden.
+    Then the energy gained during 18s is
+    $$\begin{align}
+    E &= 12.5(1 + .6(\epsilon - 1)) + 24\epsilon \\
+    &= 5 + 31.5 \epsilon
+    \end{align}$$
+    So with 300% ER she can comfortably spam her burst on cd.
+    Even with 200% ER the above will give around 70 energy, leaving only 20 more energy to fill her Q.
+    Note the above assumes she is on field and that she makes enough hits during her Q 
+    to gain all 5 instances of energy restoration from musou isshin
+    (unless the enemy moves all over the place, this is usually possible since she gets so much poise/interruption resistance, 
+    so she can simply tank hits and keep attacking without being staggered).
+  </p>
+
+  <h2>Role of energy</h2>
+  <p>
+    For most characters, ER is only important to the point of spamming one's burst on cooldown.
+    Otherwise, there will be longer downtime, which will result in diminished dps.
+    Once one has enough ER to spam bursts on cd, it is more beneficial to invest into damage (atk, crit, etc.).
+  </p><p>
+    However, there are some characters that have special bonuses involving ER such as Mona or the Raiden Shogun.
+    Moreover, Version 2.1 released the Emblem set which converted ER into greater DMG bonus (similar to Mona's passive).
+    The Emblem set became the new bis for several other characters including Beidou, Mona, Raiden, Xiangling, etc.
+    But even for the Emblem set, once you have enough ER to spam bursts on cd,
+    having an ATK sands usually always gives more damage than an ER sands
+    (the 4 piece Emblem converts 25% of ER to dmg bonus, max of 75%, but based on the distribution of ATK% and ER% on artifacts,
+    the game does not give enough ER% on the sands to outdamage an ATK% sands).
+    For some supports such as Bennett and Yun Jin, if you only care about their support abilities rather than their damage,
+    then opting for an ER sands may be worthwhile to spam their bursts more often.
+  </p><p>
+    Still the emblem domain, featuring Emblem and Shimenawa (2 piece gives ATK), became one of the most useful domains to farm
+    (alongside the Viridescent Venerer domain) due to its importance to several key supports.
+  </p><p>
+    For Venti specifically, the Viridescent Venerer set is still preferred over Emblem
+    since VV gives -40% RES, which gives a multiplicative increase in damage, buffing the team a lot more.
+    As of 2.4, VV is one of the only artifact sets that reduce RES.
+  </p>
+
+</body>
+</html>
