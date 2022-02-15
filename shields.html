@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>  
+
+  <link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+
+    <title>Shields</title>
+ </head>
+ 
+<body>
+  <div id="includedContent"></div>
+
+  <h2>1 Character shields</h2>
+  <p>
+    Character shields have HP, indicating how much damage they absorb.
+    $$H = \text{Base}\times\text{Absorption bonuses}\times\text{Elemental bonus}\times(1+\text{Shield Strength})$$
+    The base is determined by the specific talent (or whether it is a crystallize shield).
+    Absorption bonuses include those from talents, passives, and constellations and can sometimes be multiplicative.
+    Elemental bonuses refer to how a shield absorbs its own element more effectively, with Geo shields absorbing everything effectively.
+    Shield Strength is a character attribute that can be increased via talents, etc.
+  </p>
+  <p>
+    For example, Morax's shield at level 10 has base
+    $$\text{Base} = 2712 + .2304(\text{Max HP})$$
+    It has 150% dmg absorption against everything.
+    With one of his passives, the shield can fortify up to 5 times, each time granting 5% more shield strength.
+    So suppose we have 25% shield strength (ignoring any other shield buffs from things like 4p tenacity).
+    Then the amount of damage the jade shield can absorb is
+    $$H = (2712 + .2304(\text{Max HP}))(1.5)(1+.25)
+    = 5085 + 0.432(\text{Max HP})$$
+    So if Morax has 30k HP (very achievable), the shield can absorb 18045 damage.
+    Basically the things in the game that can destroy this shield are Childe's attacks or a Maguu Kenki's attacks.
+    Then of course there are things like corrossion that bleed through the shield.
+  </p>
+
+  <h2>2 Enemy Shields</h2>
+  <p>
+    There are various types of enemy shields.
+    Enemy shields can take up to 3 types of damage that are additive: elemental gauge damage, poise damage, and regular damage.
+  </p><p>
+    Usually Geo and Frozen shields take poise damage (heavy attacks like Claymore, Plunging, Geo, explosions).
+    Environmental objects such as ore have a poise hp, whereas things like grass and hay also have a 'shield' (before burning).
+    Some other shields/armor do not take any damage from regular attacks and need elemental gauge damage (reactions) to break.
+  </p><p>
+    There are scale factors that convert poise damage and regular damage into shield damage.
+  </p>
+
+  <h3>Reaction damage</h3>
+  <p>
+    We first discuss gauge shield damage.
+    All elemental attacks in the game have a gauge value: 1A, 2B, 4C,
+    and these are hardcoded into the game.
+    Elemental attacks can apply the corresponding element as a status to the target.
+    The higher the number on the gauge, the longer the status lasts.
+    When another element is applied to a target with a status, an elemental reaction occurs.
+    Elemental reactions can deplete the gauge on the status.
+    If the applied element has a high enough gauge, it can even remove the existing status from the target.
+    Otherwise, the status will decay naturally with enough time.
+    <!--For example, if one applies 2B pyro to an enemy. -->
+  </p>
+  <p>
+    Most attacks in the game are 1A. Certain skills such as Bennett's E and many bursts (Childe, Raiden, Hu Tao Q) are 2B.
+    Swirl can apply 2B of the corresponding infused element.
+    Beidou's Q (initial hit) is 4C electro.
+  </p>
+  <p>
+    Elemental reactions can also be used to damage enemy shields.
+    The damage done to the shield is the gauge value of the attack times the reaction coefficient (RC)
+    associated with the reaction triggered.
+    $$D_R = \text{gauge value}\times\text{RC}$$
+    For example, applying pyro on cryo has an RC of 2.
+    So applying 2B pyro on a cryo shield will deal \(2\times 2 = 4\) gauge units (GU) of shield damage.
+    Some other RC values are as follows:
+  </p>
+  <ul>
+    <li>Pyro on Hydro: 0.5</li>
+    <li>Pyro on Cryo: 2</li>
+    <li>Pyro on Electro: 1</li>
+    <li>Hydro on Pyro: 2</li>
+    <li>Hydro on Cryo: 0</li>
+    <li>Hydro on Electro: depends (0.8)</li>
+    <li>Cryo on Pyro: 0.5</li>
+    <li>Cryo on Hydro: 1</li>
+    <li>Cryo on Electro: 1</li>
+    <li>Electro on Pyro: 1</li>
+    <li>Electro on Hydro: depends (0.8)</li>
+    <li>Electro on Cryo: 1</li>
+    <li>Swirl, Crystallize: 0.5</li>
+  </ul>
+  <p>Note Electro-Charged (EC) is unique in that the gauge damage can be dealt in several ticks over time.
+    Also these RC values are actually different for Fatui armor.
+  </p>
+  <p>The game code uses the term Elemental Durability instead of GU.
+    The conversion ratio is 1 GU = 25 units Element Durability.
+  </p>
+
+  <h3>Poise damage</h3>
+  <p>If an attack is heavy/blunt, then it can deal poise damage to certain shields (geo, frozen).
+    Poise damage is a hidden attribute hardcoded into all attacks in the game.
+    Usually higher poise damage means it can stagger targets more easily.
+    Attacks also have an impulse/force level that determines whether they can lift enemies into the air as well.
+  </p>
+  <p>
+    Some shields are mostly poise-based. For example, ores are 'shields' that require a certain amount of poise damage before breaking.
+    Poise damage is converted into shield damage as follows
+    $$D_P = \text{poise damage}\times \text{poise coefficient}$$
+    The poise coefficient (PC) is as follows:
+  </p>
+  <ul>
+    <li>Heavy attack on Geo shield: .014</li>
+    <li>Melee attack on Geo shield: .002</li>
+    <li>Heavy attack on Frozen/Cryo shield: .006</li>
+  </ul>
+  <p>If an attack is both heavy and melee, then the PC will be the one for heavy attacks (the max of the PC).</p>
+  <p>Some examples of really heavy attacks (high poise damage and blunt) include
+    Xiao's plunging, Morax's meteor, Morax's hold stele, Claymore swings, Yoimiya's burst explosion, Overloaded reactions, etc.
+  </p>
+
+  <h3>Normal damage</h3>
+  <p>
+    Some shields can be broken simply by doing any damage to them (e.g. Abyss shields). The conversion is
+    $$D_N = \frac{.2\times\text{Damage}}{\text{Enemy HP}} \times \text{Shield Gauge}$$
+  </p>
+
+  <h3>Total damage</h3>
+  <p>
+    The total damage done to the shield is just the sum
+    $$D_S = D_R + D_P + D_N$$
+    Note that some shields cannot be damaged by poise or normal damage (such as the hypostasis shields).
+    In that case, the corresponding terms are ommitted from above.
+  </p>
+
+</body>
+</html>
