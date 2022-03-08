@@ -86,6 +86,38 @@
     Calculations are for a melt Bennett.
     Bennett is best used as a support.
     While he can do decent damage and his q can buff himself, his q also buff other characters.
+  </p><p>
+    At lv13 his Q has 494.7% scaling damage.
+    Suppose Bennett has 61.6 pyro dmg bonus.
+    The cd on the Q is 15s.
+    Assuming he can spam it on cd (and melt it) the burst dps is
+    $$x_Q = 2*494.7*1.616/15 = 106.59136$$
+  </p><p>
+    One passive reduces the cd of E by 20%. Another reduces the cd by 50% inside his Q.
+    The initial cd of his E is 5s.
+    From testing, it appears these two cd reductions are multiplicative.
+    That is, with these two passives (and casting E inside Q),
+    the cd of his E becomes \(.5*.8*5 = 2\) seconds 
+    (rather than say \(.3*5 = 1.5\)s which is what you would get by adding 20% and 50% for 70% cd reduction).
+    So assuming Bennett is not on 4p TF (which can reduce cd by a further 1s on overloaded reactions to a cd of 1s),
+    he can cast his E once every 2s within his Q.
+  </p><p>
+    The Q lasts 12s, so say he can cast his E six times within its duration.
+    The scaling of his E tap is 292.4% at lv13.
+    The dps from his E inside his Q is
+    $$x_E = 6*292.4/12 = 146.2$$
+    assuming no melts or vaporizes. 
+    Note standard icd is 2.5s/3 hits, and since Bennett applies strong 2B pyro on each E tap,
+    he will rapidly deplete any existing hydro/cryo status on the enemy,
+    so in practice, it may be hard or not even possible to melt or vaporize each E
+    without very rapid hydro/cryo application (or if the enemy is something like a hydro/cryo slime or is wet in perpetuity).
+  </p><p>
+    The total dps is then
+    $$x_E + x_Q = 252.79136$$
+    Note this is for using Bennett on field for most of the time.
+    This dps is around Albedo level.
+    But in general, the team will do a lot more damage when Bennett is used as a support,
+    and his Q is used to buff other hypercarries who can do much more dps.
   </p>
 
   <h2>Trivia</h2>
