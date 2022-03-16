@@ -35,7 +35,7 @@
   which together contribute the majority of her dps.
 </p>
 
-<h3>Elemental Skill</h3>
+<h3>Elemental Skill: Sesshou Sakura (杀生樱)</h3>
 <p>
   Most of Yae's damage is from her E, which has 100% uptime and is off field.
   The range on Yae's E allows her to hit flying enemies like oceanid birds, specters, and eyes of storm
@@ -94,7 +94,9 @@
   For example, Eula-Yae-Raiden-Diona or Eula-Yae-Raiden-Jean are viable.
 </li>
 <li>Xiao-Yae-Bennett, Itto-Yae, etc. where Yae provides off field dps</li>
-<li>Hu Tao-Xingqiu-Yae, Diluc-Xingqiu-Yae: but in these cases, usually Bennett/Thoma/Venti/Kazuha are preferred in the other two slots.</li>
+<li>Diluc-Xingqiu-Yae: but in these cases, usually Bennett/Thoma/Venti/Kazuha are preferred in the other two slots.
+  Hu Tao-Yae is cringe. You can use it, if you're bad at making teams and have poor judgment.
+</li>
 </ul>
 <p>One could also try the "Yae national" consisting of Yae-Bennett-Xingqiu-Xiangling, but in this case, usually Raiden is preferred
   as she batteries the rest of the characters and can meet the energy requirement of the team more efficiently.
@@ -121,6 +123,35 @@
 </p>
 
 <h2>Calculations</h2>
+
+<h3>C0</h3>
+<p>We assume C0, level 10 E and Q.
+  From testing, 1 sakura hits 5 times over its 14s duration.
+  So 3 sakura can hit a total of 15 times.
+  Suppose she has 2p TF and 2p WT, so the damage bonus is 46% goblet + 15% tf + 15% em = 76% for E.
+  With level 3 sakura the dps is
+  $$x_E = 170.64*1.76*15/14 \approx 321.78$$
+  Now consider her burst dps.
+  The scaling if all 3 sakura are detonated is 
+  \(468+3*600.87=2270.61\).
+  Then there is 46% goblet + 15% tf = 61% dmg bonus for q.
+  The burst dps is
+  $$x_Q = 2270.61*1.61/22= 166.17$$
+  The total dps is
+  $$x_E + x_Q = 487.95$$
+  This is Raiden/Eula level, but a bit lower than Itto.
+  Most of Yae's dps comes from her E (like around 2/3 or 67%).
+  Yae's main advantage is that she has 100% uptime on her E,
+  whereas other characters may have downtime.
+  Still most of this damage is quite single target, similar to Oz.
+</p><p>
+  Some people when calculating these figures for Yae ignore damage bonus and fool people in the media.
+  You cannot do this. That is completely incorrect and blatantly wrong.
+  Some characters like Xiao and Raiden simply get so much damage bonus 
+  that they blow other characters out of the water in that department.
+  Xiao's burst is literally a damage bonus buff of around 100%.
+  Damage bonus is an integral part of these calculations that significantly affects theoretical dps.
+</p>
 <p>C0, C3, C6 calculations</p>
 
 </body>
