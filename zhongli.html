@@ -37,6 +37,7 @@
 </ul>
 </li>
 <li class="toclevel-1 tocsection-10"><a href="#Teams"><span class="tocnumber">4</span> <span class="toctext">Teams</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Calculations"><span class="tocnumber">5</span> <span class="toctext">Calculations</span></a></li>
 </ul>
 </div>
 
@@ -91,6 +92,7 @@
 <ul><li>Favonius Lance</li></ul>
 <dl><dt>3 stars</dt></dl>
 <ul><li>Black Tassel</li></ul>
+
 <h2><span class="mw-headline" id="Teams">Teams</span></h2>
 <p>As a shield bot, there are not really any teams where Zhongli particularly shines or stands out. However, there are some DPS units who benefit greatly from his shield:
 </p>
@@ -111,6 +113,46 @@
     In compensation for this, Xiao's scalings and DMG Bonus are much higher than these other units.
   </p><p>
   Above C0, for Anemo RES specifically, Zhongli gets powercrept by Jean and Venti.
+  </p>
+
+  <h2><span class="mw-headline" id="Calculations">Calculations</span></h2>
+  <p>
+    The resonance damage from the stele does not really become significant unless there are 3 or more geo constructs.
+    For example, when using the Geo Traveler's Q (creates 4 ridges) with Zhongli's E, there can be up to 5 aoe pulses.
+    The resonance scaling is around 57.6% at level 10 E, so 5 times that gives 288% total.
+    It is not much, but it can be non trivial.
+  </p>
+  <p>
+    Spamming Zhongli's burst on cd becomes more feasible in mono-geo teams since Zhongli has ER issues.
+    But when there are multiple geo characters generating energy, then it becomes easier to use his burst more frequently.
+    At level 10, his burst has scaling 899.72%.
+    Zhongli at level 90 with 4p tenacity and a geo dmg goblet gets \(28.8+46.6 = 75.4\) geo dmg bonus
+    (the 4p tenacity is more a support set that makes Zhongli tankier; 
+    to build more offense, going for things like 2p archaic, 2 noblesse will increase his dmg bonus;
+    but when there are so many better dps options in the game, why bother).
+    Zhongli's burst has a 12s cd and has an mv of
+    $$x_q = 899.72(1.754)/12 = 131.5090733333$$
+    It's not much but it can be non trivial. 
+    Note even if there is one big hit, because of the cooldown on the burst, 
+    the dps is spread over time and is actually lower than what one might think/exaggerate.
+    Zhongli's main role is to be a pure support. 
+    Even the dps from his burst is not high compared to others, but it can provide petrification.
+    Even then, not everything can be petrified.
+  </p>
+  <p>
+    We could consider Zhongli's passive that increases the damage of his burst based on 33% of his HP.
+    This kind of damage increase is similar to Yun Jin's buff.
+    We assume Zhongli has 2000 atk (generous) and 30k HP (very achievable).
+    With Bennett, say Zhongli's atk becomes 3000.
+    Now 33% of 30k hp is around 10k. So the base damage becomes
+    $$(3000*8.9972+10000) = 3000(8.9972+3.33) = 3000(12.3272)$$
+    With this passive the damage is increased by
+    $$12.3272/8.9972 = 1.3701151469$$
+    (comparing to using Bennett without considering the passive), making the dps
+    $$1.370x_q = 180.1825733242$$
+    It is still not much.
+    No wonder shorty grandpa Zhongli faked his death and retired.
+    Tartaglia's laughing at how short this weak archon is.
   </p>
 
   </body>
