@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+    
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+
+    <title>Scaling</title>
+
+</head>
+  
+<body>
+  <div id="includedContent"></div>
+  
+<div class="mw-parser-output">
+
+<p>Various AoE abilities scale with the number of enemies present.
+</p>
+<p>
+  Normally, AoE attacks have linear scaling.
+  If the attack does \(A\) damage, and there are \(n\) enemies, 
+  then the total damage is \(An\).
+  For swirl the damage can go up to \(2An\) (max of 2 instances of damage per enemy).
+  For Childe's riptide, the scaling is quadratic \(An^2\). 
+  For Beidou it is sublinear (scaling with \(A/n\)).
+  In fact for most single target abilities (like Xingqiu's rainswords or Hu Tao's charged attacks),
+  the scaling is sublinear (scaling with \(A/n\)).
+</p><p>
+Things like Albedo's Q and Ganyu's Q are bounded above by a linear function.
+Ganyu's Q spawns at most ~50 icicles. If each icicle hits n enemies there are 50n instances of damage, which is linear.
+It only appears quadratic \(10n^2\) for \(n \le 5\) but for more than 5 enemies, it is no longer quadratic but linear,
+bounded above by \(50n\).
+Ayato's Q is similar, being bounded above by a linear function.
+People say these abilities have 'pseudo-quadratic' scaling.
+They are no longer quadratic if there are too many enemies.
+</p><p>
+By contrast, Childe has actual quadratic scaling.
+However large n is, Childe's riptide damage will scale with \(n^2\). 
+This cannot be bounded above by any linear function.
+</p><p>
+  So technically, only Childe has true quadratic scaling.
+  But this may change with future characters.
+</p><p>
+  The Anemo swirl reaction is a very broken reaction already with good aoe.
+  One way it can be made more broken is if it had quadratic scaling.
+</p><p>
+  Another thing Genshin does is putting a tradeoff between AoE radius and scaling type.
+  Abilities with quadratic scaling (or pseudo-quadratic scaling) typically have smaller AoE radii (like within 1-3m),
+  requiring enemies to be grouped up very closely together.
+  Typically this is achievable with vacuum abilities from Venti, Kazuha, etc. which is why Anemo units are extremely valuable.
+  On the other hand, many abilities with linear scaling (such as Ganyu's CA, Xiangling's Q, or Xiao's plunging)
+  have much larger AoE radii (5-6m or more).
+  Moreover the damage talent scaling is higher for linear abilities (expect 200-400% or more),
+  whereas for the quadratic abilities, the damage scaling is a bit less (riptide damage is like around 100%, etc.)
+  But this may change with future character abilities.
+</p><p>
+  So the game is basically telling you: sure you can have quadratic scaling but the AoE radius will be smaller,
+  or you can have the typical linear scaling but the AoE radius can be bigger.
+  This is how the game balances AoE mechanics.
+</p>
+
+
+</body>
+</html>
