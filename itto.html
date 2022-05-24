@@ -115,19 +115,89 @@
     The burst has an 18s cd.
     We assume Itto has Lv. 10 NA.
     The MV is
-  $$z = (2*(180.2*5+377.4) + 720.45)*1.706/18 = 310.61$$
-  Now Itto's burst gives an ATK buff based on his DEF.
-  We assume a typical ATK scaling character has around 2000 ATK.
-  Now with his Q Itto can reach around 4000 ATK with an average build (when paired with Gorou).
-  Unlike Hu Tao, Itto does not really lose anything when paired with Bennett.
-  Say Bennett gives 1000 ATK so Itto reaches 5000 ATK while other characters reach 3000 ATK.
-  So with Bennett, Itto will have ~1.67 times more attack than a typical character.
+    $$z = (2*(180.2*5+377.4) + 720.45)*1.706/18 = 310.61$$
+    Now Itto's burst gives an ATK buff based on his DEF.
+    We assume a typical ATK scaling character has around 2000 ATK.
+    Now with his Q Itto can reach around 4000 ATK with an average build (when paired with Gorou).
+    Unlike Hu Tao, Itto does not really lose anything when paired with Bennett.
+    Say Bennett gives 1000 ATK so Itto reaches 5000 ATK while other characters reach 3000 ATK.
+    So with Bennett, Itto will have ~1.67 times more attack than a typical character.
+  </p><p>
+    So we multiply the above MV by the ATK scaling
+    $$x = 5z/3 = 517.68$$
+    And this does not factor in his E damage (the cow that hits like a truck).
+    For around 500% scaling and 10s cd, the E can contribute around +50 more mv to the above number.
+    (If a sacrificial claymnore is used, the E can sometimes be used twice.)
+    So Itto is another example of a character that has high dps without need for reactions.
+  </p>
 
-  So we multiply the above MV by the ATK scaling
-  $$x = 5z/3 = 517.68$$
-  And this does not factor in his E damage (the cow that hits like a truck).
-  So Itto is another example of a character that has high dps without need for reactions.
-</p>
+  <h3>C2</h3>
+  <p>
+    We now consider the effect of C2, which can reduce the burst cd by up to 4.5s (if there are 3 geo characters on the team).
+    This can increase dps to
+    $$x_2 = 18x/13.5 = 690.24$$
+    which is a 33% increse in damage, comparable to a TTDS buff.
+  </p><p>
+    By reducing cd to 13.5s, since the burst lasts 11s, C2 effectively allows near 100% uptime for Itto.
+    There is only 2.5s of downtime, during which other characters' abilities can be used.
+  </p>
+
+  <h3>C6</h3>
+  <p>
+    As for C6, it gives +70% crit dmg to CA. This is good for low-investment builds.
+    Say one only has the base 50% crit dmg. Then this buff will give at most \(2.2/1.5 \approx 1.47) times more damage.
+    But usually one starts with more than 50% crit dmg with artifacts.
+    Itto can also get lots of crit dmg from the stonethresher and Gorou C6, so the +70% crit buff will give diminishing returns for crit.
+    For simplicity, we will ignore the effects of crit buffs for now.
+    Other characters can get crit through other means as well, such as Sara, crit weapons, etc.
+  </p><p>
+    Instead we focus on the other buff provided by C6, the 'infinite' CA.
+    There is a 50% chance to not consume a stack.
+    On average, he can do twice as many CA.
+    So if before he had 5 CA + final slash, he can now do on average 10 CA + final slash (11 hit combo).
+    The advantage of the CA is their increased ATK SPD compared to normal attacks.
+    We assume that the new combo looks something like:
+    11 hit combo + 5 NA + 11 hit combo.
+    The MV is
+    $$z_6 = (2*(180.2*10+377.4) + 720.45)*1.706/13.5 = 641.87$$
+    We then scale this by the ATK buff
+    $$x_6 = 5z_6/3 = 1069.78$$
+    We will assume that a C6 Itto has around the same ATK as a C0 Itto 
+    (though C5 does give some extra scaling to the q, it may not change ATK by that much).
+  </p><p>
+    Even in a really wild and optimal scenario, where Itto never runs out of stacks, does say 30 CA in a row nonstop,
+    and has say 5000 ATK (so 6000/3000=2 times more ATK than others), the dps is
+    $$2*(180.2*30+377.4)*1.706/13.5 = 1461.7$$
+    There is not much difference from 1000.
+    It will be within this range of dps.
+    Anyways C6 Itto is already stronger than all C0 characters.
+    Compared to C0, a C6 Itto might provide 2 times more dps.
+  </p><p>
+    Itto's main strength is his combination of high ATK and high DEF (literally turning defense into offense),
+    making him able to do lots of damage, while being nearly invincible at the same time (enemy attacks basically tickle him).
+    He is a literal tank and superman.
+  </p>
+
+  <h3>Passive</h3>
+  <p>One of his passives increases his CA by 35% of his DEF.
+    So if Itto has 5000 ATK and say 3000 DEF, the CA scaling will be increase to
+    $$(5000*180.2+35(3000))/5000 = 180.2 + 35(3/5) = 201.2$$
+    whereas the final slash scaling will increase to
+    $$(5000*377.4+35(3000))/5000 = 377.4 + 35(3/5) = 398.4$$
+    For C0, there are say 12 hits of his CA so the total increase in dps is
+    $$12*35(3/5)*1.706/18 = 23.884$$
+    which is more or less negligible.
+    This only affects the ca, not the na.
+    For C6, if there are say 22 hits of his CA, the increase from this passive is
+    $$22*35(3/5)*1.706/13.5 = 58.38$$
+    Since Itto already gets so much ATK from his Q, 
+    the additive damage increase does not have as much an effect as for other characters.
+  </p><p>
+    The best way to increase Itto's dps is by giving him more DMG Bonus (the multiplicative one).
+    Chances are Itto will have super high ATK, DEF, and CRIT.
+    The only thing he needs to boost his dps even further is DMG Bonus.
+    Mona is one of the best ways to do that (note Kazuha cannot 'swirl Geo').
+  </p>
   
 </body>
 </head>
