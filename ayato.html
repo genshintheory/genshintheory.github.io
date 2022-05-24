@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+    
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+    <title>Ayato</title>
+
+</head>
+  
+<body>
+  <div id="includedContent"></div>
+  
+<p>Ayato has lower base attack (299) than Tartaglia (301).
+This game is called Genshin/Yuanshen for a reason.
+This guy Ayato is also a servant to the Almighty Shogun.
+</p>
+<p>Genshin released patch notes saying that Ayato had a chance of extending corrosion.
+  This game is funny sometimes.
+</p>
+
+<h2>Talents</h2>
+<p>Has an E like Childe/Hu Tao/Yoimiya and a Q like Ganyu.</p>
+
+<h3>Burst</h3>
+<p>Here come the Ganyu simps. But this has a more expensive 80 energy cost and 2s downtime.
+Sub-dps is unreliable even with Venti as there is anti-synergy.
+Ayato q lasts 18s, whereas Venti's q lasts less time,
+so enemies will not be cc'd the whole time, meaning there will be more inefficiency
+(not every raindrop will hit).
+</p>
+<p>Ayato has a passive similar to Barbara, which will regenerate energy over time up to 40/80.
+It is an interesting symbolic choice given the voice actors.
+</p>
+
+<h3>Passive</h3>
+<p>He makes sussy food. Here come the Hu Tao simps.</p>
+
+<h2>Teams</h2>
+<p>Xiangling: however since Ayato's E only lasts 6s whereas XL's Q lasts 10-14s, 
+Ayato does not fit Xiangling as well as Childe, who can keep up for the duration of XL's burst</p>
+<p>Yun Jin: she can buff Ayato's NA, but Ayato has an HP self-buff so both the EO set and YJ buff will hit diminishing returns.
+Yun Jin's damage increase is more effective for characters like Yoimiya or Razor.
+That said, the other buffs from Yun Jin's constellations (C6) can still help Ayato.</p>
+<p>Anemo buffers: Venti, Kazuha, Sucrose to provide CC and VV shred</p>
+<p>Electro characters for EC teams, but in version 2.6, Genshin said the EC reaction had a bug for Ayato</p>
+<p>Cryo for freeze teams</p>
+<p>Ayato does not have a tailor-made support or even a tailor-made set for that matter.</p>
+
+<h2>Build</h2>
+<p>4p EO, 4p heart of depth, 4p glad, 
+  4p shimenawa (not as recommended since you probably want to use his burst rather than drain energy),
+2p heart/2p tenacity, and combinations thereof</p>
+<p>The sword that released with him, the Jingjin sword with 33% crit rate, is pretty good.
+  It has higher base attack than the jade cutter, and Ayato does want attack.
+</p>
+
+<h2>Calculations</h2>
+<p>Ayato's E (镜花 Jinghua) lasts 6s and has a 12s cd.
+  Within its duration, he can do 15 NA (the 3-hit combo 5 times).
+  For a level 10 E, the dps is
+  \(x=(349.35*5)*(1.466+.2)/12 = 242.507125\)
+  The .2 is from the 20% NA damage from a level 10 Q.
+  Dps is meh. Childe has higher dps with riptide.
+  And Ayato's hydro application is worse with the icd, so Ayato is a worse enabler.
+  The AoE is fair, but Ayato looks like a literal stone 石 while auto-attacking.
+  During his E, Ayato cannot CA or PA.
+  During Childe's E, at least he can CA and has riptide for hydro application.
+  Moreover, Childe has the freedom to choose the duration. 
+  He can choose it short at 6s like Ayato or he can last longer up to 30s to accomodate other characters like Xiangling.
+  Meanwhile, Ayato is stuck at 6s or less.
+</p><p>
+  Ayato also has a water illusion that explodes once with 200.6% scaling.
+  He also has the Namisen HP scaling.
+  Level 10 E gives 1.11% HP per stack, max 4 stacks at C0 (at C2 becomes 5).
+  He gains 1 stack every .1s.
+  He attacks every 6/15=.4s.
+  One of his passives gives 2 stacks at the start. Illusion explosion gives max stacks.
+  So assume he has max 4 stacks the whole time.
+  Assume he has 30k hp (if he has an ATK sands this may be harder to achieve)
+  and 2k atk (Ayato is on the lower end of attack at 299, lower than Tatar).
+  Max 4 stacks is 4.44% of hp, which is 1332 bonus damage.
+  Scaling on shunsuiken (纯水剑) is around 100% each (actually a bit more) at level 10.
+  Factoring in Bennett gives say 3000 attack, so base damage is around 3000.
+  So the hp scaling gives roughly 4332/3000=1.444 times increase in damage
+  $$1.444x = 350.1802885$$
+  This is Keqing level.
+  Then add illusion explosion
+  $$(200.6)*(1.466)/12=24.5066333333$$
+  The dps goes to around 375 mv.
+  Yoimiya does more damage (and has higher base attack).
+</p>
+
+<h2>Trivia</h2>
+<p>The Yuan dynasty unified the Song, Jin, and Liao dynasties.</p>
+
+
+</body>
+</html>
