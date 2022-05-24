@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+    
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+
+    <title>Crit</title>
+
+</head>
+  
+<body>
+  <div id="includedContent"></div>
+  
+<div class="mw-parser-output">
+
+<p>Among dps characters, some ascend with crit rate and some ascend with crit damage.
+  By default most characters start with 5% crit rate and 50% crit damage.
+  Crit rate characters can reach 24.2% crit rate at level 80-90,
+  whereas crit damage characters can reach 88.4% crit damage at level 80-90.
+</p><p>
+  From these base values alone, crit rate characters have an inherent advantage over crit damage characters.
+  The formula for expected crit multiplier is
+  $$x = 1+rd$$
+  where r is the cr and d is the cd.
+  For crit rate characters (without weapons, artifacts, etc.) they can naturally get 24.2% cr and 50% cd,
+  so \(x = 1+.242*.5 = 1.121.\)
+  By contrast, crit damage characters naturally get 5% cr and 88.4% cd so \(x = 1+.05*.884 = 1.0442.\)
+  In other words, without extra weapons/artifacts/passives/supports buffing the character,
+  crit rate characters can naturally have a higher expected crit multiplier than crit damage characters.
+</p><p>
+  Sure when you crit, the number may be higher if you have higher crit damage, 
+  but what's the use in having high crit damage if you can't crit in the first place?
+  That's why having crit rate is important.
+</p>
+
+</body>
+</html>
