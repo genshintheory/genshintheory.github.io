@@ -62,6 +62,36 @@
   The best candidates include: Venti (cc), Jean (healing), Kazuha (dmg bonus buff), Sucrose (EM buff).
   These anemo characters are basically universally good for most teams in the game.
   Not much else needs to be said on their talents. 
+</p><p>
+  It is anticipated that Heizou will also be good for freeze teams.
+  </p>
+
+  <h2>Calculations</h2>
+  <p>Most freeze teams will not have Bennett, so divide team dps by 1.5 (a penalty of 33%).
+    From the anemo vv character, RES is reduced by -40% giving a 1.27 increase in dps.
+    Cryo resonance + blizzard strayer gives +55% cr.
+    Expected damage is proportional to
+    $$x = 1+rd$$
+    With 55% more cr the new damage becomes
+    $$x' = 1+rd + .55d$$
+    The damage increase is
+    $$R = x'/x = 1 + \frac{.55d}{1+rd}$$
+    Note a Bennett team can have the atk buff plus melt (giving roughly a 1.5*2 = 3 times multiplier).
+    It is unclear how freeze teams can achieve a similar 3 times multiplier without Bennett to compensate.
+    To maximize R above, note the base crit rate is usually \(r=.05.\)
+    Only for \(d \approx 5 \) or more can the damage increase R reach 3 or more.
+    This corresponds to 500% crit damage, which is basically impossible to achieve in practice.
+    Even with 300% crit damage, R can only give around 1.43 times more damage.
+    So the blizzard set fails to outdamage Bennett melt teams.
+  </p><p>
+    So why use freeze teams at all?
+    The real benefit of freeze teams (when enemies can be frozen)
+    is that when the enemy is immobilized, it makes it easier for all attacks to hit.
+    If the enemy jumps around all over the place and is not frozen,
+    that might result in some inefficiencies.
+    Some attacks may miss and so on.
+    Freezing the enemy makes efficient gamemplay ('playing optimally') easier to achieve.
+    But if you're already playing optimally in the first place, melt teams can usually give higher dps.
   </p>
 
 
