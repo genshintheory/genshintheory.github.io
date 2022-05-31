@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+    
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+<link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+
+    <title>Off field DPS</title>
+
+  </head>
+ 
+<body>
+  <div id="includedContent"></div>
+
+  <p>
+    Here we define sub-dps as off field damage.
+    Various characters provide off field damage.
+    Some proc on NA only like Beidou, XQ.
+    Others proc on hit: Raiden E, Albedo.
+    Others will automatically hit: Yae, XL, Morax, Fischl, Venti, Kazuha, etc.
+    Interestingly, Raiden's burst NA do not proc Beidou's Q but do proc XQ's Q.
+  </p><p>
+    Of off field damage dealers: Yae, Raiden, Albedo, etc. have 100% uptime.
+    Usually for sub-dps there is a limit/'wavelength'/internal cd (not to be confused with the icd from gauge theory) 
+    to how frequent the damage is dealt.
+    If x damage is dealt per hit, then dps is
+    $$z = x \frac{duration}{icd} \frac{1}{\max(cooldown, duration)}$$
+    or x times the number of hits within the duration divided by the cooldown of the skill.
+    Note if the cooldown is less than the duration (ie 100% uptime) then the above simplifies to x/icd.
+  </p>
+
+</body>
+</head>
