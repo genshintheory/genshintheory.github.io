@@ -28,7 +28,9 @@
 
 <h3>Elemental Burst</h3>
 <p>
-	The reason Xingqiu is used is for his off field Hydro application through his burst.
+	Xingqiu is mainly used for his off-field Hydro application and sub-dps through his burst.
+  The burst lasts 15s and has an 80 energy cost.
+  At C2 it is extended for 3s, making the duration 18s.
 </p>
 <p>
 Constellation Lv. 6 increases the damage of every third sword rain attack during this Talent's duration (creates 5 sword rains). 
@@ -36,24 +38,48 @@ Xingqiu regenerates 3 Energy when the third Rain Sword attack hits enemies.
 Normally, sword rain alternates between firing 2 swords and 3 swords. 
 With C6, the order is 2 swords → 3 swords → 5 swords.
 There is usually a 1s delay between successive waves.
-The burst lasts 15s.
 </p><p>
 Without any Constellations, this skill at Talent Level 10 has a scaling of 97.7% per sword. 
 On average, there are 25 instances of Rain Sword DMG, resulting in a total scaling of 2442.5%.
 At C6, this skill at Talent Level 13 has a scaling of 115% per sword. 
 On average, there are \(10*5 = 50\) instances of Rain Sword DMG, resulting in a total scaling of 5750%.
-</p><p>
+</p>
+
+<h2>C0 calculations</h2>
+<p>
 	We assume Xingqiu has a Hydro DMG Bonus goblet.
 	He gets 20% Hydro DMG through his passive.
 	The total DMG Bonus on the burst is
 	$$46.6 + 20 = 66.6$$
-	The burst has a 20 second cd, so the DPS at C0 is
-	$$x_0 = 1.666*2442.5/20 = 203.46025$$
-	and the DPS at C6 is
-	$$x_6 = 1.666*5750/20 = 478.975$$
+  However, Xingqiu's burst does not snapshot. This is the key difference between XQ and Xiangling.
+  In practice, most of the time XQ is actually off-field, so most of his burst will not be able to receive Bennett's ATK buff.
+  By contrast Xiangling can snapshot Bennett's buff and retain the ATK boost for the duration of her pyronado.
+  As computed in other places, Bennett's buff can increase damage by around 1.5 times.
+  So we divide XQ's dps by 1.5.
+  The burst has a 20 second cd, so the DPS at C0 is
+  <!--$$x_0 = 1.666*2442.5/20 = 203.46025$$-->
+  $$x_0 = 1.666*2442.5/(20*1.5) = 135.64$$
+  It's true that Yelan with her HP scaling is unaffected by Bennett's buff,
+  but it's not like Xingqiu benefits much from Bennett either since XQ is off-field most of the time
+  and XQ's burst does not snapshot.
+  By contrast Yelan's HP scaling already builds in Bennett's ATK buff, making her more versatile and deal more damage at C0.
+</p>
+
+<h2>C6 calculations</h2>
+<p>
+  Now C4 gives 50% more damage, and this is a multiplicative increase (times 1.5).
+  This 1.5 times increase cancels out with the 1.5 deduction from Xingqiu's inability to benefit from Bennett's buff in practice
+  (off field, not snapshotting).
+  Other types of multiplicative buffs include Yoimiya's E skill.
+  So it can be said that part of the purpose of XQ's C4 is to account for the fact that his Q cannot snapshot.
+</p><p>
+  The DPS at C6 is then
+	$$x_6 = 1.666*5750*1.5/(20*1.5) = 478.975$$
   Note this is really all single target damage.
   Other characters will have a greater advantage in AoE situations.
-</p><p>
+</p>
+
+<p>
 Childe and Xingqiu are sometimes compared.
 A C0 Childe can do more damage than a C0 Xingqiu.
 At C6, Xingqiu may be competitive in single target damage with a C0 Childe.
