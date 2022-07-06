@@ -58,13 +58,22 @@
 <p>As a support, Ganyu is powercrept by many other units: Venti, Bennett, Kazuha, Zhongli, etc. She is not even top 10 as a support.
 </p><p>Ganyu does not particularly excel in either category and is vastly overhyped by the community, USA NGOs, and biased media portrayal. This puts her in a lower tier than other units. She never was and never will be meta.
 </p>
+
 <h2><span class="mw-headline" id="Calculations">Calculations</span></h2>
 <p>We assume talent level 10 on the charged attack. We also assume Ganyu is wearing a 4-piece Wanderer's with Cryo DMG Bonus (up to \( 46.6+35=81.6\) DMG Bonus). Note a 4-piece Blizzard Strayer gives less DMG Bonus. We assume that she is not using her burst, and we ignore weapon effects as in Xiao's case.
 </p><p>It takes 3 seconds for Ganyu to do a fully charged 2nd level shot. The DPS scaling for one level 2 shot is
 </p>
 <dl><dd>\( x=(1+.816)*(230+392)/3\approx 376.52 \)</dd></dl>
 <p>This is much lower than Xiao's high plunge DPS. Even if you add the DMG Bonus from her burst it is not enough to reach Xiao's level.
+</p><p>
+  Usually her burst is only used in freeze comps where Ganyu has blizzard strayer for 61.6% cryo dmg bonus.
+  We assume level 10 burst for 126.49% scaling per icicle.
+  There are at max 50 icicles over 15s.
+  But not all of them hit. They are generated pseudorandomly.
+  Let's say in practice, about half of them hit (usually need Venti) the dps is
 </p>
+<dl><dd>\( x_Q =(1+.616)*25*126.49/15\approx 340.68 \)</dd></dl>
+<p>In practice, the dps will be much less, since not every icicle is guaranteed to hit.</p>
   
 </body>
 </html>
