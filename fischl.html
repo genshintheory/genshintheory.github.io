@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--<link rel="import" href="header.html">-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+<link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+
+<title>Fischl</title>
+
+  </head>
+  
+<body>
+  <div id="includedContent"></div>
+
+  <h2>Calculations</h2>
+  <p>Fischl's E summons Oz which does damage for 10s.
+    The E cd is 25s.
+    During the 10s duration it is possible to resummon and reposition Oz again.
+    Oz will snapshot ATK buffs like Bennet's Q.
+    Damage is single target.
+  </p><p>
+    Using Fischl's Q (energy cost 60) will reset the cd of her E.
+    In practice though, without spamming her burst on cd or having enough ER,
+    it is hard to have 100% uptime on Oz,
+    whereas it is much easier to have 100% uptime on <a href='yaemiko.html'>Yae</a>.
+  </p><p>
+    Let's be optimistic and suppose Fischl can spam her burst on cooldown.
+    During Oz's 10s duration, he can fire 10 shots (roughly 1 shot per second).
+    We suppose that after using Fischl's Q (which takes up some field time),
+    we can reset the E and summon Oz for another 10s to do 10 more shots.
+    So during the 25s rotation, Oz can do 20 shots, the Q will do some damage,
+    and there is also the initial summoning damage from the E.
+  </p><p>
+    Suppose Fischl has level 13 E and Q.
+    The scaling on the E is 188.7 per shot and 245.31 upon summoning.
+    The scaling on the Q is 442.
+    Suppose Fischl has 61.6% electro dmg bonus.
+    The mv is then
+    $$x = 1.616*(442+245.31+20*188.7)/25 = 288.3790784$$
+    This is lower than C0 Yae.
+  </p>
+  <p>
+    Note this ignores the effects from certain constellations.
+    C2 and C4 buff her damage based on her ATK (C4 even heals).
+    And C6 extends Oz's duration by 2s and makes Oz do joint attacks (that also scale with Fischl's ATK).
+  </p>
+  
+  </body>
+</html>
