@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+    
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+<title>Markov Chain</title>
+
+  </head>
+  
+<body>
+  <div id="includedContent"></div>
+  
+<div class="mw-parser-output"><p>The <a href="http://en.wikipedia.org/wiki/Markov_Chain" class="extiw" title="wikipedia:Markov Chain">Markov Chain</a> is a probabilistic model based on a finite state machine.
+</p><p>It can be used to describe the <a href="/wiki/Wish" class="mw-redirect" title="Wish">Wish</a> pity system in Genshin Impact. Note that this is just a theoretical model, and the actual in-game gacha system may yield different results in practice.
+</p>
+<h2><span class="mw-headline" id="Winning_5_Star_Featured_Character">Winning 5 Star Featured Character</span></h2>
+<p>For the Event Exclusive 5 star banner, every 90 pulls will guarantee a 5 star character. There is a 1/2 probability that it is the event featured character. If one loses the 50-50 then the next 5 star won (in the next 90 pulls) is guaranteed to be the event featured character. The pity will reset, and the cycle will continue.
+</p><p>There are two states in the Markov Chain:
+</p>
+<ul><li>State 1 (S1): the next 5 star has a 50-50 chance of being the event featured 5 star</li>
+<li>State 2 (S2): the next 5 star is guaranteed to be the event featured 5 star</li></ul>
+<p>The transition probabilities are:
+</p>
+<ul><li>S1 to S1 with probability 1/2 (win the 50-50)</li>
+<li>S1 to S2 with probability 1/2 (lose the 50-50)</li>
+<li>S2 to S1 with probability 1 (win the guaranteed)</li></ul>
+<p>The question is: if one makes a large number of wishes, what is the expected number of times that the featured event 5 star will be won? On average, what fraction of the 5 stars won will be the featured event 5 star?
+</p><p>Using the Markov Chain defined above, note that every time we enter the S1 state we win the featured 5 star. So we can rephrase the question as: in the long run, what portion of the time will we spend in the S1 state?
+</p><p>To compute this let
+</p>
+<ul><li>x be the probability we are in state S1</li>
+<li>y be the probability we are in state S2</li></ul>
+<p>We have that
+</p>
+<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/232443130147e73c8333f0d5fd7be981223e2854" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:9.586ex; height:2.509ex;" alt="{\displaystyle x+y=1}" /></dd></dl>
+<p>Also, using the transition probabilities
+</p>
+<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/a0f6b29e2814b6c20c92355f07154f4729841b33" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -4.485ex; margin-bottom: -0.187ex; width:12.504ex; height:10.509ex;" alt="{\displaystyle {\begin{aligned}x&amp;={\frac {1}{2}}x+y\\y&amp;={\frac {1}{2}}x\end{aligned}}}" /></dd></dl>
+<p>Solving this system gives
+</p>
+<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/458fa1c6c7f297c11bb2b39f2776850ccae44e55" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:6.427ex; height:5.176ex;" alt="{\displaystyle x={\frac {2}{3}}}" /></dd></dl>
+<p>so for all the times we win a 5 star, we are expected to win the event featured 5 star 2/3 of the time.
+</p><p>This can be numerically simulated on a computer as well.
+</p><p><br />
+</p>
+
+  </body>
+</html>

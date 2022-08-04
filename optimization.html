@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+    
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+<title>Markov Chain</title>
+
+  </head>
+  
+<body>
+  <div id="includedContent"></div>
+
+<div class="mw-parser-output"><p>This article seeks to derive some mathematical results for optimizing <a href="/wiki/Attribute" class="mw-redirect" title="Attribute">Attribute</a> ratios. The derivations assume some familiarity with multivariable calculus and Lagrange multipliers.
+</p>
+<div id="toc" class="toc"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Expected_Crit"><span class="tocnumber">1</span> <span class="toctext">Expected Crit</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Crit_Ratio"><span class="tocnumber">1.1</span> <span class="toctext">Crit Ratio</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Crit_Distribution"><span class="tocnumber">1.2</span> <span class="toctext">Crit Distribution</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#ATK.25"><span class="tocnumber">2</span> <span class="toctext">ATK%</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Emblem_of_Severed_Fate"><span class="tocnumber">3</span> <span class="toctext">Emblem of Severed Fate</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Expected_Crit">Expected Crit</span></h2>
+<p>Let r be the crit rate probability (<img src="https://wikimedia.org/api/rest_v1/media/math/render/png/4c83cc55849ff47df350018d4b796c78c707d49f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.505ex; width:5.31ex; height:2.343ex;" alt="{\displaystyle r\leq 1}" />) and d be the crit damage (<img src="https://wikimedia.org/api/rest_v1/media/math/render/png/74c3a2cca0c610ded6e0f188788933fb11f07df4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.505ex; width:5.477ex; height:2.343ex;" alt="{\displaystyle d\geq 0}" />) in decimal form (so 150% crit damage would be <img src="https://wikimedia.org/api/rest_v1/media/math/render/png/dd3f4fbc6c5999102bda4a3e7b5ef1e8c7f9e438" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:7.286ex; height:2.176ex;" alt="{\displaystyle d=1.5}" />).
+</p><p>Suppose the damage is x without crit. The <b>expected damage</b> is
+</p>
+<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/2de069b849125de19a4831ac739ec84a5aafb6cf" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:32.942ex; height:2.843ex;" alt="{\displaystyle (1-r)x+r(1+d)x=x(1+rd)}" /></dd></dl>
+<p>The objective is to maximize this function, namely the product <img src="https://wikimedia.org/api/rest_v1/media/math/render/png/c9fe21fdc2919127530531a6b0e171e7873c34e2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:6.642ex; height:2.509ex;" alt="{\displaystyle f=rd}" />.
+</p><p>In general, choose the crit rate r and crit damage d that maximizes their product to maximize the expected damage.
+</p><p>Note that in practice, if one considers other factors, this may change. For example, for a <a href="/wiki/Favonius_Warbow" title="Favonius Warbow">Favonius Warbow</a>, it may be more optimal to have more crit so that one can get more energy. Some characters like Kokomi may not even rely on crit. Some artifact sets and other effects like <a href="/wiki/Blizzard_Strayer" title="Blizzard Strayer">Blizzard Strayer</a> and <a href="/wiki/Cryo_Resonance" class="mw-redirect" title="Cryo Resonance">Cryo Resonance</a> may give much more crit rate to begin with, that it might be more optimal to stack more crit damage. In practice, the optimization will usually differ based on one's team compositions.
+</p>
+<h3><span class="mw-headline" id="Crit_Ratio">Crit Ratio</span></h3>
+<p>This is a toy model that will derive the 2:1 ratio between <a href="/wiki/Critical_Hit" title="Critical Hit">crit damage</a> and crit rate. Note this is a rule of thumb, and in-game optimization may be completely different.
+</p><p>Within Genshin Impact, there is a tendency for crit rate and crit damage to appear in a 1 to 2 ratio, whether for artifacts substats, ascensions, and some weapons. That is, for every 1 point in crit rate we gain, we lose 2 points in crit damage. We can express this using the following constraint:
+</p>
+<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/19565edac149fbca71beb1afdcdb03442290fb18" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:19.752ex; height:2.843ex;" alt="{\displaystyle g=r+d/2-c=0}" /></dd></dl>
+<p>for some constant c. Note this assumption may or may not hold in practice.
+</p><p>Our new goal is to maximize the product rd with respect to the above constraint. We can do this using Lagrange multipliers.
+</p>
+<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/a4cd2a213a53564b598a8c7c2b9082f3cb918f0b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:23.379ex; height:2.843ex;" alt="{\displaystyle \partial _{r}(f-\lambda g)=d-\lambda =0}" /></dd>
+<dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/6579c22683f5c56dcd0a3dbbe73cf243cd0fdbd8" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:25.655ex; height:2.843ex;" alt="{\displaystyle \partial _{d}(f-\lambda g)=r-\lambda /2=0}" /></dd></dl>
+<p>Solving this system gives 
+</p>
+<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/aedbeca9223f2026e9d51322e86d67e10c092792" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:6.525ex; height:2.176ex;" alt="{\displaystyle d=2r}" /></dd></dl>
+<p>so the optimal ratio between crit damage and crit rate assuming the given constraint is 2 to 1, as desired.
+</p>
+<h3><span class="mw-headline" id="Crit_Distribution">Crit Distribution</span></h3>
+<i><div role="note" class="notice hatnote context-link seealso dablink">See also: <a href="/wiki/Artifacts/Stats" title="Artifacts/Stats">Artifacts/Stats</a></div></i>
+<p>One of the key assumptions for the 2:1 rule of thumb to hold is the distribution of crit stats. Note that the assumption that crit damage and crit rate are distributed in a 2:1 ratio does not always hold in practice, in which case, we do not have a 2:1 ratio but rather go back to maximizing the product of crit rate and crit damage.
+</p><p>However, for artifact substats, crit rate and crit damage are usually distributed in such a way. We introduce the notion of the <b>crit value</b> as
+</p>
+<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/83149f7df31826d157f8019d404d0c6b3cd45bfe" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.505ex; width:12.919ex; height:2.343ex;" alt="{\displaystyle CV=2r+d}" /></dd></dl>
+<p>For a 5 star artifact piece, we assume that we get a high roll on both crit rate <img src="https://wikimedia.org/api/rest_v1/media/math/render/png/fb12fcfddb65e3d1e6a044215f6e833f0cd4337b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.103ex; height:2.009ex;" alt="{\displaystyle r_{0}}" /> and crit damage <img src="https://wikimedia.org/api/rest_v1/media/math/render/png/4740381c16ea98c4132510daa642e93c1e42c049" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.263ex; height:2.509ex;" alt="{\displaystyle d_{0}}" />. Note that we roughly have <img src="https://wikimedia.org/api/rest_v1/media/math/render/png/85d23cde1839f4715a4bacf85f04cbe40589a1fe" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:8.627ex; height:2.509ex;" alt="{\displaystyle d_{0}=2r_{0}}" />. We assume that when we level up the artifact, all upgrades go into either crit rate or crit damage. (When leveling to +20, we can upgrade substats 5 times.) Each time crit is upgraded it increases by <img src="https://wikimedia.org/api/rest_v1/media/math/render/png/fb12fcfddb65e3d1e6a044215f6e833f0cd4337b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.103ex; height:2.009ex;" alt="{\displaystyle r_{0}}" />, and each time crit damage is upgraded it increases by <img src="https://wikimedia.org/api/rest_v1/media/math/render/png/4740381c16ea98c4132510daa642e93c1e42c049" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.263ex; height:2.509ex;" alt="{\displaystyle d_{0}}" />. 
+</p><p>So we have the following table describing the possible stats we can get at +20:
+</p>
+<table class="fandom-table">
+<tbody><tr>
+<th>Crit rate
+</th>
+<th>Crit damage
+</th>
+<th>CV
+</th></tr>
+<tr>
+<td><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/9bc0ca78add3c85d6a287ec1f73a3eb07f1391db" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.265ex; height:2.509ex;" alt="{\displaystyle 5r_{0}}" />
+</td>
+<td><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/4740381c16ea98c4132510daa642e93c1e42c049" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.263ex; height:2.509ex;" alt="{\displaystyle d_{0}}" />
+</td>
+<td><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/02a237738bef27c26cb2f87b66179315544b1f0b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:4.428ex; height:2.509ex;" alt="{\displaystyle 12r_{0}}" />
+</td></tr>
+<tr>
+<td><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/26a1d4801b16792008afd31ab609aae3f2b0ae3d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.265ex; height:2.509ex;" alt="{\displaystyle 4r_{0}}" />
+</td>
+<td><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/4b7af5eafe63b44b8b71c8d2fb739c70a776d249" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.426ex; height:2.509ex;" alt="{\displaystyle 2d_{0}}" />
+</td>
+<td><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/02a237738bef27c26cb2f87b66179315544b1f0b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:4.428ex; height:2.509ex;" alt="{\displaystyle 12r_{0}}" />
+</td></tr>
+<tr>
+<td><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/ab722012a8e3c7cadeb31d5c8e88de1522c37614" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.265ex; height:2.509ex;" alt="{\displaystyle 3r_{0}}" />
+</td>
+<td><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/5656dc9b82b45990ece102dbdf19a2f9fcc3ebee" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.426ex; height:2.509ex;" alt="{\displaystyle 3d_{0}}" />
+</td>
+<td><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/02a237738bef27c26cb2f87b66179315544b1f0b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:4.428ex; height:2.509ex;" alt="{\displaystyle 12r_{0}}" />
+</td></tr>
+<tr>
+<td><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/c056c7bcbe846b1b57d4f5c53ee2e9086cb0bf54" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.265ex; height:2.509ex;" alt="{\displaystyle 2r_{0}}" />
+</td>
+<td><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/71060f9a5afa38272f6a5ad7c626153151a11a80" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.426ex; height:2.509ex;" alt="{\displaystyle 4d_{0}}" />
+</td>
+<td><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/02a237738bef27c26cb2f87b66179315544b1f0b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:4.428ex; height:2.509ex;" alt="{\displaystyle 12r_{0}}" />
+</td></tr>
+<tr>
+<td><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/fb12fcfddb65e3d1e6a044215f6e833f0cd4337b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.103ex; height:2.009ex;" alt="{\displaystyle r_{0}}" />
+</td>
+<td><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/fdbd216ff038acc6fd30a9e99a53049d895678f9" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.426ex; height:2.509ex;" alt="{\displaystyle 5d_{0}}" />
+</td>
+<td><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/02a237738bef27c26cb2f87b66179315544b1f0b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:4.428ex; height:2.509ex;" alt="{\displaystyle 12r_{0}}" />
+</td></tr></tbody></table>
+<p>So here the constraint
+</p>
+<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/add059b6961f7b245b86aa276652da13c43d2a4f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:18.59ex; height:2.509ex;" alt="{\displaystyle g=2r+d-c=0}" /></dd></dl>
+<p>approximately holds where the constant c is just the crit value <img src="https://wikimedia.org/api/rest_v1/media/math/render/png/02a237738bef27c26cb2f87b66179315544b1f0b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:4.428ex; height:2.509ex;" alt="{\displaystyle 12r_{0}}" />. This gives some plausibility for the assumption made in the previous derivation.
+</p>
+<h2><span id="ATK%"></span><span class="mw-headline" id="ATK.25">ATK%</span></h2>
+<p>We now consider a third variable ATK%. With this the expected damage becomes
+</p>
+<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/a2deba86e632eedab6fa3b0d9628001cfe339cb6" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:16.448ex; height:2.843ex;" alt="{\displaystyle x(1+a)(1+rd)}" /></dd></dl>
+<p>where all other factors are absorbed into a constant x. Here we want to maximize the objective function <img src="https://wikimedia.org/api/rest_v1/media/math/render/png/e60fd40e003f84f2b06d9109299ba4a999b9b74a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:19.496ex; height:2.843ex;" alt="{\displaystyle f=(1+a)(1+rd)}" />.
+</p><p>For artifact substats, we assume that ATK%, CRIT RATE, and CRIT DMG are distributed as follows:
+</p>
+<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/d75542edd565a5659fec3d063ad3a0eb1a4e20c1" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:28.472ex; height:2.843ex;" alt="{\displaystyle g=a/3+r/2+d/4-c=0}" /></dd></dl>
+<p>That is, they appear in roughly a 3:2:4 ratio.
+</p>
+<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/94dcd1af80497203cf2b1cfc8481da2ca8adc585" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:30.883ex; height:2.843ex;" alt="{\displaystyle \partial _{a}(f-\lambda g)=1+rd-\lambda /3=0}" /></dd>
+<dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/cdb80ba0aebd1d6564e5213b3bfc4bbe68786799" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:32.745ex; height:2.843ex;" alt="{\displaystyle \partial _{r}(f-\lambda g)=(1+a)d-\lambda /2=0}" /></dd>
+<dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/f3a721009fb77a9a35cce45352c8e5a4bf45673a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:32.697ex; height:2.843ex;" alt="{\displaystyle \partial _{d}(f-\lambda g)=(1+a)r-\lambda /4=0}" /></dd></dl>
+<p>From this we have that <img src="https://wikimedia.org/api/rest_v1/media/math/render/png/aedbeca9223f2026e9d51322e86d67e10c092792" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:6.525ex; height:2.176ex;" alt="{\displaystyle d=2r}" /> and
+</p>
+<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/7f18f996c4ee61d4c8ae8729cfc9a53af8f7047d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:26.044ex; height:2.843ex;" alt="{\displaystyle \lambda =3(1+rd)=4(1+a)r}" /></dd>
+<dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/f35d1750abf75c982e3b6b718ccc7ccd8faf8a21" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:22.591ex; height:3.176ex;" alt="{\displaystyle 3(1+2r^{2})=4(1+a)r}" /></dd></dl>
+<p>Solving this equation gives
+</p>
+<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/32381176c82bfd0b9e91d31be2d54f5ccb0a4a93" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:35.443ex; height:5.843ex;" alt="{\displaystyle a={\frac {3(1+2r^{2})}{4r}}-1={\frac {3r}{2}}-1+{\frac {3}{4r}}}" /></dd></dl>
+<h2><span class="mw-headline" id="Emblem_of_Severed_Fate">Emblem of Severed Fate</span></h2>
+<p>If a character equips a 4-piece <a href="/wiki/Emblem_of_Severed_Fate" title="Emblem of Severed Fate">Emblem of Severed Fate</a>, how much should they invest into ER% and ATK%? In terms of maximizing the raw damage number, it is usually optimal to choose more ATK% over ER%. However, having more ER% can help characters gain their bursts more quickly, which could help deal more damage in the long run. For example, some characters such as Raiden Shogun, Mona, Xiangling, Xingqiu rely on their bursts for most of their damage.
+</p><p>Suppose we have no <a href="/wiki/Damage_Bonus" title="Damage Bonus">Damage Bonus</a> to begin with. Damage will be proportional to
+</p>
+<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/9e4668955efcb301dba1779da3f198e90864c973" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:18.229ex; height:2.843ex;" alt="{\displaystyle f=(1+a)(1+b)}" /></dd></dl>
+<p>where a is the ATK% and b is the damage bonus. If one equips a 4-piece Emblem of Severed Fate set (which gives +20% ER and damage bonus equal to 25% of one's ER), then
+</p>
+<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/10c78a8b21f18c340d1769e950c98e9e8dd193a4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:11.774ex; height:5.343ex;" alt="{\displaystyle b={\frac {1.2+\xi }{4}}}" /></dd></dl>
+<p>where <img src="https://wikimedia.org/api/rest_v1/media/math/render/png/7f90bb0113c7c5bb0eb180f0b2415078d3669879" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:5.291ex; height:2.509ex;" alt="{\displaystyle \xi \geq 0}" /> is any extra ER% we have. From artifact substat distributions, we roughly have
+</p>
+<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/03d35816af6232b88e121be209af2d0b76c43d60" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:23.235ex; height:2.843ex;" alt="{\displaystyle g=a/9+\xi /10-c=0}" /></dd></dl>
+<p>Then
+</p>
+<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/1663c0639bde29ad528effb00a1d5655e12df278" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:32.294ex; height:5.343ex;" alt="{\displaystyle \partial _{a}(f-\lambda g)={\frac {5.2+\xi }{4}}-\lambda /9=0}" /></dd>
+<dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/5c3373cf1490e693196e350ccbffd43bd2f293ef" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:31.706ex; height:5.176ex;" alt="{\displaystyle \partial _{\xi }(f-\lambda g)={\frac {1+a}{4}}-\lambda /10=0}" /></dd></dl>
+<p>Solving gives
+</p>
+<dl><dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/cc0576e89285114c8407c0bec215353810a0d744" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:20.333ex; height:5.343ex;" alt="{\displaystyle 10{\frac {1+a}{4}}=9{\frac {5.2+\xi }{4}}}" /></dd>
+<dd><img src="https://wikimedia.org/api/rest_v1/media/math/render/png/c61f0469abeae388170efd3e97069318448354fe" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:20.144ex; height:5.676ex;" alt="{\displaystyle \xi ={\frac {10(1+a)}{9}}-5.2}" /></dd></dl>
+<p>Note this value is negative for <img src="https://wikimedia.org/api/rest_v1/media/math/render/png/67945e58adc22397846d112771a3bcda890c7382" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:8.462ex; height:2.176ex;" alt="{\displaystyle a&lt;3.68}" /> (368 ATK% which is not realistically achievable).
+</p><p>This means that for maximizing a single-instance of damage (or damage per screenshot), it is usually always optimal to invest into ATK% over ER% when equipping a 4 piece Emblem of Severed Fate. For example, choosing an ATK% sands over an ER% sands will give more damage per screenshot.
+</p><p>However, ER% is beneficial to invest in to the point of spamming one's burst on cooldown if one's burst gives a major chunk of their damage.
+</p>
+
+  </body>
+</html>
