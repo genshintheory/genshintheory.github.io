@@ -83,9 +83,13 @@
   </p><p>
     Bloom drops a Dendro Core, similar to how crystallize drops an elemental shard.
     When pyro or electro is applied to the dendro core it will produce different effects.
-    If pyro is applied the core will do greater aoe dendro damage.
+    If pyro is applied (burgeon) the core will do greater aoe dendro damage.
     If electro is applied (hyperbloom) the core will produce a 'sprawling shot' that will home in and attack nearby enemies.
     If nothing is applied the dendro core will automatically deal dendro damage after a certain time.
+    Only a finite number of dendro cores can exist at a given time.
+    This will prevent it from having true quadratic scaling 
+    (i.e. create n cores, each of which does aoe dmg on n enemies for n^2 scaling).
+    Swirl also has an aoe limit (for swirl it is 2 instances of damage per enemy).
   </p><p>
     Catalyze applies the 'quicken' status to the enemy.
     This causes it to take increased dendro (spread) and electro (aggravate) damage.
