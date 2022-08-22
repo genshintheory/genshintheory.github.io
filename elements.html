@@ -86,7 +86,7 @@
     If pyro is applied (burgeon) the core will do greater aoe dendro damage.
     If electro is applied (hyperbloom) the core will produce a 'sprawling shot' that will home in and attack nearby enemies.
     If nothing is applied the dendro core will automatically deal dendro damage after a certain time.
-    Only a finite number of dendro cores can exist at a given time.
+    Similar to geo constructs, only a finite number of dendro cores can exist at a given time.
     This will prevent it from having true quadratic scaling 
     (i.e. create n cores, each of which does aoe dmg on n enemies for n^2 scaling).
     Swirl also has an aoe limit (for swirl it is 2 instances of damage per enemy).
@@ -103,10 +103,14 @@
   <ul>
     <li>Double anemo (2 anemo characters): decrease cd, increase speed</li>
     <li>Double cryo: increase crit rate</li>
-    <li>Double dendro: ?</li>
-    <li>Double electro: generate more energy</li>
+    <li>Double dendro: gives 50 em, when triggering first order dendro reactions (burning, bloom, quicken) increase by another 30 em,
+      when triggering second order dendro reactions (hyperbloom/burgeon, aggravate/spread) increase by another 20 em.
+      So one can get up to 100 em from this.
+      For someone like Yae this also converts to 15% dmg bonus.
+    </li>
+    <li>Double electro: generate more energy when triggering electro reactions, affected by hydro for 40% less time</li>
     <li>Double geo: when shielded, -20% geo res, increase dmg bonus</li>
-    <li>Double hydro: increase healing</li>
+    <li>Double hydro: increase HP by 25%, affected by pyro for 40% less time</li>
     <li>Double pyro: increase ATK</li>
     <li>Four different elements (protective canopy): increases character res</li>
   </ul>
@@ -121,6 +125,9 @@
     It only offered dmg bonus.
     But after version 1.3, geo resonance can now reduce geo res (good for geo dps like Itto)
     and increase shield strength.
+    Also before 3.0, hydro resonance gave more healing.
+    But after 3.0, hydro resonance now increases HP.
+    This is a somewhat more useful change given that several hydro characters scale off HP.
   </p><p>
     Some character skills also depend on the elemental types of party members
     and can act like 'extended resonance' effects.
