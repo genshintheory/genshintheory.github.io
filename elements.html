@@ -76,8 +76,7 @@
   It can be thought of as a certain 'dendro shield'.
   Once the shield is broken, the grass will start burning.
   </p><p>
-    A recent trailer announced that there will be two new reactions for dendro:
-    bloom and catalyze.
+    Version 3.0 introduced two new reactions for dendro: bloom and catalyze.
     Bloom happens when dendro+hydro react.
     Catalyze happens when dendro+electro react.
   </p><p>
@@ -98,7 +97,7 @@
     They say it is connected to the local history of Sumeru.
   </p>
 
-  <h3>Quicken</h3>
+  <h3>Quicken (Additive reaction)</h3>
   <p>Applying dendro and electro puts the target in the quicken state.
     The quicken state can be destroyed when pyro is applied.
     When dendro or electro is applied, they produce the spread and aggravate reactions.
@@ -106,7 +105,19 @@
     This bonus dmg is similar to Shenhe or Yun Jin's buff.
     Whereas vaporize and melt are multiplicative reactions, spread and aggravate are additive.
     The additive dmg from spread and aggravate is given by
-    $$\text{flat dmg} = \text{level multiplier}*RC*(1+\frac{5*EM}{EM+1200}+\text{reaction bonus}$$
+    $$\text{flat dmg} = \text{level multiplier}*RC*(1+\frac{5*EM}{EM+1200}+\text{reaction bonus})$$
+  </p><p>
+    For spread \(RC = 1.25\) and for aggravate \(RC = 1.15\).
+    The level multiplier at level 90 is 1446.85.
+    So if EM is 0, the flat dmg increase for spread is 1808.56,
+    and the flat dmg increase for aggravate is 1663.56.
+  </p><p>
+    Additive dmg increase / flat dmg is factored into dmg via the following formula
+    $$(\text{ATK}*\text{scaling} + \text{flat dmg})*(1+\text{dmg bonus%})*(\text{crit multiplier})$$
+  </p><p>
+    Note additive and multiplicative reactions are affected by dmg bonus%, crit, enemy defense,
+    whereas transformative reactions are not.
+    However, enemy resistance can affect the dmg of all reactions.
   </p>
 
   <h2>Elemental resonance</h2>
