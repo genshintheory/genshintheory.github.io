@@ -32,8 +32,8 @@
 <p>
 	Xingqiu is mainly used for his off-field Hydro application and sub-dps through his burst.
   The burst lasts 15s and has an 80 energy cost.
-  At C2 it is extended for 3s, making the duration 18s.
-</p>
+  At C2 it is extended for 3s, making the duration 18s. The C2 will also decrease hydro res by 15%.
+ </p>
 <p>
 Constellation Lv. 6 increases the damage of every third sword rain attack during this Talent's duration (creates 5 sword rains). 
 Xingqiu regenerates 3 Energy when the third Rain Sword attack hits enemies.
@@ -58,6 +58,7 @@ On average, there are \(10*5 = 50\) instances of Rain Sword DMG, resulting in a 
   By contrast Xiangling can snapshot Bennett's buff and retain the ATK boost for the duration of her pyronado, even if she is off-field.
   As computed in other places, Bennett's buff can increase damage by around 1.5 times.
   So we divide XQ's dps by 1.5.
+</p><p>
   The burst has a 20 second cd, so the DPS at C0 is
   <!--$$x_0 = 1.666*2442.5/20 = 203.46025$$-->
   $$x_0 = 1.666*2442.5/(20*1.5) = 135.64$$
@@ -69,14 +70,14 @@ On average, there are \(10*5 = 50\) instances of Rain Sword DMG, resulting in a 
 
 <h2>C6 calculations</h2>
 <p>
-  Now C4 gives 50% more damage, and this is a multiplicative increase (times 1.5).
-  This 1.5 times increase cancels out with the 1.5 deduction from Xingqiu's inability to benefit from Bennett's buff in practice
-  (off field, not snapshotting).
+  Now C4 gives 50% more damage to the E during the Q, and this is a multiplicative increase (times 1.5).
+  <!--This 1.5 times increase cancels out with the 1.5 deduction from Xingqiu's inability to benefit from Bennett's buff in practice
+  (off field, not snapshotting).-->
   Other types of multiplicative buffs include Yoimiya's E skill.
-  So it can be said that part of the purpose of XQ's C4 is to account for the fact that his Q cannot snapshot.
+  <!--So it can be said that part of the purpose of XQ's C4 is to account for the fact that his Q cannot snapshot.-->
 </p><p>
   The DPS at C6 is then
-	$$x_6 = 1.666*5750*1.5/(20*1.5) = 478.975$$
+	$$x_6 = 1.666*5750/(20*1.5) = 319.3$$
   Note this is really all single target damage.
   Other characters will have a greater advantage in AoE situations.
 </p>
