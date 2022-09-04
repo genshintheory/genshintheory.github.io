@@ -107,6 +107,10 @@
     The additive dmg from spread and aggravate is given by
     $$\text{flat dmg} = \text{level multiplier}*RC*(1+\frac{5*EM}{EM+1200}+\text{reaction bonus})$$
   </p><p>
+    Note additive and multiplicative reactions are affected by dmg bonus%, crit, enemy defense,
+    whereas transformative reactions are not.
+    However, enemy resistance can affect the dmg of all reactions.
+  </p><p>
     For spread \(RC = 1.25\) and for aggravate \(RC = 1.15\).
     The level multiplier at level 90 is 1446.85.
     So if EM is 0, the flat dmg increase for spread is 1808.56,
@@ -121,6 +125,8 @@
     $$\text{effective scaling} = \text{scaling} + \frac{\text{flat dmg}}{\text{ATK}}$$
     so that the damage can be rewritten as
     $$(\text{ATK}*\text{effective scaling})*(1+\text{dmg bonus%})*(\text{crit multiplier})$$
+    The increase in damage is then
+    $$(\text{effective scaling}*\text{scaling}) = 1+\frac{\text{flat dmg}}{\text{ATK}*\text{scaling}}$$
   </p><p>
     If a character has say 2000 ATK (no Bennett), 
     then for spread \(1808.56/2000 \approx .90\) so the increase in effective scaling is 90%.
@@ -141,11 +147,24 @@
     This will diminish the effect of the additive reaction.
     The increase in effective scaling for spread will be \(1808.56/3000 \approx .60\).
     So if the initial scaling is 100% it multiplies damage by 1.6 (whereas before it was 2 times).
-    The main result is that the higher the scaling, the less the buff.
   </p><p>
-    Note additive and multiplicative reactions are affected by dmg bonus%, crit, enemy defense,
-    whereas transformative reactions are not.
-    However, enemy resistance can affect the dmg of all reactions.
+    The main result is that the higher the scaling, the less the buff.
+    Hence things with lower scaling like normal attacks (around 100%) tend to get a bigger buff from quicken
+    (and things like Yun Jin's buff).
+    By contrast, things with higher scaling (like nukes) receive a smaller buff.
+    However, due to standard ICD for most characters, not every dendro or electro hit will get buffed.
+    Only every 3rd hit (or every 2.5s) will the hit get buffed.
+    For example, for Yae's E, only 1 out of 3 E hits will trigger the aggravate reaction (and be buffed) due to ICD.
+  </p><p>
+    The quicken reaction has decent EM scaling.
+    For 100 EM the aggravate flat dmg gets a 1.38 times multiplier.
+    For 230 EM it gets a 1.8 times multiplier.
+    For 500 EM it gets roughly a 2.5 times multiplier.
+  </p><p>
+    So for example if you have 230 EM (from Gilded Dreams), 
+    then at level 90 aggravate gives \(1.8*1808 \approx 3254\) flat dmg.
+    For 2000 ATK and 100% scaling, aggravate can increase damage by around 2.6 times.
+    But for things with higher scaling, the buff is lower.
   </p>
 
   <h2>Elemental resonance</h2>
@@ -200,6 +219,18 @@
     Gauge units are also consumed.
     When cryo is applied, it will trigger the superconduct reaction.
     The dendro and cryo status can exist simultaneously on a target.
+  </p>
+
+  <h2>ICD</h2>
+  <p>There is a limit to how often an element can be applied.
+    For most abilities in the game, the standard ICD is 2.5s or 3 hits.
+    That is an element can be applied once every 2.5 seconds or every 3 hits of that element.
+  </p><p>
+    There are only a handful of abilities that may not have an ICD (or the ICD is short enough).
+    These include things like Diluc's E, Xiao's plunging, most polearm charged attacks.
+    In practice this means that Diluc can vaporize each E hit.
+    Some characters may have ICDs that differ from 2.5s or 3 hits.
+    In practice and for calculations, the ICD tends to matter for characters that rely on vaporize, melt, or quicken to deal damage.
   </p>
   
   </body>
