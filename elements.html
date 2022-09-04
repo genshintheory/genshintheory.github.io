@@ -70,21 +70,30 @@
   </p>
 
   <h2>Dendro (草)</h2>
-  <p>Dendro already has a reaction: burning. This happens when pyro makes contact with a dendro object,
-  like wooden shields, grass, hay, dendro slimes, etc.
-  It takes a certain amount of pyro gauge units (strong 2B) to get grass burning.
-  It can be thought of as a certain 'dendro shield'.
-  Once the shield is broken, the grass will start burning.
-  </p><p>
+  <p>Since 1.0, Dendro already had a reaction: burning (dendro+pyro).
     Version 3.0 introduced two new reactions for dendro: bloom and catalyze.
     Bloom happens when dendro+hydro react and can enable certain tertiary reactions (3-way reactions).
     Catalyze happens when dendro+electro react.
+  </p>
+    Burning happens when pyro makes contact with a dendro object,
+    like wooden shields, grass, hay, dendro slimes, etc.
+    It takes a certain amount of pyro gauge units (strong 2B) to get grass burning.
+    It can be thought of as a certain 'dendro shield'.
+    Once the shield is broken, the grass will start burning.
+    However, wooden shields and grass are also different from other dendro objects in the game
+    in that they can only trigger burning but not bloom or catalyze reactions.
+    If grass could trigger bloom then when it is raining, there would be way too many dendro cores.
+    Some people claim that wooden shields and grass are NOT dendro,
+    but still elemental sight classifies such things as dendro.
+    To say they are not dendro is an idiotic and blatantly wrong way of putting it.
+    Another way is to expand the concept of dendro to include things that can burn but not necessarily bloom or quicken.
   </p><p>
     Bloom drops a Dendro Core, similar to how crystallize drops an elemental shard.
     When pyro or electro is applied to the dendro core it will produce different effects.
     If pyro is applied (burgeon) the core will do greater aoe dendro damage.
     If electro is applied (hyperbloom) the core will produce a 'sprawling shot' that will home in and attack nearby enemies.
     If nothing is applied the dendro core will automatically deal dendro damage after a certain time.
+    The dendro core explosion can deal damage to both player and enemy.
     Similar to geo constructs, only a finite number of dendro cores can exist at a given time.
     This will prevent it from having true quadratic scaling 
     (i.e. create n cores, each of which does aoe dmg on n enemies for \(n^2\) scaling).
