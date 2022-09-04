@@ -30,12 +30,13 @@
   <li>Diluc (C0, vaporize, infusion): 634</li>
   <li>Yoimiya (C0, Yun Jin buff, overload): estimate, potentially more than Diluc</li>
   <li>Beidou (C6, exactly 2 enemies, 200% ER): 618.8</li>
+  <li>Yae Miko (C0, 4p Gilded Dreams): 617.8</li>
   <li>Yoimiya (C0, Yun Jin buff, no reactions): 608.3</li>
   <li>Hu Tao (C1, vaporize): 544.3</li>  
   <!--<li>Yoimiya (C0, overload): estimate</li>-->  
   <li>Itto (C0): 517.7</li>
   <li>Raiden Shogun (C0, max stacks, 200% ER): 494.1</li>
-  <li>Yae (C0): 488.0</li>
+  <li>Yae Miko (C0, 2TF + 2WT): 488.0</li>
   <li>Eula (C0, max stacks, burst only): 443.8 (in practice may only get 14 out of 30 stacks per burst, becomes easier to get full stacks at c6)</li>
   <li>Yoimiya (C0, with reactions)</li>
   <li>Hu Tao (C0, vaporize): 435.4</li>  
@@ -108,6 +109,22 @@ This is a dps list considering higher constellations above C0.
   <li>Xingqiu (C0): 203.5</li>
 </ol>
 <p>When they call Beidou the queen of AoE sub-DPS, it is actually well-deserved.</p>
+
+<h1>MV to DPS</h1>
+  <p>
+    DPS numbers are expressed as % (so 2000% would be a multiplier of 20, dividing by 100%) 
+    and are normalized after considering Bennett's buff (~1.5 multiplier)
+    assuming an ATK of 2000 for most characters.
+    Actual dps would also consider DEF, RES, etc.
+  </p><p>
+    The factor to multiply the mv is
+    $$2000*1.5*.5*.9 = 1350$$
+    and if there is 200% crit damage
+    $$1350*3 = 4050$$
+    or roughly 4000. 
+    Note in practice, some units (notably supports) may have less than 2000 atk and 200% crit damage
+    meaning the actual dps will be less.
+  </p>
 
   </body>
 </html>
