@@ -77,7 +77,7 @@
   Once the shield is broken, the grass will start burning.
   </p><p>
     Version 3.0 introduced two new reactions for dendro: bloom and catalyze.
-    Bloom happens when dendro+hydro react.
+    Bloom happens when dendro+hydro react and can enable certain tertiary reactions (3-way reactions).
     Catalyze happens when dendro+electro react.
   </p><p>
     Bloom drops a Dendro Core, similar to how crystallize drops an elemental shard.
@@ -116,9 +116,9 @@
     $$(\text{ATK}*\text{scaling} + \text{flat dmg})*(1+\text{dmg bonus%})*(\text{crit multiplier})$$
   </p><p>
     The flat dmg increase has an effective scaling of
-    $$\frac{\text{flat dmg}}/\text{ATK}$$
+    $$\frac{\text{flat dmg}}{\text{ATK}}$$
     So it is almost like increasing the scaling to
-    $$\text{effective scaling} = \text{scaling} + \frac{\text{flat dmg}}/\text{ATK}$$
+    $$\text{effective scaling} = \text{scaling} + \frac{\text{flat dmg}}{\text{ATK}}$$
     so that the damage can be rewritten as
     $$(\text{ATK}*\text{effective scaling})*(1+\text{dmg bonus%})*(\text{crit multiplier})$$
   </p><p>
