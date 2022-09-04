@@ -22,7 +22,7 @@
   
 <body>
     <div id="includedContent"></div>
-    
+
   <div class="mw-parser-output"><p>This is for quick reference and back-of-the-envelope calculations. This is mostly for estimation, and actual numbers may be different.
 </p>
 <div id="toc" class="toc"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
@@ -106,6 +106,41 @@
       $$\frac{1}{T}\int_0^T rt \ dt = rT/2$$
       The integral approximation becomes more accurate the more hits there are (such as for a rapid fire C6 Yoimiya).
     </p>
+
+    <h2>Typical stats</h2>
+
+    <h3>HP</h3>
+    <p>Suppose a typical character has 10k base hp.
+      The flower will give 4780 flat hp.
+      Assuming no HP on substats,
+      the character will have around 15k total hp.
+      In practice and based on empirical observations, 
+      many characters can reach up to 20k (due to hp% and flat hp on substats).
+    </p><p>
+      Now suppose a character is built to scale with hp (i.e. Yelan).
+      Such characters typically have higher base hp.
+      To be conservative say they have 13k base hp.
+      Suppose they use an HP sands which gives 46.6% HP (ATK sands also give 46.6% ATK).
+      Then they can reach total hp of
+      $$13000*1.466 + 4780 = 23838$$
+    </p><p>
+      If they have 14k base hp they can reach
+      $$14000*1.466 + 4780 = 25304$$
+    </p><p>
+      Sometimes these characters can gain additional hp buffs.
+      For example, the Staff of Homa can increase hp by 20%.
+      In this case
+      $$14000*1.666 + 4780 = 28104$$
+      Homa then converts .8% of hp to atk or around 225 more atk.
+      When under 50% hp it converts 1.8% of hp to atk or around 506 more atk.
+    </p><p>
+      Yelan has a passive that increases hp by 30% when there are four different members in the team (e.g. dendro international).
+      In this case
+      $$14000*1.766 + 4780 = 29504$$
+      so she can reach 30k hp.
+      In reality such characters can get more than 30k hp due to higher base hp or hp substats.
+    </p>
+
     
 <h2><span class="mw-headline" id="Notes">Notes</span></h2>
 <div class="mw-references-wrap"><ol class="references">
