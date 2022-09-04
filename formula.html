@@ -36,9 +36,11 @@
 <p>If you assume the enemy has 10% RES to physical and all elements:
 </p>
 <ul><li>This gives a 0.9 times multiplier to incoming damage.</li>
-<li>Viridescent Venerer -40% RES (for Hydro, Pyro, Electro, Cryo) gives -30% RES or a 1.15 multiplier to incoming damage. So VV increases damage by \( 1.15/.9\approx 1.278\) times. If the enemy has more than 10% base RES, this number will be greater. If they have less than 10% base RES, this number will be smaller.
+<li>Viridescent Venerer shreds 40% RES (for Hydro, Pyro, Electro, Cryo), giving -30% RES or a 1.15 multiplier to incoming damage. So VV increases damage by \( 1.15/.9\approx 1.278\) times. If the enemy has more than 10% base RES, this number will be greater. If they have less than 10% base RES, this number will be smaller.
 <ul><li>Superconduct also lowers Physical RES by 40% so it gives a similar damage increase.</li></ul></li>
-<li>Zhongli shield -20% all RES gives -10% RES or a 1.05 multiplier. So his shield increases damage by \( 1.05/.9\approx 1.167 \) times.</li></ul>
+<li>Deepwood lowers Dendro RES by 30% to -20% RES or a 1.1 multiplier. It increases damage by \(1.1/.9 \approx 1.22\) times.</li>
+<li>Morax shield -20% all RES gives -10% RES or a 1.05 multiplier. So his shield increases damage by \( 1.05/.9\approx 1.167 \) times.</li>
+</ul>
 <h2><span class="mw-headline" id="Bennett_Buff">Bennett Buff</span></h2>
 <p>Notes on Bennett's burst (Fantastic Voyage) ATK buff:
 </p>
@@ -85,7 +87,7 @@
 <li>Hypothetically, an attack that ignores 100% of DEF will double the damage.</li></ul>
 <p>Usually <i>x</i> will be smaller than 1 so we can approximate further with a taylor expansion
 </p>
-<dl><dd>\( R\approx {\frac {1}{1-x/2}}\approx 1+x/2+(x/2)^{2}+\ldots \)</dd></dl>
+<dl><dd>$$ R\approx {\frac {1}{1-x/2}}\approx 1+x/2+(x/2)^{2}+\ldots $$</dd></dl>
 <p>So a very rough rule of thumb is that if a portion <i>x</i> of DEF is reduced or ignored, then damage will increase by at least <i>x</i>/2.
 </p><p>Note that actual values in game may be more or less, so do not take the value out of context.
 </p>
