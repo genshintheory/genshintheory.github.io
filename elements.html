@@ -87,7 +87,7 @@
     If nothing is applied the dendro core will automatically deal dendro damage after a certain time.
     Similar to geo constructs, only a finite number of dendro cores can exist at a given time.
     This will prevent it from having true quadratic scaling 
-    (i.e. create n cores, each of which does aoe dmg on n enemies for n^2 scaling).
+    (i.e. create n cores, each of which does aoe dmg on n enemies for \(n^2\) scaling).
     Swirl also has an aoe limit (for swirl it is 2 instances of damage per enemy).
   </p><p>
     Catalyze applies the 'quicken' status to the enemy.
@@ -100,7 +100,7 @@
   <h3>Quicken (Additive reaction)</h3>
   <p>Applying dendro and electro puts the target in the quicken state.
     Quicken is indicated by a dual dendro-electro status.
-    When dendro or electro is applied, they produce the spread and aggravate reactions.
+    When dendro or electro is applied, they produce the spread and aggravate reactions (and refresh the quicken status).
     Spread and aggravate give additive dmg that scales with character level and EM.
     This bonus dmg is similar to <a href='shenhe.html'>Shenhe</a> or <a href='yunjin.html'>Yun Jin</a>'s buff.
     Whereas vaporize and melt are multiplicative reactions, spread and aggravate are additive.
@@ -164,7 +164,11 @@
     So for example if you have 230 EM (from Gilded Dreams), 
     then at level 90 aggravate gives \(1.8*1808 \approx 3254\) flat dmg.
     For 2000 ATK and 100% scaling, aggravate can increase damage by around 2.6 times.
-    But for things with higher scaling, the buff is lower.
+    (Note for things with higher scaling, the buff is lower.)
+    Compare this to the 0 EM case when the buff was around 2 times for 100% scaling.
+    So Gilded's EM buff can increase damage by 30%.
+    Compare this to the lowsy underwhelming deepwood set, which can only increase dendro damage by 1.2 times.
+    It is clear that of the two sets, Gilded is far superior.    
   </p>
 
   <h2>Elemental resonance</h2>
