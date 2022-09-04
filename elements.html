@@ -99,10 +99,10 @@
 
   <h3>Quicken (Additive reaction)</h3>
   <p>Applying dendro and electro puts the target in the quicken state.
-    The quicken state can be destroyed when pyro is applied.
+    Quicken is indicated by a dual dendro-electro status.
     When dendro or electro is applied, they produce the spread and aggravate reactions.
     Spread and aggravate give additive dmg that scales with character level and EM.
-    This bonus dmg is similar to Shenhe or Yun Jin's buff.
+    This bonus dmg is similar to <a href='shenhe.html'>Shenhe</a> or <a href='yunjin.html'>Yun Jin</a>'s buff.
     Whereas vaporize and melt are multiplicative reactions, spread and aggravate are additive.
     The additive dmg from spread and aggravate is given by
     $$\text{flat dmg} = \text{level multiplier}*RC*(1+\frac{5*EM}{EM+1200}+\text{reaction bonus})$$
@@ -112,8 +112,36 @@
     So if EM is 0, the flat dmg increase for spread is 1808.56,
     and the flat dmg increase for aggravate is 1663.56.
   </p><p>
-    Additive dmg increase / flat dmg is factored into dmg via the following formula
+    Additive dmg increase / flat dmg / base dmg is factored into dmg via the following formula
     $$(\text{ATK}*\text{scaling} + \text{flat dmg})*(1+\text{dmg bonus%})*(\text{crit multiplier})$$
+  </p><p>
+    The flat dmg increase has an effective scaling of
+    $$\frac{\text{flat dmg}}/\text{ATK}$$
+    So it is almost like increasing the scaling to
+    $$\text{effective scaling} = \text{scaling} + \frac{\text{flat dmg}}/\text{ATK}$$
+    so that the damage can be rewritten as
+    $$(\text{ATK}*\text{effective scaling})*(1+\text{dmg bonus%})*(\text{crit multiplier})$$
+  </p><p>
+    If a character has say 2000 ATK (no Bennett), 
+    then for spread \(1808.56/2000 \approx .90\) so the increase in effective scaling is 90%.
+    For aggravate it will be less.
+    As a rough approximation, the main result is that spread and aggravate can increase effective scaling by around +100% (actually less).
+    If the initial scaling is 100% then this can double damage.
+    If the initial scaling is 200% then this multiplies damage by 1.5.
+    This is important since Bennett can buff ATK by 1.5 times,
+    but using Bennett or pyro can destroy the quicken status on enemies.
+    So many quicken teams will not use Bennett at all,
+    but based on the above considerations, the buff from quicken can compensate for the lack of Bennett.
+    This can free up Bennett for your other spiral abyss team,
+    so the dendro reactions can offer flexibility and give another way to play the game.
+  </p><p>
+    Note that Bennett's buff and quicken's buff are not multiplicative with each other.
+    They actually compete with each other.
+    If you have 2000 ATK and Bennett gives 1000 extra ATK, that brings your attack to 3000.
+    This will diminish the effect of the additive reaction.
+    The increase in effective scaling for spread will be \(1808.56/3000 \approx .60\).
+    So if the initial scaling is 100% it multiplies damage by 1.6 (whereas before it was 2 times).
+    The main result is that the higher the scaling, the less the buff.
   </p><p>
     Note additive and multiplicative reactions are affected by dmg bonus%, crit, enemy defense,
     whereas transformative reactions are not.
@@ -159,7 +187,20 @@
   </p>
 
   <h2>Gauge units</h2>
-  <p>A gauge unit (GU) is a measure of the quantity of an element applied on a target.</p>
+  <p>A gauge unit (GU) is a measure of the quantity of an element applied on a target.
+    When an element is applied on a target, usually a status will appear on the target.
+    The status will decay or deplete over time, depending on how many gauge units were initially applied.
+    Currently, character gauges come in 1A, 2B, and 4C applications.
+    (There were rumors that Yelan's Q hydro application was 1.5 gu in beta, but currently it is 1A.)
+  </p>
+
+  <h3>Quicken status</h3>
+  <p>The quicken gauge is consumed when pyro is applied (burning) or hydro is applied (bloom).
+    When anemo is applied, it will do electro swirl, and when geo is applied, it will do electro crystallize.
+    Gauge units are also consumed.
+    When cryo is applied, it will trigger the superconduct reaction.
+    The dendro and cryo status can exist simultaneously on a target.
+  </p>
   
   </body>
 </html>
