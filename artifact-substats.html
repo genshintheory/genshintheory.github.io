@@ -79,5 +79,58 @@
   For the five pieces, there are a total of 45 substats.
 </p>
 
+<h2>Vanilla character</h2>
+<p>Suppose the character does not have crit on the weapon, does not ascend with crit, or get crit buffs from any external source.
+  That is, suppose their only source of crit is from artifacts.
+  Most characters start with 50% cd and 5% cr.
+  What is the optimal choice of crit on the artifacts?
+</p><p>
+  Suppose each non-circlet piece gives 3.89% cr and 7.77% cd at level 0.
+  We then need to allocate 5*4=20 substats between cr and cd.
+  We also have to choose between cr and cd circlet.
+  A cr circlet gives 31.1% cr and up to 7.77*6=46.62% cd.
+  A cd circlet gives 62.2% cd and up to 3.89*6=23.34% cr.
+</p><p>
+  Suppose we use a cr circlet, so that
+  $$r = 5+3.89*(4+x)+31.1 = 51.66+3.89x$$
+  and
+  $$d = 50+7.77*(4+y)+46.62 = 127.7+7.77y$$
+  where
+  $$g = x + y - 20 = 0$$
+  We want to maximize the product
+  $$f = rd = c + 401.3982 y + 496.753 x + 30.2253 xy$$
+  This is a constrained optimization problem where x, y take on nonnegative integer values.
+</p><p>
+  Using lagrange multipliers gives
+  $$\partial_x(f + \lambda g) = 496.753 + 30.2253 y + \lambda = 0$$
+  and
+  $$\partial_y(f + \lambda g) = 401.3982 + 30.2253 x + \lambda = 0$$
+  Solving gives
+  $$\begin{align}
+  -\lambda &= 496.753 + 30.2253 y = 401.3982 + 30.2253 x \\
+  95.3548 &= 30.2253 (x - y) \\
+  x &= y + 3.1548007795
+  \end{align}$$
+</p><p>
+  Substituting into the constraint g gives
+  $$2y + 3.1548007795 - 20 = 0$$
+  or y = 8.42259961025.
+  Then x = 11.57740038975.
+</p><p>
+  The optimal cr and cd are then
+  r = 96.7%
+  and d = 193.14%.
+  In other words, r and d are distributed in a 1 to 2 ratio.
+  This has already been derived in <a href='optimization.html'>optimization</a>.
+</p><p>
+  The expected crit multiplier is then
+  $$1+rd = 1+.967*1.9314 = 2.8676638$$
+  It is similar to having 100% cr and 200% cd.
+  This is achievable for every vanilla character without the use of crit weapons,
+  assuming optimal artifacts.
+  Of course, in practice it is very hard to get optimal artifacts (2 crit on each piece at max tier, with all rolls going into crit).
+  The odds are quite low (assuming that the artifact rolls are not rigged manually by the game).
+</p>
+
   </body>
 </html>
