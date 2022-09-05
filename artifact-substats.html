@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+    
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+<title>Artifacts</title>
+
+  </head>
+  
+<body>
+  <div id="includedContent"></div>
+
+<h2>Substats and optimization</h2>
+<p>We will assume 5 star artifacts.
+  Each artifact has 4 different substats.
+  These are usually drawn randomly (some may initially start with 2 or 3 substats but by level 20 will have 4).
+  We assume each artifact starts with 4 substats at level 0.
+</p><p>
+  When leveling an artifact every 4 levels, one of these substats (chosen randomly) will increase.
+  The increase amount depends on what tier that substat was drawn in.
+  Each substat can be drawn from 4 tiers, each tier giving different amounts of that substat.
+  Here we will assume each substat is drawn from the highest tier.
+</p><p>
+  Substats include hp, atk, def, hp%, atk%, def%, ER, EM, CR, CD (10 different substats).
+  Of these usually CR and CD are most valuable for increasing dps.
+  The crit value is defined as \(CV = 2*CR + CD\).
+  This is defined as usually CR and CD are distributed in a 1:2 ratio within the game.
+</p><p>
+  So as far as optimization goes, given that the search space is small and finite,
+  brute force can be used to find the optimal combination of substats to maximize damage.
+  There are 10 different substats so \(\binom{10}{4} = 210\) different substat combinations on a main piece.
+  There are then \(\binom{8}{3} = 56\) ways the substats can be increased when leveling to level 20.
+  In all there are \(210*56=11760\) possible lv20 artifacts (assuming they start with 4 substats at max tier at lv0).
+  Brute force on 10k possibilities is nothing for modern computers.
+  It can even be done in a second.
+</p><p>
+  But usually one tries to maximize the amount of crit on the substats.
+  For the flower, feather, sands, goblet, each will have 2 substats that max out crit.
+  Each will have 2 other substats which can be atk, er, em, hp, or def depending on what the unit needs.
+  Then lastly the circlet will usually be crit on the main stat with 1 crit substat (that is maxed out) and 3 other substats.
+  It can be a crit rate or crit damage circlet.
+  If it is a crit dmg circlet, one will usually want to max out crit rate on the substat and vice versa.
+</p><p>
+  For a general ATK scaling character, usually atk, atk% are most important as substats.
+  For characters that focus more on their bursts, ER can also be important.
+  For characters that have special scaling with em, hp, or def, those substats can be important too.
+</p><p>
+  At max tier, cr comes in increments of 3.89%, and cd comes in increments of 7.77%.
+  A single piece can level up a substat up to 5 times.
+  For example, if cr is leveled 3 times and cd 2 times, the piece will have 
+  3*3.89% = 11.67% cr and 2*7.77% = 15.54% cd.
+  Sometimes we say we have 3 substats of cr and 2 substats of cd,
+  where we treat 'substat' as a unit of measure.
+  For four of the pieces, substats can be increased up to 20 times (we have 20 substats).
+  The question is how to distribute those 20 times between cr and cd (how to distribute 20 substats between cr, cd).
+</p><p>
+  This depends on other things like the weapon, the circlet, whether the character ascends with crit,
+  and other sources of crit buffs (like Gorou, Blizzard, etc.).
+</p><p>
+  But in general, the average crit multiplier is 1+rd 
+  so you want to maximize the product rd of crit rate r and crit damage d.
+</p><p>
+  In total, one artifact piece starts with 4 substats and can level up 5 times,
+  so it will have a total of 9 substats.
+  For the five pieces, there are a total of 45 substats.
+</p>
+
+  </body>
+</html>
