@@ -132,5 +132,66 @@
   The odds are quite low (assuming that the artifact rolls are not rigged manually by the game).
 </p>
 
+<h2>Crit value</h2>
+<p>
+  We can do a similar calculation if we choose the cd circlet.
+  But first note that no matter how we allocate x and y,
+  there is an invariant in the system
+  $$cv = 2r + d$$
+  This is called the <b>crit value</b>.
+  If we allocate 20 substats to cr we get +20*3.89= +77.8% cr or 155.6 cv.
+  If we allocate 20 substats to cd we get +20*7.77= +155.4% which gives a similar cv (rounding).
+</p><p>
+  For the above example with vanilla characters, the cv is around 2*100+200 = 400 cv (estimate).
+  To be precise it is 2*96.7+193.14 = 386.54 cv.
+  Without artifacts, we have 2*5+50=60 cv.
+  Equipping artifacts can give us 155 + 62.2 + (8+6)*7.77 = 325.98 more cv.
+  So long as the cv is the same, the optimal choice of r and d will be the same (exercise: prove this).
+</p>
+<p>In the r-d 2d plane, we can plot a line d=2r describing the optimal ratio of r and d.
+  We can also plot contours of 2r+d = cv where all points on a contour have the same crit value.
+  Where the line d=2r and the contour 2r+d=cv intersect describes the optimal solution.
+  </p>
+  <p>
+  External sources can give more cv and bring us to higher contours and thereby increase the expected crit multiplier.
+  Rosaria and cryo resonance can give up to 15% cr or 30 more cv.
+  Blizzard strayer can give 40% cr on frozen enemies or 80 cv.
+  Itto's c6 gives 70% cd or 70 cv.
+  Gorou's c6 gives 40% cd or 40 cv.
+  Characters that ascend with cr or cd can get 19.2% cr or 38.4% cd at lv90 or 38.4 cv.
+  Weapons can give 44, 66, or 88 cv (the higher the cv the lower the base atk).
+  And then there are basket cases like Kokomi who get -100% cr (sigh).
+</p><p>
+  How big is the gain from cv increase from other sources?
+  We can do some napkin back-of-the-envolope calculations to get an estimate.
+  Above we said that we can get around 400 cv for vanilla characters (only artifacts).
+  The optimal choice is then around 100% cr and 200% cd for a crit multiplier of 3.
+  Say we gain 100 cv from a combo of the above effects.
+  Then we have 500 cv total.
+  By the 1:2 rule the optimal choice is then 125% cr and 250% cd.
+  But wait, there is no point in getting 125% cr (excess). 100% is enough. So here we have overflow.
+  We see that with vanilla artifacts it is possible to reach near 100% cr without weapons or other external crit buffs.
+  (It is just getting perfect artifacts is almost impossible in practice, 
+  so weapons and external sources make achieving this dream more possible.)
+</p><p>
+  So we can re-allocate or re-invest the cv as cd.
+  Turn the surplus 25% cr into 50% more cd.
+  So now we have 100% cr and 300% cd.
+  This gives a crit multiplier of 4.
+  This is an increase of 4/3=1.33 times (or 33%).
+  In fact since artifacts alone can give up to 100% cr,
+  then any external crit sources can be converted into cd.
+</p>
+
+
+<h2>Leftover substats</h2>
+<p>Above we invested most of the substats into cr and cd.
+  Each artifact piece will have 2-3 leftover substats which can be atk, hp, def, er, em.
+  For a vanilla character who is comfortable getting their burst back on cd,
+  usually atk and atk% are good to have as substats.
+  Only for special or 'exotic' characters with hp, def, er, or em scaling can these other non-atk substats be important too.
+  Or if the character needs more ER for an expensive burst, er can be important in achieving that.
+</p>
+
   </body>
 </html>
