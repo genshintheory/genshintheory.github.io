@@ -24,23 +24,34 @@
   <div id="includedContent"></div>
 
   <h2>Overview</h2>
-  <p>In Teyvat there are seven elements, with each element corresponding to one of the seven nations.
-    For version 1-2, there have been 6 main elements.
-    It is anticipated that when Sumeru releases, Dendro will also be introduced as the seventh element.
+  <p>In Teyvat there are seven elements (元素), with each element corresponding to one of the seven nations.
+    For versions 1-2, there have been six main elements.
+    When Sumeru released in version 3, Dendro was introduced as the seventh element.
+    Sometimes 'physical' is considered as an eighth element.
   </p>
 
   <h2>Reactions</h2>
   <p>
     Reactions can be roughly classified into two types: amplifying and transformative.
-    Amplifying reactions include vaporize and melt, which amplify the incoming damage.
-    Vaporize and melt are also asymmetric reactions.
-    In melt, when pyro is applied on cryo, it gives a base 2x multiplier.
-    But if cryo is applied on pyro, it gives a base 1.5x multiplier.
-    In vaporize, when pyro is applied on hydro, it gives a base 1.5x multiplier.
-    But if hydro is applied on pyro, it gives a base 2x multiplier.
   </p><p>
-    Transformative reactions basically do an extra instance of damage.
-    When anemo is applied on to one of the 'autumn' elements (pyro hydro electro cryo),
+    Amplifying reactions include multiplicative reactions and additive reactions.
+    Multiplicative reactions such as vaporize and melt, which multiply the incoming damage.
+    Vaporize and melt are also asymmetric reactions.
+  </p>
+  <ul>
+    <li>In melt, when pyro is applied on cryo, it gives a base 2x multiplier.
+    But if cryo is applied on pyro, it gives a base 1.5x multiplier.</li>
+    <li>In vaporize, when pyro is applied on hydro, it gives a base 1.5x multiplier.
+    But if hydro is applied on pyro, it gives a base 2x multiplier.</li>
+  </ul>
+  <p>With Dendro, there are also additive reactions: aggravate and spread, which add flat damage.
+    These are also asymmetric reactions (explained in detail in the Dendro section below).
+  </p>
+  <p>
+    Transformative reactions basically do an extra instance of damage. These include:
+  </p>
+  <ul>
+    <li>Swirl: When anemo is applied on to one of the 'autumn' elements (pyro hydro electro cryo),
     swirl will absorb that element and deal damage and apply 2B gauge units
     within an aoe in the corresponding elemental type, spreading its effects.
     So pyro swirl will do an extra instance of pyro damage.
@@ -52,21 +63,24 @@
     Most linear aoe damage scales like O(n), but swirl scales like O(2n) which is double (where n is the number of enemies).
     Even then swirl is quite broken as exemplified by Venti's burst.
     If they made swirl quadratic \(O(n^2)\) then that would almost be too broken,
-    when Anemo is already considered one of the most, if not the most broken element in the game.
-  </p><p>
-    Other types of transformative reactions include electro-charged (hydro+electro will do extra instances of electro damage over time and stun the enemy, as well as do some chain lightning similar to Beidou's Q),
-    overloaded (pyro+electro will do another instance of pyro damage and cause an aoe explosion),
-    superconduct (electro+cryo will do another instance of aoe cryo damage and reduce physical RES by -40%).
-    For electro-charged the electro and hydro status will coexist on the enemy,
-    allowing for things such as 'vapeload' when pyro is applied (vaporize + overloaded).
-  </p><p>
-    When geo is applied to an autumn element it will create a crystallize shard, giving a shield to the character
-    that absorbs that particular element more effectively.
-  </p><p>
-    Lastly there is the frozen reaction (hydro+cryo) which can freeze some enemies (not all).
+    when Anemo is already considered one of the most, if not the most broken element in the game.</li>
+    <li>Electro-charged (hydro+electro will do extra instances of electro damage over time and stun the enemy, as well as do some chain lightning similar to Beidou's Q). For electro-charged the electro and hydro status will coexist on the enemy,
+  allowing for things such as 'vapeload' when pyro is applied (vaporize + overloaded).</li>
+    <li>Overloaded: pyro+electro will do another instance of pyro damage and cause an aoe explosion,</li>
+    <li>Superconduct: electro+cryo will do another instance of aoe cryo damage and reduce physical RES by -40%.</li>
+    <li>Crystallize: when geo is applied to an autumn element it will create a crystallize shard, giving a shield to the character
+    that absorbs that particular element more effectively.</li>
+    <li>Lastly there is the frozen reaction (hydro+cryo) which can freeze some enemies (not all).
     When a blunt force is applied to a frozen target, it can trigger the 'shatter' effect, dealing physical damage.
-  </p><p>
-    Almost all of these reactions (amplifying or transformative) scale with the character's EM (except for frozen).
+    </li>
+  </ul>
+  <p>The damage of transformative reactions scales with character level and EM.
+    They typically do not crit or factor in defense.
+    But they are affected by RES.
+    By contrast, amplifying reactions can crit and factor in defense as well.
+  </p>
+  <p>
+    Almost all of these reactions (amplifying and transformative) scale with the character's EM (except for frozen).
     The higher the EM, the more damage can be done or the stronger the shield (for crystallize).
     In version 1.6, transformative reactions received a buff (changing how the reactions scaled with EM).    
   </p>
