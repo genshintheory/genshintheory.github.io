@@ -44,7 +44,7 @@
     In the last hit of his NA combo animation, he throws down a lightning bolt.
   </p><p>
     During his q, a circle will periodically flash on screen.
-    With one of his passives, if he uses his e when the circle appears, it will increase the e dmg by 35%
+    With one of his passives, if he uses his e (chasmic soulfarer) when the circle appears, it will increase the e dmg by 35%
     and fire three dustbolts (similar to Chongyun's c1 passive or Sara's q) that have 100% atk scaling each.
     The e does aoe damage.
   </p>
@@ -94,6 +94,47 @@
     He also benefits from Anemo vv and Bennett.
   </p><p>
     Other teams include: Cyno Beidou Yelan Bennett (Cyno fireworks) or Cyno Beidou XL Bennett.
+  </p>
+
+
+  <h2>Calculations</h2>
+  <p>Assume lv 10 E and Q with 4p Gilded, 46.6% dmg bonus, and 200 EM (gilded 80 + substats).
+    During Q he gains 100 EM.
+    When triggering a reaction he can gain 100 to 150 more EM.
+    Suppose he is run on double electro (with Yae, Sara, etc.) so that he gains 100 EM on reaction.
+    He can then get a total of 400 EM during his burst.
+    On some builds he can possibly get more than 400 EM (like if using the missive weapon which gives ~100 more EM),
+    but to demonstrate a simple calculation, we assume 400 EM for now.
+  </p><p>
+    He can use his E skill 5 times during his Q:
+    4 times it will be buffed during the endseer stance
+    and once at the beginning (unbuffed).
+    The first endseer circle will appear ~6s after using his Q.
+    After that the endseer circle will appear once every ~4s until the end of his burst.
+  </p><p>
+    The lv 10 E mortuary rite has 282% scaling and 3s cd.
+    When it is buffed it will gain 35% dmg bonus and fire three dust bolts that deal 100% scaling each.
+    From his other passive the dust bolt dmg is increased by 250% of Cyno's EM.
+    So if he has 400 EM, that is 1000 more flat dmg.
+    Suppose Cyno has 2000 atk.
+    Then the flat dmg of one dust bolt is 2000+1000=3000 or equivalently 150% scaling each.
+    The e dps is then
+    $$x_e = (282*1.466 + 4*(282*1.816 + 3*150*1.466))/18 = 283.37$$
+  </p>
+
+  <h3>Energy calculations</h3>
+  <p>
+    His E will also generate particles during his Q, so Cyno can function as a battery too (giving him support abilities).
+    During his Q, an E will generate 4/3 particles on average.
+    If he uses his E five times, it will generate 20/3 particles on average.
+    So Cyno can gain 3*20/3 = 20 energy during his burst.
+    If he has 130% ER then this becomes 26 energy,
+    so his Q is effectively reduced from 80 to 54 cost.
+  </p><p>
+    Above we ignored electro resonance (which generates an extra electro particle when proccing reactions).
+    Outside his Q, his E generates 3 particles.
+    In practice, especially if Cyno is paired with another electro teammates or battery,
+    it is very possible to get Cyno's burst back on cooldown.
   </p>
 
   
