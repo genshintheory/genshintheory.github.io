@@ -119,8 +119,78 @@
     Suppose Cyno has 2000 atk.
     Then the flat dmg of one dust bolt is 2000+1000=3000 or equivalently 150% scaling each.
     The e dps is then
-    $$x_e = (282*1.466 + 4*(282*1.816 + 3*150*1.466))/18 = 283.37$$
+    $$z_e = (282*1.466 + 4*(282*1.816 + 3*150*1.466))/18 = 283.37$$
+  </p><p>
+    Above the dust bolt dmg contributes 146.6 of the mv or around half, so it is quite significant.
+  </p><p>
+    Cyno will also na during his burst in between his Es.
+    Using gilded dreams, it is possible to do the full 5-hit NA combo in between consecutive Es.
+    It is even possible to do more than 5 hits.
+    But for simplicity we assume between every pair of Es he will do a 5-hit NA combo.
+    So he will do the full combo 4 times.
+  </p><p>
+    For a lv 10 Q the full combo has 987% total scaling.
+    His na are also buffed by 150% of his EM.
+    For 400 EM this is 600 flat dmg per NA.
+    If he has 2000 atk then the effective scaling is
+    $$x_a = (2000*9.87 + 5*600)/2000 = 11.37 = 1137%$$
+    So the em scaling can increase the overall na dmg by a bit more than 10%.
+  </p><p>
+    The dps from na is then
+    $$z_a = 4*1.466x_a/18 = 370.41$$
+    The last hit of his 5-hit na combo has higher scaling compared to the other hits.
+  </p><p>
+    The total dps from his na and E is then
+    $$z = z_a + z_e = 663.78$$
+    So Cyno's dps is quite high.
+    The golden wolf is definitely an upgrade from Razor (so the 3.1 Mondstadt event can be thought of as Razor's retirement).
+    Moreover, it is higher than Keqing's dps.
+    Not just that, among C0 electro characters as of version 3.1, Cyno has the highest dps (among electro).
+    This is interesting given that Raiden, Yae, and Keqing have higher base ATK.
+    But those other electro characters also have more supportive roles, whether via battery, sub-dps, quickswap, exploration, etc.
+    Cyno's base atk 318 is decently high though (above Klee, lower than Yoimiya/Keqing), 
+    considering that other dps units released before like Ayato and Tighnari had a much worse time.
   </p>
+
+  <h3>Approximating C6 Xiao</h3>
+  <p>It can be said that a C0 Cyno 'approximates' a C6 Xiao.
+    However, obviously Cyno will not use his E as often.
+    Whereas C6 Xiao can use his E six times per second, Cyno may probably only use his E six times during his entire 18s burst.
+    But the fact that Cyno kind of has C6 Xiao technology built into him at C0 already makes Cyno one of the best dps in the game
+    (and one of the best dps we have had in a long while since Itto and Yae).
+    Some people try to take the Xiao analogy even further by using TF for more E spam.
+  </p>
+  <p>
+    The 4p TF will reduce the E cd by 1s when triggering electro reactions from 3 to 2s, so within 18s he can technically use his E nine times
+    if he consistently triggers reactions (in practice this is not the case which makes TF less optimal).
+    If you use TF, you get 15% more dmg bonus, you can use the E up to 4 more times possibly (but those will not be buffed), 
+    but you lose around 200 EM (500 flat dmg or 25% scaling per dustbolt, times three or 75% scaling per buffed E).
+    $$x_e = (5*282*1.616 + 4*(282*1.966 + 3*125*1.616))/18 = 384.456$$
+  </p><p>
+    However, using Cyno's E every 2s interrupts the 5-hit NA sequence,
+    so the damage from his NA will decrease (basically get halved since instead of having 4s to interweave you only have 2s).
+    The rotation is much tighter, and in practice it is harder to play optimally with TF.
+    With gilded, the na contributes most of the dps (370 out of 660).
+    But when using TF, even if you gain 100 mv in the E you lose half of the mv from na or around 185 mv.
+    So you actually lose more mv than what you gain, even if you adjust for dmg bonus.
+    And this is assuming you are playing TF optimally, which is much harder.
+    It is also assuming you have no other sources of dmg bonus,
+    but in practice, Cyno has many options for dmg bonus, including Mona, Yelan, etc.
+    which makes the 15% extra dmg bonus hit diminishing returns.
+  </p><p>
+    The buffed E contributes a significant portion of the damage, and TF can lead to a decrease in dust damage,
+    which is why Gilded synergizes better with Cyno.
+    Of course, among all the characters that can use TF, Cyno is probably the best character tailored for that set,
+    but that does not mean TF is the best set for him.
+    By contrast Gilded is a much more general set that works for many characters,
+    but can still be bis for many.
+  </p>
+
+  <h3>Reactions</h3>
+  <p>
+    Above we ignored dmg from reactions.
+  </p>
+
 
   <h3>Energy calculations</h3>
   <p>
@@ -135,6 +205,20 @@
     Outside his Q, his E generates 3 particles.
     In practice, especially if Cyno is paired with another electro teammates or battery,
     it is very possible to get Cyno's burst back on cooldown.
+  </p>
+
+  <p>Overall, Cyno is a well-designed character, one of the best designed to date
+    and much better designed than Ayaka.
+    Cyno's EM scaling makes him synergize well with the new dendro element and quicken reaction.
+    Being able to spam his E during his Q gives him battery properties and makes him like C6 Xiao.    
+    His aoe is quite good. He has many weapon options to choose from.
+    He is quite different from Raiden although both are electro polearms.
+    Whereas Raiden is more about energy generation, nuking, and quickswap,
+    Cyno is more about on-field sustained dps and EM.
+    Whereas Raiden focuses on Emblem and pure burst damage,
+    Cyno cares more about EM and even his E damage.
+    Moreover, Cyno synergizes with Beidou at least.
+    The visuals and artistic design of the Egyptian Anubis are on point.
   </p>
 
   
