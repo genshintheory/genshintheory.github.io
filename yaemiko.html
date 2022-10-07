@@ -215,7 +215,7 @@ Yae functions similarly to Albedo.
   the scaling on a level 3 sakura is 170.64,
   then the base damage is
   $$b = 2000*1.7064 + b_a = 6407.208$$
-  In other words this is a 1.877 times increase in damage.
+  In other words this is a 1.877 times increase in damage (compared to 2000*1.7064).
   This is almost like vaporizing a hit.
 </p><p>
   Due to ICD, she will aggravate one of every three hits from the E.
@@ -238,6 +238,38 @@ Yae functions similarly to Albedo.
   The total dps is then
   $$x = x_E + x_Q = 617.8$$
   So Gilded provides a huge increase in dps.
+</p>
+
+<h3>Factoring Bennett</h3>
+<p>Sometimes Bennett may not be used in quicken teams as pyro can destroy the quicken status.
+  So if other characters have Bennett and say 3k attack,
+  then the above base damage b is a 1.252 times increase in damage (compared to 3000*1.7064).
+  The dps is then
+  $$x_E = (170.64*(10+1.252*5))*1.811/14 \approx 358.9$$
+  This is still a 12% increase from before (321.78).
+  So using quicken without Bennett actually does more damage than using Bennett without quicken.
+</p><p>
+  But why not both?
+  If you are using Bennett with quicken (use Bennett q then apply quicken), then the base dmg is
+  $$b = 3000*1.7064 + b_a = 8113.608$$
+  which is a 1.585 times increase in damage.
+  The dps is then
+  $$x_E = (170.64*(10+1.585*5))*1.811/14 \approx 395.67$$
+  This is a 1.23 times increase in damage from before (321.78).
+  So this is still actually a bigger buff than deepwood.
+  Just note that Bennett (and other atk buffs) and additive buffs like quicken compete with each other.
+  If Bennett is not used on quicken teams (which is usually the case to preserve the quicken status),
+  then the actual increase in damage is much greater (up to 33% as computed above).
+</p><p>
+  As for the q, the total base damage is
+  $$b = 3000*22.7061 + 4b_a = 80118.3$$
+  The increase in base damage is 1.176 times.
+  The increase in overall damage is 
+  $$1.176*1.466/1.616 = 1.0668$$
+  So the burst dps is now
+  $$x_Q = 166.17*1.0668 = 177.27$$
+  The total dps is then
+  $$x = x_E + x_Q = 572.94$$
 </p>
 
 
