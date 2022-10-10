@@ -209,5 +209,24 @@
   See <a href='optimization.html'>optimization</a> for more info.
 </p>
 
+<h2>HP substats</h2>
+<p>EM, ER, hp, def</p>
+<p>Suppose the character wants hp instead of attack (e.g. Candace).
+  Similar to above, there will be 5 leftover substats of flat HP 
+  and 5 leftover substats of HP%.
+  At max tier, 1 substat of hp gives 239 flat hp, so 5 substats give 1195 hp.
+  Also at max tier, 1 substat of hp% gives 4.66% hp, so 5 substats give 23.3% hp.
+</p><p>
+  If a vanilla hp scaling character has say 12000 base hp, wears a 46.6% hp sands,
+  and gets the hp substats above, then they can reach
+  $$12000*(1.466+.233)+1195 = 21583$$
+  total hp.
+  In practice it is possible to reach more than 20k, even get 30k or more hp.
+  This is because above we only assumed 10 substats are allocated to hp.
+  It is possible that more than 10 substats go to hp.
+  Characters may also get more hp through passives, weapons, artifacts, ascension.
+  Optimizing between hp and crit becomes another multivariable problem to consider.
+</p>
+
   </body>
 </html>
