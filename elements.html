@@ -75,9 +75,13 @@
     </li>
   </ul>
   <p>The damage of transformative reactions scales with character level and EM.
-    They typically do not crit or factor in defense.
+    They typically do not factor in crit, defense, or dmg bonus.
     But they are affected by RES.
     By contrast, amplifying reactions can crit and factor in defense as well.
+  </p><p>
+    The damage formula for transformative reactions is
+    $$d_t = \text{level multiplier}\times \text{reaction multiplier}\times 
+    (1+16 EM / (2000+EM) + \text{reaction bonus}) \times \text{RES multiplier}$$
   </p>
   <p>
     Almost all of these reactions (amplifying and transformative) scale with the character's EM (except for frozen).
