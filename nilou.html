@@ -158,7 +158,63 @@
 
 
   <h2>Calculations</h2>
-  <p></p>
+
+  <h3>Bloom damage</h3>
+  <p>The base bloom damage at lv90 is 5787.42 (same as overloaded).
+    The EM bonus is
+    $$m = 16EM/(EM+2000)$$
+    The EM used is the one who procced the bloom reaction.
+    For an enemy with 10% dendro res, the res multiplier is .9.
+    With the Golden Chalice effect, all party members get 100 EM.
+    If you use Nilou's signature Khaj weapon, she can give more EM to other party members.
+    It may not be the case that Nilou herself procs bloom all the time.
+    Her teammates could be the ones proccing bloom, in which case their EM is factored in.
+    To be conservative, let's assume that we have just 100 EM above.
+    Then the EM bonus is 
+    $$m = 0.7619047619$$ 
+    or nearly doubling the damage.
+  </p>
+  <p>In general, if you want to base team damage on a 
+    'symmetric' or 'bidirectional' transformative reaction like
+    electro-charged, overloaded, superconduct, burning, or bloom, 
+    it is better to give EM to the whole team
+    since you do not necessarily know who is going to proc the reaction.
+    By contrast for 'asymmetric' reactions like swirl, vape, melt, spread, aggravate, 
+    it is clearer who is the one proccing the reaction (clearer what is the forward direction).
+  </p>
+  <p>
+    The Golden Chalice effect starts after the 3rd step of her E and lasts for 30s.
+    During this time, bloom will produce bountiful cores that explode immediately and have larger aoe.
+    This basically allows Nilou's team to spam bloom more frequently.
+    Note bountiful cores and dendro cores both have a finite limit of 5 so it is not quadratic
+    (only 5 cores can exist at a time).
+    Normal dendro cores explode after 6s.
+    Cores deal dendro damage but will not proc bloom themselves 
+    (so no infinite cycle of blooms if it is raining on a target for example).
+  </p><p>
+    Suppose Nilou has 50k hp (if you do full hp build you can even reach 70-80k).
+    From her other passive she is 20k over 30k hp.
+    The conversion rate is 9% dmg bonus per 1k points above 30k.
+    So bloom gets 180% dmg bonus (the max dmg bonus is 400% which is achieved at around 74-75k hp).
+    Thus the bountiful core will do
+    $$d = 5787.42*(1 + m + 1.8)*.9 = 18552.8149714038$$
+    damage which is actually not bad considering it is a transformative reaction.
+    To convert this to mv we divide by 4000, so the above is around 464% mv.
+    That is assuming you create one core every second.
+  </p>
+  <p>To play Nilou as a bloom dps, you only need to build hp and em on her.
+    It is that simple.
+    Her E and Q scale with her hp and can crit,
+    but much of her dps will come from her bloom.
+  </p>
+  <p>The Q has 33.18+40.55=73.73% hp scaling at lv10.
+    This is roughly equivalent to 737.3% atk scaling.
+    The cd is 18s and energy cost 70.
+    In bloom teams with only hydro or dendro, this will usually not vape.
+    If you are not building any hydro dmg on Nilou the dps is then
+    $$x_q = 737.3/18 = 40.96$$
+    which is not much, even for a nuke.
+  </p>
 
   
   </body>
