@@ -160,7 +160,7 @@
   <h2>Calculations</h2>
 
   <h3>Bloom damage</h3>
-  <p>The base bloom damage at lv90 is 5787.42 (same as overloaded).
+  <p>The base bloom damage at lv90 is 2893.70 (same as overloaded, note this factors in LM and RM).
     The EM bonus is
     $$m = 16EM/(EM+2000)$$
     The EM used is the one who procced the bloom reaction.
@@ -173,6 +173,7 @@
     Then the EM bonus is 
     $$m = 0.7619047619$$ 
     or nearly doubling the damage.
+    Note if everyone has 300 EM then the em bonus is 2.0869565217 (or nearly tripling the damage).
   </p>
   <p>In general, if you want to base team damage on a 
     'symmetric' or 'bidirectional' transformative reaction like
@@ -197,9 +198,9 @@
     The conversion rate is 9% dmg bonus per 1k points above 30k.
     So bloom gets 180% dmg bonus (the max dmg bonus is 400% which is achieved at around 74-75k hp).
     Thus the bountiful core will do
-    $$d = 5787.42*(1 + m + 1.8)*.9 = 18552.8149714038$$
-    damage which is actually not bad considering it is a transformative reaction.
-    To convert this to mv we divide by 4000, so the above is around 464% mv.
+    $$d = 2893.70*(1 + m + 1.8)*.9 = 9276.4$$
+    damage. To convert this to mv we divide by 4000, so the above is around 232% mv
+    $$x_t = 232$$
     That is assuming you create one core every second.
   </p>
   <p>To play Nilou as a bloom dps, you only need to build hp and em on her.
