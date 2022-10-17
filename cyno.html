@@ -121,6 +121,14 @@
     Then the flat dmg of one dust bolt is 2000+1000=3000 or equivalently 150% scaling each.
     The e dps is then
     $$z_e = (282*1.466 + 4*(282*1.816 + 3*150*1.466))/18 = 283.37$$
+    <!-- consider Bennett 3k atk (or Scarlet Sand buff) -->
+    <!-- 
+    Then the flat dmg of one dust bolt is 3000+1000=4000 or equivalently 133% scaling each
+    when 'renormalizing' for Bennett's buff.
+    So firing three dustbolts will have a total of around 400% effective/renormalized scaling.
+    The e dps is then
+    $$z_e = (282*1.466 + 4*(282*1.816 + 400*1.466))/20 = 240.373$$ 
+  -->
   </p><p>
     Above the dust bolt dmg contributes 146.6 of the mv or around half, so it is quite significant.
   </p><p>
@@ -134,11 +142,13 @@
     His na are also buffed by 150% of his EM.
     For 400 EM this is 600 flat dmg per NA.
     If he has 2000 atk then the effective scaling is
-    $$x_a = (2000*9.87 + 5*600)/2000 = 11.37 = 1137%$$
+    $$x_a = (2000*9.87 + 5*600)/2000 = 11.37 = 1137\%$$
+    <!-- $$x_a = (3000*9.87 + 5*600)/3000 = 10.87 -->
     So the em scaling can increase the overall na dmg by a bit more than 10%.
   </p><p>
     The dps from na is then
     $$z_a = 4*1.466x_a/18 = 370.41$$
+    <!-- $$z_a = 4*1.466x_a/20 = 318.7084 -->
     The last hit of his 5-hit na combo has higher scaling compared to the other hits.
   </p><p>
     The total dps from his na and E is then
@@ -305,9 +315,56 @@
     Cyno is designed more to be an NA spammer than an E spammer.
   </p>
 
+  <h3>C2 calculations</h3>
+  <p>C1's speed boost would supposedly allow him to do more NA combos in between Es.
+    We will ignore C1 effects for now.
+  </p><p>
+    We will factor in the C2 buff of 50% dmg bonus (which requires NA spam for stacks).
+    The e dps is then
+    $$z_e = (282*1.966 + 4*(282*2.316 + 3*150*1.966))/18 = 372.5366666667$$
+    The NA dps is
+    $$z_a = 4*1.966x_a/18 = 496.7426666667$$
+    The total dps is
+    $$z = 869.2793326667$$
+  </p>
 
+
+  <h3>C5 calculations</h3>
+  <p>C3 and C5 increase his scaling (NA multipliers and mortuary rite, 
+    but the dustbolt scaling is the same).
+    Note that C3 increases Q while C5 increases E,
+    so this is acknowledgement that design-wise Cyno is focused more on NA spam than E spam
+    (the NA contributes more to Cyno's dps).
+  </p><p>
+    Let's assume lv13 E and Q.
+    The e dps is then
+    $$z_e = (333*1.966 + 4*(333*2.316 + 3*150*1.966))/18 = 404.355$$
+    The total NA scaling is 1196.77%. Accounting for the additive EM buff, the effective scaling
+    $$x_a = (3000*11.9677 + 5*600)/3000 = 12.9677 = 1296.77\%$$
+    The NA dps is
+    $$z_a = 4*1.966x_a/18 = 566.5444044444$$
+    The total dps is
+    $$z_5 = 970.8994044444$$
+  </p>
+
+
+  <h3>C6 calculations</h3>
+  <p>As derived before, if Cyno fires a dustbolt every .4s (which requires NA spam for stacks),
+    that increase scaling by 150/.4 = 375.
+    The increase in dps is then
+    $$z_6 = 375*1.966 = 737.25$$
+    which is actually a lot.
+    This almost doubles Cyno's dps (by comparison C6 nearly triples Xiao's dps).
+    The total dps is then
+    $$z = z_5 + z_6 = 1708.1494044444$$
+    This is C6 Itto level, but still less than C6 Xiao.
+    Still, Cyno is one of the best c6 dps we have had in a long time,
+    even if his c6 does not change his gameplay as much as for Itto or Xiao.
+  </p>
+
+
+  <h2>Other notes</h2>
   <p>Trivia: Raiden, Yae, Cyno all have birthdays close to each other in June.</p>
-
 
   <p>Overall, Cyno is a well-designed character, one of the best designed to date
     and much better designed than Ayaka.
