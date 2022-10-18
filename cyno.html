@@ -293,9 +293,10 @@
     when triggering electro reactions.
     See <a href='energy.html'>energy</a> for Raiden energy calcs.
   </p><p>
-    His c6 makes his na fire one dust bolt every .4s.
+    His c6 allows his na to fire one dust bolt every .4s when consuming jackal stacks
+    (the jackal stacks are generated after using q or buffed e).
     Earlier we said that the dust bolt (with the EM buff) has effectively 150% scaling.
-    So this increases the scaling by
+    So as an approximation this increases the scaling by around
     $$150/.4 = 375$$
     which is actually pretty good as a buff.
     Overall, a c6 Cyno may have similar dps as a c6 Itto.
@@ -303,9 +304,9 @@
     compared to other c6 units.
   </p><p>
     Most of Cyno's constellations focus on his NA rather than his E.
-    His C1 buffs his NA speed (help gain C2 and C6 stacks faster),
+    His C1 buffs his NA speed (help gain C2 stacks faster and fire more C6 dustbolts),
     his C2 requires him to do NA to gain full stacks for dmg bonus,
-    his C6 requires him to do NA to gain full stacks and proc additional dustbolts.
+    his C6 requires him to do NA to proc additional dustbolts.
     His constellations require him to do NA,
     making his kit more NA focused rather than E focused.
     If he does his E too frequently with TF, that will interrupt his NA combos
@@ -349,14 +350,29 @@
 
 
   <h3>C6 calculations</h3>
-  <p>As derived before, if Cyno fires a dustbolt every .4s (which requires NA spam for stacks),
+  <p>With c6, Cyno will gain 4 jackal stacks after using his Q or activating the buffed E
+    (which only happens 4 times during his burst).
+    When using an NA he will consume a stack and fire one dustbolt.
+    So after using his Q, he will have 4 stacks and consume all of them
+    until the next buffed E, after which he will gain 4 more stacks and consume them.
+    Only one stack can be consumed every .4s.
+    Given how fast Cyno attacks, he will almost always consume all 4 stacks in between buffed E.
+  </p><p>
+    So in total he can fire \(4*4 = 16\) extra dustbolts during his q with c6
+    (4 dustbolts per 'wave' or before each buffed E).
+    This increases the mv by
+    $$z_6 = 133*1.966*16/20 = 209.1824$$
+    The total dps is then
+    $$z = z_5 + z_6 = 1180.0818$$
+  </p>
+  <p><!-- As derived before, if Cyno fires a dustbolt every .4s (which requires NA spam),
     that increase scaling by 150/.4 = 375.
     The increase in dps is then
     $$z_6 = 375*1.966 = 737.25$$
     which is actually a lot.
     This almost doubles Cyno's dps (by comparison C6 nearly triples Xiao's dps).
     The total dps is then
-    $$z = z_5 + z_6 = 1708.1494044444$$
+    $$z = z_5 + z_6 = 1708.1494044444$$ -->
     This is C6 Itto level, but still less than C6 Xiao.
     Still, Cyno is one of the best c6 dps we have had in a long time,
     even if his c6 does not change his gameplay as much as for Itto or Xiao.
