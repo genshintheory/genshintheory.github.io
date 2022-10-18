@@ -340,12 +340,21 @@
     Let's assume lv13 E and Q.
     The e dps is then
     $$z_e = (333*1.966 + 4*(333*2.316 + 3*150*1.966))/18 = 404.355$$
+  </p><p>
     The total NA scaling is 1196.77%. Accounting for the additive EM buff, the effective scaling
     $$x_a = (3000*11.9677 + 5*600)/3000 = 12.9677 = 1296.77\%$$
     The NA dps is
     $$z_a = 4*1.966x_a/18 = 566.5444044444$$
     The total dps is
     $$z_5 = 970.8994044444$$
+  </p>
+
+  <p>Now consider the c1 effect.
+    As a rough approximation suppose this increases damage by 20%
+    so the NA dps is
+    $$1.2z_a = 679.8532853333$$
+    The total dps is
+    $$z_5 = 1084.2082853333$$
   </p>
 
 
@@ -363,7 +372,8 @@
     This increases the mv by
     $$z_6 = 133*1.966*16/20 = 209.1824$$
     The total dps is then
-    $$z = z_5 + z_6 = 1180.0818$$
+    <!-- $$z = z_5 + z_6 = 1180.0818$$ -->
+    $$z = z_5 + z_6 = 1293.3906853333$$
   </p>
   <p><!-- As derived before, if Cyno fires a dustbolt every .4s (which requires NA spam),
     that increase scaling by 150/.4 = 375.
