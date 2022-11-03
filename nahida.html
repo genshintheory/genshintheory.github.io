@@ -37,6 +37,148 @@
   <ul>
     <li>English: Kimberley Anne Campbell</li>
   </ul>
+
+
+  <h2>Talents</h2>
+  <p>Nahida is a unique character as she can be played as a support, sub-dps, and main-dps.
+    The only other character that can be played like this is probably Yelan.
+  </p>
+  <p>One of her passives gives 25% of the highest EM as EM to other teammates,
+    for a max of 250 EM.
+    So one teammate needs 1k EM to give the full buff.
+    This passive powercreeps c2 kazuha, and Nahida can do this at c0.
+    This speaks of the power difference between the two.
+  </p>
+
+
+  <h2>Artifacts</h2>
+  <p>There are two main artifact sets:
+    4p gilded and 4p deepwood.
+    If using Nahida as a dps with another team member using deepwood,
+    then gilded is always better.
+    Moreover, gilded gives more EM and makes it easier to reach 1k em.
+  </p><p>
+    As for main stats there are a number of options:
+    atk-dendro-crit,
+    em-dendro-crit,
+    full em,
+    atk-em-crit,
+    em-em-crit,
+    atk-atk-em
+    atk-em-em.
+  </p><p>
+    We will only consider the first five.
+  </p><p>
+    As for substats: crit, EM, ATK.
+  </p>
+
+
+  <h2>Weapons</h2>
+  <p>Nahida has many good options.
+    Her bis has a gilded kind of effect and looks like a genie's lamp.
+    Other good weapons include: widsith, kagura, lost prayer, solar, 
+    sac frags, even the ttds (though it is recommended to build more dmg into Nahida).
+  </p><p>
+    Nahida does not really need EM since her burst is quite cheap at 50.
+  </p>
+
+
+  <h2>Calculations</h2>
+  <p>We assume 1k EM and 1k ATK.
+    It is hard to have both 1k EM and 2k ATK (unless you use Gilded).
+    You usually have to choose btw an EM and ATK sands.
+    If you add Bennett, while other atk scaling characters can reach 3k atk,
+    with 1k atk that will become 2k atk.
+    Actually the only real way to reach 1k EM is to use full EM set with EM weapon.
+  </p><p>
+    If you want to use Nahida as a support for national type teams, then Gilded is her bis as it will make her reach 1k em.
+    If you use deepwood, that would only really buff her own damage not others, whereas Gilded buffs her own damage and others' damage.
+    Besides, you can even put deepwood on other characters (like even Xiangling) and save Gilded for Nahida.
+    You would only put deepwood on Nahida to support other dendro dps (e.g. full em deepwood),
+    but that is almost a waste since Nahida herself can do a lot more damage with other artifact combos.
+  </p><p>
+    A lv10 E has scaling of 185.8% ATK+371.5% EM.
+    Assume a national team (one pyro, hydro, electro).
+    Honestly the hydro buff from the q is almost useless: 
+    the duration extension is not that needed since her q will have 100% uptime anyways.
+    If hydro increased the aoe of Nahida's E attack (or made it do aoe damage like riptide), 
+    then god that would be something else.
+    To buff Nahida's E damage the most with her Q, you would probably want 2 pyro + electro or 2 electro + pyro.
+    Examples include Raiden-Bennett-XL-Nahida and Cyno/Raiden-Yae-Bennett-Nahida.
+    However, you usually want hydro on national teams to enable vaporize.
+    So we will take Raiden-Yelan-XL-Nahida as a canonical example of a Nahida team (a control to compare other calculations with).
+  </p><p>
+    Assume 61.6% dendro dmg bonus (4p deepwood).
+    We get 26.8% dmg bonus and .45s reduction from Q.
+    The E karma usually procs once every 2.5s, but now it is 2.05s.
+    We also have 88.4% dmg bonus on the E.
+  </p><p>
+    Assume 1k em and 1k atk. The base damage is
+    $$1858 + 3715 = 5573$$  <!-- 1.8576666667 -->
+    With Bennett it becomes
+    $$2*1858 + 3715 = 7431$$  <!-- 2.477 -->
+    But if you play Nahida off-field she will not benefit from Bennett's buff.
+    Normalizing wrt 3k atk, the effective scaling (without Bennett) is 186%.
+  </p><p>
+    The dps is then
+    $$x_e = 186*1.884/2.05 = 170.9385365854$$
+    But considering this can spread the damage can be higher.
+  </p><p>
+    But Nahida has a passive that converts em to dmg bonus.
+    Each em point above 200 gives .1% dmg bonus and .03% cr.
+    With 1k em she can reach the max of 80% dmg bonus and 24% cr.
+    This gives 168.4% dmg bonus on the E.
+    The dps is then 
+    $$x_e = 186*2.684/2.05 = 243.523902439$$
+  </p><p>
+    We now calculate spread dps.
+    Given icd, she will spread every other hit.
+    The additive bonus damage from spread at lv90 with 1k em is
+    $$b = 1446.85*1.25*(1+5000/2200) = 5918.9318181818$$
+    which is quite a lot.
+    The total base damage (without Bennett) is then
+    $$11491.9318181818$$
+    The renormalized scaling is 383.06439394 which is more than twice the original scaling.
+    The dps is now
+    $$x_e = 383*2.684/2.05 = 501.4497560976$$
+    But since this spreads on every other hit we take an average with the non-spread dps:
+    $$x_e = (243.5 + 501.5)/2 = 372.5$$
+    Considering that this is a full em build, this mv is quite high.
+  </p>
+
+  <p>However, above assumed she had standard 2.5s icd.
+    In reality her icd is 1s.
+    That means she will apply dendro on each hit,
+    meaning she can spread on each hit.
+    So her dps is 
+    $$x_e = 501.4497560976$$
+    This makes her one of the best sub-dps in the game
+    and one of the best dps.
+    Moreover it is multitarget and has 100% uptime.
+  </p><p>
+    Can Nahida work with Xiao, Itto, or cryo?
+    Dendro does not react with anemo, geo, cryo,
+    so in order for Nahida's E to proc in those kinds of teams,
+    they would need another element to proc reactions.
+  </p>
+
+  <p>
+    If you choose to build more atk rather than em,
+    then you will lose out on the dmg bonus from em (and lose some of the support em buff ability).
+    For example, you could also have 2k atk and 500 em (atk-dendro-crit with gilded+weapon).
+    Ultimately we need to optimize the product of base damage, dmg bonus, crit.
+  </p>
+  <p>
+    Given she can use the widsith for crit dmg (and gets crit rate from her passive), using full em is acceptable.
+    Since she has more access to crit stats, it makes her much better than kazuha.
+    If she uses thousand floating dreams, she can probably get away with not using full em (e.g. em-em-crit 4p gilded).
+  </p>
+
+  <p>You can do autoattacks with Nahida, but they won't be buffed by her dmg bonus/crit rate passive 
+    (which only applies to her E).
+    Note her c6 passive is considered E damage and will be buffed though.
+  </p>
+
   
   </body>
 </html>
