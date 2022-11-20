@@ -133,6 +133,8 @@
 
 
   <h2>Calculations</h2>
+
+  <h3>Full EM build (support build)</h3>
   <p>We assume 1k EM and 1k ATK.
     It is hard to have both 1k EM and 2k ATK (unless you use Gilded).
     You usually have to choose btw an EM and ATK sands.
@@ -163,9 +165,9 @@
     We also have 88.4% dmg bonus on the E.
   </p><p>
     Assume 1k em and 1k atk. The base damage is
-    $$1858 + 3715 = 5573$$  <!-- 1.8576666667 -->
+    $$b_0 = 1858 + 3715 = 5573$$  <!-- 1.8576666667 -->
     With Bennett it becomes
-    $$2*1858 + 3715 = 7431$$  <!-- 2.477 -->
+    $$b_1 = 2*1858 + 3715 = 7431$$  <!-- 2.477 -->
     But if you play Nahida off-field she will not benefit from Bennett's buff.
     Normalizing wrt 3k atk, the effective scaling (without Bennett) is 186%.
   </p><p>
@@ -181,22 +183,20 @@
     $$x_e = 186*2.684/2.05 = 243.523902439$$
   </p><p>
     We now calculate spread dps.
-    Given icd, she will spread every other hit.
     The additive bonus damage from spread at lv90 with 1k em is
-    $$b = 1446.85*1.25*(1+5000/2200) = 5918.9318181818$$
+    $$b_s = 1446.85*1.25*(1+5000/2200) = 5918.9318181818$$
     which is quite a lot.
     The total base damage (without Bennett) is then
-    $$11491.9318181818$$
-    The renormalized scaling is 383.06439394 which is more than twice the original scaling.
+    $$b = b_0 + b_s = 11491.9318181818$$
+    The renormalized scaling is \(100b/3000 = 383.1\) which is more than twice the original scaling.
     The dps is now
     $$x_e = 383*2.684/2.05 = 501.4497560976$$
-    But since this spreads on every other hit we take an average with the non-spread dps:
+    But if this spreads on every other hit we take an average with the non-spread dps:
     $$x_e = (243.5 + 501.5)/2 = 372.5$$
     Considering that this is a full em build, this mv is quite high.
   </p>
 
-  <p>However, above assumed she had standard 2.5s icd.
-    In reality her icd is 1s.
+  <p>However, in reality her icd is 1s (not the standard 2.5s icd).
     That means she will apply dendro on each hit,
     meaning she can spread on each hit.
     So her dps is 
@@ -205,6 +205,34 @@
     and one of the best dps.
     Moreover it is multitarget and has 100% uptime.
   </p><p>
+    And this is just a support build.
+    A support build kazuha (full em) will not even do half the damage.
+  </p><p>
+    And there are crazier builds with 3000 em Nahida
+    paired with Diona and other EM giving abilities.
+  </p>
+
+  <p>Above we assumed the damage is off field (as she may usually be played).
+    But if we assume she is on field and benefits from Bennett's buff,
+    the spread base damage is
+    $$b = b_1 + b_s = 13349.9$$
+    The renormalized scaling is 445%.
+    The dps is 
+    $$x_e = 445*2.684/2.05 = 582.6$$
+  </p>
+
+
+  <h3>DPS build</h3>
+  <p>For a max dps build suppose you have 2k atk and 1k em.
+    Off field damage (without Bennett) with spread is what is computed above (around 582.6 mv).
+    The base damage with Bennett (on-field Nahida) is
+    $$3*1858 + 3715 = 9289$$
+    The total base damage 
+  </p>
+
+
+  <h2>Other notes</h2>
+  <p>
     Can Nahida work with Xiao, Itto, or cryo?
     Dendro does not react with anemo, geo, cryo,
     so in order for Nahida's E to proc in those kinds of teams,
