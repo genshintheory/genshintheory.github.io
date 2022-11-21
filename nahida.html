@@ -226,8 +226,20 @@
   <p>For a max dps build suppose you have 2k atk and 1k em.
     Off field damage (without Bennett) with spread is what is computed above (around 582.6 mv).
     The base damage with Bennett (on-field Nahida) is
-    $$3*1858 + 3715 = 9289$$
-    The total base damage 
+    $$b_1 = 3*1858 + 3715 = 9289$$
+    The total spread base damage is 
+    $$b = b_1 + b_s = 15207.9$$
+    The renormalized scaling is 506.931.
+    The dps is
+    $$x_e = 506.931*2.684/2.05 = 663.7$$
+    which is very high.
+  </p>
+
+  <p>Even then we still have not optimized completely.
+    Technically, to get the most dps,
+    we can drop the hydro buff 
+    and replace it with the pyro buff (more dmg bonus)
+    or electro buff (more frequent E procs).
   </p>
 
 
@@ -237,6 +249,9 @@
     Dendro does not react with anemo, geo, cryo,
     so in order for Nahida's E to proc in those kinds of teams,
     they would need another element to proc reactions.
+  </p><p>
+    Nahida has found some uses on cryo melt teams
+    where she and pyro are used for burning, allowing cryo units to melt.
   </p>
 
   <p>
