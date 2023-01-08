@@ -89,7 +89,7 @@
     After his E ends, it goes into a 6s cd.
   </p><p>
     His E is one of the most unique abilities in the game
-    and supports the hypothesis that the fatui harbingers have unique tricks up their sleeve
+    and supports the hypothesis that the fatui harbingers have unique tricks up their sleeves
     (Childe had riptide or 断流 duanliu, which is an interesting name in its own right).
   </p>
   <p>
@@ -102,6 +102,14 @@
     One of Scara's passives buffs him in E mode when he comes into contact with different elements:
     pyro buffs his atk, cryo buffs his crit rate, electro gives him energy, hydro extends the duration.
   </p>
+  <p>
+    Generally, it is advised to use the q within the e (near the end of the e).
+    That way the q can receive the buffs from the e through the above passive 
+    (increased atk from pyro, increased crit rate from cryo on q).
+    The c2 further encourages using the q near the end of the e as that will maximize the q dmg bonus.
+  </p>
+
+
   <p>Another passive gives him a certain probability 
     to not consume air stamina when sprinting midair while also firing additional wind arrows.
   </p><p>The fact that the Wanderer has a passive similar to the echo artifact set
@@ -138,6 +146,7 @@
   <h2>Teams</h2>
   <p>Wanderer synergizes with many supports including:
     Faruzan, Yun Jin, Yelan, XQ, Beidou, XL, Yae, Candace, etc.
+    He can even be used with his mother Raiden in a quickswap team.
   </p><p>
     Wanderer can join his fellow comrade Childe and replace kazuha in Childe international,
     much like how Wanderer destroyed kazuha's clan.
@@ -149,6 +158,94 @@
     which severely limits Ayato's versatility and puts him below meta.
   </p>
 
+
+  <h2>Calculations</h2>
+  <p>We assume level 10 AA, E, and Q.
+    We also assume 61.6+40=101.6% anemo dmg bonus from desert chronicle.
+    In some teams where Scaramouche and Childe are together, Childe can also buff his AA by one level.
+    We will not consider that here.
+  </p><p>
+    We ignore buffs from absorbing elements
+    as well as the damage from the wind arrows.
+    In particular, we will consider his E without the hydro buff. 
+    We also consider three main AA combos: CA spam, NA spam, and 2N1C (2 NA followed by 1 CA).
+    In practice, the optimal combo may also depend on NA atk speed, dodging, external buffs, etc.
+  </p><p>
+    From in-game testing, he will stay in air for around 10s (without consuming any air stamina).
+    The e will then go into cd for 6s.
+    The total cd is then 16s.
+  </p><p>
+    During his E, he can spam 9 CA.
+    His CA has 237.74% scaling.
+    His E will multiply this by 143%.
+    This will then become around 340% scaling.
+    The dps from ca spam is
+    $$x_c = 340*2.016*9/16 = 385.56$$
+    But is this the optimal combo?
+  </p><p>
+    Another combo is NA spam. He can do the full NA combo 5 times during his E.
+    His full NA combo has total scaling
+    \(135.83 + 128.52 + 94.18*2 = 452.71\)
+    His E will multiply this by 153.72%.
+    The dps from na spam is
+    $$x_n = 452.71*1.5372*2.016*5/16 = 438.42$$
+    This shows na spam does more damage than ca spam.
+    But is this optimal?
+    The advantage of using ca is the massive aoe.
+    We can try interweaving na with ca.
+  </p><p>
+    We consider N2C1. The combo has scaling
+    \( (135.83 + 128.52)*1.5372 + 340 = 746.36\)
+    He can do 5 of those during his E.
+    The dps is then
+    $$x_m = 746.36*2.016*5/16 = 470.2068$$
+    which is even more dps than the other combos.
+    So of the three considered, mixing NA and CA provides the optimal combo.
+    It is plausible that with NA atk spd buffs or using his signature weapon, NA spam becomes more optimal.
+    But in absence of these other buffs, mixing NA and CA can provide a lot of dps.
+    The above alone is Raiden level damage.
+  </p>
+
+  <p>When he casts his E, he will also do an instance of aoe damage with 171.36% scaling.
+    This contributes minimal mv of
+    $$x_e = 171.36*1.616/16 = 17.30736$$
+    At the end of his E, he may also be able to do a plunge attack.
+    The low/high plunge scaling is 224.62% / 280.57%.
+    There may also be collision/midair plunge damage.
+    We will ignore that for now.
+    Let's suppose it is a high plunge for illustration purposes. 
+    The mv for that is
+    $$x_p = 280.57*2.016/16 = 35.35182$$
+    If we combine these two extra instances of damage from the beginning and end of the E,
+    it contributes around 50% mv, which can be non-negligible. 
+  </p>
+
+  <p>Note above that the desert chronicle buff can last for 15s (so technically it can also last for Xiao's burst).
+    Without the hydro buff, Scaramouche can stay midair for around 10s.
+    With the hydro buff and even constellations, of course he can stay midair longer,
+    and his signature weapon also has a buff that accomodates a duration approaching 15s.
+    But for all practical purposes, we assume the chronicle buff will last 
+    while Scaramouche is midair and for his final plunge attack (at C0).
+  </p>
+
+  <p>His Q has 
+    \(264.96×5 = 1324.8\)
+    total scaling.
+    The dmg bonus for this is 61.6% (as the desert chronicle 40% buff applies to AA).
+    The cd is 15s.
+    The mv is then
+    $$x_q = 1324.8*1.616/15 = 142.72512 $$
+  </p>
+
+  <p>Scaramouche is an excellent character that can be commended ad infinitum
+    and be given many awards.
+    He can levitate, traverse terrain swiftly, and is easy to use.
+    He does a lot of damage, his cooldown is conveniently short, 
+    and he is easily one of the best characters for exploration.
+  </p><p>
+    It is fair to say Scaramouche lives up to Liu Che's (刘彻) legacy
+    and is one of the best characters in the game.
+  </p>
 
   
   </body>
