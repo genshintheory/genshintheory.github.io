@@ -88,6 +88,8 @@
 
 
   <h2>Calculations</h2>
+
+  <h3>E projection</h3>
   <p>Assume 4p gilded with 46.6% dendro dmg bonus.
     At lv90, Alhaitham gets 28.8% more dendro dmg bonus.
     Suppose he gets 180em from gilded, 100em from dendro resonance, 
@@ -126,7 +128,24 @@
     $$1446.85*1.25*(1+(5*400)/1600) = 4069$$
     This is equivalent to 136% extra scaling per spread.
     So the projection dps with spread is
-    $$(18*153.216 + 9*136)*2.154/18 = 476.5$$
+    $$x_p = (18*153.216 + 9*136)*2.154/18 = 476.5$$
+  </p>
+
+
+  <h3>Burst</h3>
+  <p>At lv10, each Q hit has 218.88% ATK + 175.1% EM scaling.
+    Assuming 3k atk and 400 em, this is equivalent to about
+    242.23% atk scaling per hit.
+    Suppose Alhaitham uses his Q on cd and each time starting with 0 mirrors.
+    His Q will hit 4 times. It has a cd of 18s. The dps is
+    $$4*242.23*2.154/18 = 115.9$$
+    without reactions. He can spread two of those hits, making the dps
+    $$x_q = (4*242.23 + 2*136)*2.154/18 = 148.5$$
+  </p><p>
+    Adding his E projection with Q damage gives a dps of 
+    $$x_p + x_q = 625,$$ 
+    which is very high (top tier).
+    And this is not even considering his NA or rush damage.
   </p>
 
 
