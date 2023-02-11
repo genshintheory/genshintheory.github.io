@@ -100,6 +100,11 @@
     His E projection has 120.96% ATK + 241.92% EM scaling per mirror,
     and the rush attack has 348.48% ATK + 278.78% EM scaling at lv10.
     The E cd is 18s.
+    For 3k atk and 400 em, the 100% EM scaling is equivalent to 13.3% ATK scaling (divide by 7.5).
+    So the E projection is equivalent to 
+    $$120.96+32.256=153.216$$ 
+    ATK scaling per mirror (the EM scaling gives around 27% more damage).
+    For different atk and em stats, this will differ, but we use this for this calculation.
   </p><p>
     Alhaitham is a very flexible character given that he can gain mirrors via different ways
     and can have different kinds of rotations.
@@ -110,8 +115,18 @@
     This will give him 12s of dps with 3 mirrors.
     After that he can swap out or continue to dps with 1-2 mirrors.
   </p><p>
-    During those 12s, he can do 6 projection attacks.
-    For now we will ignore his NA, CA, and rush damage.
+    For now we will ignore his NA, CA, rush damage, and Q damage.
+    During those 12s, he can do 6 projection attacks with 3 mirrors or 18 hits.
+    This gives a dps of 
+    $$18*153.216*2.154/18 = 330$$
+    without reactions.
+  </p><p>
+    Given his unique ICD, he can spread half of those (or 9 hits).
+    At lv90 and 400em, the flat dmg bonus from spread is about
+    $$1446.85*1.25*(1+(5*400)/1600) = 4069$$
+    This is equivalent to 136% extra scaling per spread.
+    So the projection dps with spread is
+    $$(18*153.216 + 9*136)*2.154/18 = 476.5$$
   </p>
 
 
