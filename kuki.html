@@ -36,7 +36,7 @@
     Her Q does dot that synergizes with the quicken reaction (multiple procs over time).
     Her Q is very similar to Collei's Q.
   </p><p>
-    One of her passives increases her healing and Q damage based on her EM.
+    One of her passives increases her healing and E damage based on her EM.
   </p><p>
     If her hp is less than 50% she gains buffs: 
     increased healing and increased q damage (q field lasts longer).
@@ -65,8 +65,11 @@
   <h2>Teams</h2>
   <p>She can be used on any team that needs healing, including Xiao teams (even her c4 works for plunging).</p>
   <p>Her electro application particularly synergizes well with some electro and dendro characters, 
-    such as Cyno, Nahida, Collei,
+    such as Cyno, Nahida, Alhaitham, Collei
     and Kuki synergizes well in taser, quicken, and hyperbloom teams.
+  </p><p>
+    One example taser team is Scaramouche, Nahida, Kuki, Yelan.
+    An example of a quickbloom team is Alhaitham, Nahida, Kuki, Yelan.
   </p>
   <p>As part of the Arataki gang, does she synergize with Itto?
     She can heal Itto for sure.
@@ -76,6 +79,26 @@
     Kuki is a better electro healer than Dori.
     It makes sense why Itto chose Kuki over Dori.
   </p>
+
+
+  <h2>Calculations</h2>
+  <p>Suppose she has 46.6% electro dmg bonus and 200 em (e.g. tenacity + em sword).
+    Suppose she uses an hp sands and has 30k hp.
+    As mentioned above, when using it under 50% hp,
+    her q has a total of 92% hp scaling which is about 920% atk scaling (compared to 3k atk with Bennett).
+  </p><p>
+    The dps is
+    $$x_q = 920*1.466/15 = 89.9$$
+  </p><p>
+    This can proc aggravate up to 4 times.
+    With 200 em, the additive damage is
+    $$1446.85*1.15*(1+5*200/1400) = 2852$$
+    or about 95% extra scaling per aggravate (divide above by 3k atk).
+  </p><p>
+    The dps with 4 aggravates is then
+    $$x_q = (920+4*95)*1.466/15 = 127$$
+  </p>
+
 
 </body>
 </html>
