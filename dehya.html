@@ -29,8 +29,10 @@
 
   <h2>Talents</h2>
   <p>Her E creates a 10m radius field that does a coordinated aoe pyro attack upon hit.
-    It can proc once every 2.5s.
+    It can proc once every 2.5s, so it can melt/vape each hit.
     The E dmg has dual atk + hp scaling.
+    This means she will be buffed by both pyro resonance (atk buffs) and hydro resonance (hp buffs).
+  </p><p>
     Dehya can reposition the field once during its duration.
     It has a 20s cd and 12s duration (which can increase to 18s with c2).
     Her E can snapshot.
@@ -61,7 +63,24 @@
   </p>
 
   <h2>Calculations</h2>
-  <p></p>
+  <p>Assume 2k atk and 30k hp. With Bennett, she can reach 3k atk.
+    So hp is 10 times the atk.
+    <!-- So atk and hp scaling are in a rough 10 to 1 ratio. -->
+    Assume lv10 E and Q.
+  </p><p>
+    Her E has 108.36% ATK + 1.86% HP scaling.
+    The hp part is equivalent to 18.6% atk scaling (multiply by 10),
+    so the effective scaling is 126.96% per hit.
+  </p><p>
+    When she casts her E she does 203.18% scaling.
+    When she repositions her E she does 239.04% scaling.
+    These hits have independent ICD (both can melt/vape).
+    One can cast her E and immediately afterwards reposition her E to get both hits in at the beginning.
+  </p><p>
+    During the 12s duration of the field, her E can proc 4 times.
+    The total scaling is 
+    $$203.18 + 239.04 + 4*126.96 = 950.06$$
+  </p>
 
   
   </body>
