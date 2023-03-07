@@ -136,9 +136,9 @@
     So with Bennett, Itto will have ~1.67 times more attack than a typical character.
   </p><p>
     So we multiply the above MV by the ATK scaling
-    $$x = 5z/3 = 517.68$$
+    $$x_q = 5z/3 = 517.68$$
     And this does not factor in his E damage (the cow that hits like a truck).
-    For around 500% scaling and 10s cd, the E can contribute around +50 more mv to the above number.
+    The E has around 500% scaling and a 10s cd.
     (If a sacrificial claymnore is used, the E can sometimes be used twice.)
     So Itto is another example of a character that has high dps without need for reactions.
   </p><p>
@@ -146,7 +146,7 @@
     It has a 10s cd.
     Suppose Itto uses it twice during his 11s burst, so it benefits from the atk buff.
     The dps is
-    $$x_E = 553*1.706*(5/3)/10 = 157.2$$
+    $$x_e = 553*1.706*(5/3)/10 = 157.2$$
   </p>
 
   <h3>C1</h3>
@@ -222,9 +222,13 @@
     whereas the final slash scaling will increase to
     $$(5000*377.4+35(3000))/5000 = 377.4 + 35(3/5) = 398.4$$
     For C0, there are say 12 hits of his CA so the total increase in dps is
-    $$12*35(3/5)*1.706/18 = 23.884$$
+    $$x_b = 12*35(3/5)*1.706/18 = 23.884$$
     which is more or less negligible.
     This only affects the ca, not the na.
+    The total C0 dps (with Bennett) is then
+    $$x_q + x_e + x_b = 157.2+517+23.8 = 698$$
+  </p>  
+  <p>
     For C6, if there are say 22 hits of his CA, the increase from this passive is
     $$22*35(3/5)*1.706/13.5 = 58.38$$
     Since Itto already gets so much ATK from his Q, 
@@ -235,6 +239,9 @@
     The only thing he needs to boost his dps even further is DMG Bonus.
     Mona is one of the best ways to do that (note Kazuha cannot 'swirl Geo').
   </p>
+
+  <h3>Without Bennett</h3>
+  <p>Most of the above calculations hinge on the assumption that Itto is paired with Bennett.</p>
   
 </body>
 </head>
