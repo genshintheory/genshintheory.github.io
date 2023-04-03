@@ -116,15 +116,7 @@ but it is no surprise that Nahida is more effectively used in pretty much any ot
 </p>
 <dl><dd>\( x_C =(1+.816)*(230+392)/3\approx 376.52 \)</dd></dl>
 <p>This is much lower than Xiao's high plunge DPS. Even if you add the DMG Bonus from her burst it is not enough to reach Xiao's level.
-</p><p>
-  Usually her burst is only used in freeze comps where Ganyu has blizzard strayer for 61.6% cryo dmg bonus.
-  We assume level 10 burst for 126.49% scaling per icicle.
-  There are at max 50 icicles over 15s.
-  But not all of them hit. They are generated pseudorandomly.
-  Let's say in practice, about half of them hit (usually need Venti) the dps is
 </p>
-<dl><dd>\( x_Q =(1+.616)*25*126.49/15\approx 340.68 \)</dd></dl>
-<p>In practice, the dps will be much less, since not every icicle is guaranteed to hit.</p>
 
 <h3>Melt (Dehya is Ganyu's best support here)</h3>
 <p>Ganyu melt teams look like:
@@ -163,6 +155,27 @@ but it is no surprise that Nahida is more effectively used in pretty much any ot
   And it's actually lower than Xiangling's dps, which is quite sad for a non-standard banner 5 star.
   Maybe Ganyu should have joined fellow underwhelming CA dps Tighnari on the standard banner too.
 </p>
+
+<h3>Burst</h3>
+<p>
+  Usually her disco ball is only used in freeze comps where Ganyu has blizzard strayer for 61.6% cryo dmg bonus
+  (as otherwise it can mess up melt teams).
+  We assume level 10 burst for 126.49% scaling per icicle.
+  If there are 5 or more enemies, there are at max 50 icicles over 15s.
+  But not all of them hit. They are generated pseudorandomly.
+  Let's say in practice, about half of them hit (usually need Venti).
+</p><p>
+  Moreover, it is usually not the case that there are always 5+ enemies.
+  If there is one enemy, there will be 10 icicles.
+  If there are two, there will be 20, and so on.
+  This caps out at 50 max.
+  Suppose there are 2-3 enemies in an average situation.
+  In other words, suppose 25 icicles are generated.
+</p><p>
+  The dps is
+</p>
+<dl><dd>\( x_Q =(1+.616)*25*126.49/15\approx 340.68 \)</dd></dl>
+<p>In practice, the dps will be much less, since not every icicle is guaranteed to hit.</p>
   
 </body>
 </html>
