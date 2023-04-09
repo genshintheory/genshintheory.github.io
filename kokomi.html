@@ -76,7 +76,8 @@
 
 <h2>Teams</h2>
 <p>
-  Kokomi is typically used in Freeze teams, Electro-charged teams, the meme Kokomon team, or basically any team that needs healing
+  Kokomi is typically used in Freeze teams, Electro-charged teams, the meme Kokomon team, bloom teams,
+  or basically any team that needs healing
   (like against the rifthounds or other bleed mechanics).
   </p><p>
   Even though her E has no ICD so she can technically be used in vape teams (she can keep up with Xiangling's Pyronado),
@@ -94,6 +95,42 @@
   Then using Sucrose as a driver to swirl these elements can create a big explosion
   where the enemies will simultaneously be applied with hydro, electro, pyro, anemo (from swirl).
 </p>
+
+<h2>Calculations</h2>
+<p>There are two parts to her dps: her Q dps and the Ocean Clam dps.
+  Assume 30k hp and lv10 NA, E, Q.
+  Assume 4p Clam with \(46.6+28.8=75.4\% \) hydro dmg bonus
+  and \(25+15=40\% \) healing bonus.
+</p><p>
+  At lv10, her NA gets an additive bonus of 12.77% hp.
+  With her passive 15% of her healing bonus is converted into extra hp scaling.
+  So for 40% healing bonus, she gets an additional 6% hp scaling,
+  giving an additive bonus of 18.77% hp for her NA.
+  This is equivalent to 187.7% atk scaling per NA.
+</p><p>
+  Suppose she uses her 3-hit NA combo 5 times within the Q's 10s interval
+  (this becomes easier to achieve with atk spd buffs like Mika's).
+  The burst has a cd of 18s.
+  Her Q does an initial hit of 18.75% hp or around 187.5% atk scaling.
+  The mv is
+  $$x_b = (187.5+5*(123.08+110.77+169.75+3*187.7))*1.754/18 = 489.3$$
+  This is actually higher than Ayaka's dps.
+</p><p>
+  However, Kokomi cannot crit.
+  Assuming a 'normal' character can reach 100% crit rate and 200% crit dmg,
+  this means her above mv is slashed by three:
+  $$z_b = x_b/3 = 163.1$$
+  Above we did not account for possible vapes,
+  but that would not fix her fundamental setback of not being able to crit.
+  Even if she vapes all her NA (impossible due to ICD),
+  the above would double become around 300 mv, 
+  which is still low.
+  As such, Kokomi's potential as a burst dps is limited,
+  while she is better suited as a support.
+</p><p>
+  If Kokomi's C6 allowed her to crit, then she would at least be decent.
+</p>
+
   
 </body>
 </html>
