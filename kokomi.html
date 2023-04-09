@@ -127,6 +127,7 @@
   which is considered a nuke for a hydro attack (given this can vape).
   Moreover, Kokomi's CA gets a 12.2% hp buff (122% atk scaling) from Q, 6% hp buff from passive (60% atk), 
   bringing 267% to 449% scaling (another nuke).
+  These scalings are comparable to (higher than actually) Scaramouche's E buffed NA/CA.
   By contrast, Ayato's NA scalings are around 100%.
 </p><p>
   However, Kokomi cannot crit.
@@ -168,6 +169,23 @@
 <p>The 4p Ocean Clam set turns any healer into a physical sub-dps
   (the bubble pop does physical damage and is affected by physical res shred like superconduct,
   which enables Ocean Clam superconduct Qiqi to be viable in situations).
+  The bubble pops every 3s,
+  dealing damage based on 90% of the accumulated healing to all party members
+  (so if multiple party members are healed, that will count multiple times to the total healing).
+  There are limits though: only one bubble can appear every 3.5s,
+  and a bubble can store a max of 30k hp healed (including 'overflow healing').
+  Moreover, only one bubble can exist at a time (so cannot stack multiple healers together).
+</p><p>
+  These limits conveniently allow us to calculate a theoretical maximum to dps (ignoring physical RES shred).
+  Suppose Kokomi can saturate the 30k limit each time (possible as she heals a ton).
+  Then the dps is
+  $$d_o = 30000/3.5 = 8571.4$$
+  To convert this to mv, divide by 4000 (see <a href='dps.html'>dps</a>) to get
+  $$z_o = d_o/4000 \approx 200\%$$
+  Now if we add Kokomi's main sources of damage, her mv is
+  $$z = z_o + z_b \approx 387.9$$
+  Not only is this higher than Ayaka's dps, it is higher than Ganyu's.
+  But that is not surprising given how weak Ganyu is.
 </p>
   
 </body>
