@@ -102,6 +102,13 @@
   Assume 4p Clam with \(46.6+28.8=75.4\% \) hydro dmg bonus
   and \(25+15=40\% \) healing bonus.
 </p><p>
+  Also for sake of argument, suppose she has 2k atk and uses Bennett.
+  In reality, for the teams Kokomi plays in, neither condition may be true,
+  and as a result the dps below (specifically from her ATK scaling parts) below will be less.
+</p>
+
+<h3>Burst</h3>
+<p>
   At lv10, her NA gets an additive bonus of 12.77% hp.
   With her passive 15% of her healing bonus is converted into extra hp scaling.
   So for 40% healing bonus, she gets an additional 6% hp scaling,
@@ -114,9 +121,12 @@
   Her Q does an initial hit of 18.75% hp or around 187.5% atk scaling.
   The mv is
   $$x_b = (187.5+5*(123.08+110.77+169.75+3*187.7))*1.754/18 = 489.3$$
+</p><p>
   This is actually higher than Ayaka's mv.
   Moreover, the scaling of an individual NA goes up to \(169.75+187.7=357.45\)
   which is considered a nuke for a hydro attack (given this can vape).
+  Moreover, Kokomi's CA gets a 12.2% hp buff (122% atk scaling) from Q, 6% hp buff from passive (60% atk), 
+  bringing 267% to 449% scaling (another nuke).
   By contrast, Ayato's NA scalings are around 100%.
 </p><p>
   However, Kokomi cannot crit.
@@ -124,6 +134,11 @@
   (giving a crit multiplier of 3),
   this means her above mv is slashed by 3:
   $$z_b = x_b/3 = 163.1$$
+  Even if 200% crit dmg sounds too much,
+  suppose a normal character can at least get 100% crit dmg (meaning 2 times the damage).
+  Then given that Kokomi cannot crit, she is missing out on a 2x multiplier,
+  so her actual dps is slashed by 2, becoming around 240 mv.
+</p><p>
   Above we did not account for possible vapes,
   but that would not fix her fundamental setback of not being able to crit.
   Even if she vapes all her NA (impossible due to ICD),
@@ -131,9 +146,29 @@
   As such, Kokomi's potential as a burst dps is limited,
   while she is better suited as a support.
 </p><p>
+  Her Q also buffs her E damage by 12.77% hp (around 127.7% atk scaling).
+  Her E has 196.54% scaling.
+  During her Q, this becomes 324.24% per tick, which again is high scaling.
+  Her E can tick 7 times within its 12s duration,
+  but say only 6 of those are buffed by her 10s Q.
+  We ignore E reset. The E has a 20s cd.
+  The mv is
+  $$x_e = (196.54+6*324.24)*1.754/20 = 187.9$$
+</p><p>
+  As her E has no icd, she can technically vape each tick.
+  But the difference between Guoba and Kokomi is that Guoba can crit.
+  The above mv is slashed by 3 if she cannot crit:
+  $$z_e = x_e/3 = 62.6$$
+  This is like adding dust to dust.
+</p><p>
   If Kokomi's C6 allowed her to crit, then she would at least be decent.
 </p>
 
+<h3>Ocean Clam sub-dps</h3>
+<p>The 4p Ocean Clam set turns any healer into a physical sub-dps
+  (the bubble pop does physical damage and is affected by physical res shred like superconduct,
+  which enables Ocean Clam superconduct Qiqi to be viable in situations).
+</p>
   
 </body>
 </html>
