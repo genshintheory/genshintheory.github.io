@@ -243,6 +243,7 @@
     This dps is not just very high, but also top tier for c0 units.
   </p><p>
     Note this does not factor his wind arrow damage.
+    Nor does this account for buffs from infusion elements (e.g. pyro or hydro infusion).
     Moreover, in battle, the NA/CA damage while levitating may be less
     if Scaramouche has to spend time moving around in the air.
   </p>
@@ -272,6 +273,17 @@
     The C6 heavily favors Scaramouche using pure NA spam (as opposed to weaving in CA).
     Moreover, the C6 will also restore up to 20 stamina points to him
     (thereby increasing 100 to 120 without hydro infusion or 120 to 140 with hydro infusion).
+  </p><p>
+    Recall the dps from NA spam at C0:
+    $$x_n = 438.42$$
+    Now multiply this by 1.4 (for C6 effect)
+    $$y = 1.4x_n = 613.788$$
+    We will not assume hydro infusion (as was the case when computing C0 base dps).
+    When 20 points are restored (100 to 120) 
+    we assume that we can multiply dps by 1.2 (in reality this is an approximation). 
+    $$z_n = 1.2y = 736.5456$$
+    This is around 1.7 times more dps than c0 NA/CA dps,
+    which is quite good for a C6.
   </p>
 
 
