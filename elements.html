@@ -117,8 +117,11 @@
     Assuming res multiplier of 0.9, level multiplier of 1446.85, the above becomes
     $$d_t = 1446.85*17*0.9*RC = 22136.8 (RC)$$
     So for example, hyperbloom can reach up to 66k damage per hit.
-    Because the EM scaling of transformative reactions is sublinear, they can saturate the upper limit
-    or hit diminishing returns very fast once one gets around 1k EM.
+    Because the EM scaling of transformative reactions is sublinear, 
+    they can hit diminishing returns a bit faster than linear scaling (but not as fast as exponential decay). 
+    At 1k EM the multiplier is around 6 times the base damage of 0 EM.
+    And it is quite hard to get more than 1k EM in the game.
+    The real way to further increase transformative damage is via RES shred.
   </p><p>
     But a more important limit involves the damage sequence and aoe limit:
     there is a limit on the number of times an enemy can be damaged by reactions like bloom, hyperbloom, burgeon (2 times per enemy per 0.5s).
