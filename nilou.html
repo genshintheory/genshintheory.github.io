@@ -311,12 +311,21 @@
     If we blindly follow this then the team dps can become 229*4=916%, which is viable.
     But more importantly, this is team dps since in practice it could be any one of Nilou's teammates proccing the bloom reaction.
     This raises the question of how to attribute the portion of team dps to Nilou herself.
+    A naive computation will assume the team dps is spread evenly between the 4 team members,
+    so Nilou's own dps becomes 229.
+    But we need to examine this in more detail.
   </p><p>
-    Above we assumed that Nilou can create two cores herself every second.
+    Above we assumed that Nilou can create one or two cores herself every second.
     This is quite generous.
     Think about how Nilou applies hydro to create a core:
-    she can either create the water ring that lasts 12s (with 6s downtime)
-    or she can gain an infusion for 8s.
+    she can either create the water ring that lasts 12s (with 6s downtime) and apply hydro once every 1.9s
+    or she can gain an infusion for 8s (with 10s downtime) and more actively apply hydro.
+    In either mode, it becomes hard to apply hydro to create one or two cores every second, nevermind four.
+    For example, if we just use the water ring, that is one core every 1.9s attributed to Nilou (or around half a core per second).
+    And moreover there is a 6s downtime of not applying any hydro, so in reality it is less.
+    The point is that since bloom is a symmetric reaction, it becomes harder to attribute dps to individual members,
+    and it becomes more important to look at the overall team dps,
+    but for Nilou 229 is reasonable for an estimate (leaning on the more generous side as per the above analysis).
   </p>
   <p>To play Nilou as a bloom dps, you only need to build hp and em on her.
     It is that simple.
