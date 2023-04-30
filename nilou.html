@@ -300,10 +300,13 @@
     $$d = 2893.70*(1 + m + 1.8)*.9 = 9276.4$$
     (true) damage. To convert this to mv we divide by 4050, so the above is around 229% mv
     $$x_t = 229$$
-    That is assuming you create one core every second.
-    In practice, say you can create two cores per second.
+    That is assuming Nilou herself creates one core every second.
+    In practice, say Nilou can create two cores per second.
     Then the dps is 229*2=458%, which is actually decent (better than Ganyu).
-    Note due to damage sequence, bloom has a limit of how many times it can damage an enemy within a second.
+  </p><p>
+    Note due to damage sequence, bloom has a limit of how many times it can damage an enemy within a second:
+    two instances of damage per 0.5s (or 4 instances per second).
+    If we blindly follow this then the team dps can become 229*4=916%.
     But more importantly, this is team dps since in practice it could be any one of Nilou's teammates proccing the bloom reaction.
     This raises the question of how to attribute the portion of team dps to Nilou herself.
   </p>
