@@ -131,7 +131,27 @@
     Lastly there is a limit on how many bloom cores can exist in the world (5 at a time).
     All of these restrictions are meant to prevent transformative reactions from having true <a href='scaling.html'>quadratic scaling</a>.
   </p><p>
-    
+    We can start converting the above real/true damage to mv scalings.
+    Using the assumptions discussed in <a href='dps.html'>dps</a>, to convert mv to true damage, multiply by 4050.
+    So to convert transformative reaction damage to mv (for the limit \(EM \to \infty \)),
+    $$m_t = d_t/4050 = 22136.8 (RC)/4050 = 5.47 (RC) = 547\% (RC)$$
+    In other words, hyperbloom has a cap of around 1500% scaling (a dendro nuke) per hit.
+    The fact it can be spammed 4 times a second per enemy gives it 6000% mv, which is absolutely broken.
+  </p><p>
+    But if we tone it down a bit and stick with 1k EM, the formula becomes
+    $$m_t = d_t/4050 = 8247 (RC)/4050 = 2.036 (RC) = 203.6 \% (RC)$$
+    So for hyperbloom, that is a nuke of around 600% scaling per hit, which is still quite large.
+    And if the upper limit of 4 hits per second is saturated, that is ~2400% mv,
+    which is comparable to C6 Xiao level of dps (top among C6 hypercarries).
+    Of course, the difference is that Xiao does aoe damage, whereas hyperbloom is single target (sublinear aoe scaling).
+    So if there are two enemies, hyperbloom dps is split between the two so it becomes 1200% mv per enemy.
+    But still, 1200% mv is near the level of C6 Scaramouche, C6 Itto, and C6 Cyno (also among the top hypercarries in the game).
+  </p><p>
+    In other words, a C0 hyperbloom team (with 1k EM electro driver) can do as much damage as many C6 characters.
+    This is why hyperbloom can be so busted.
+    But more importantly, hyperbloom (a transformative reaction) can do as much damage as standard crit teams.
+    With the introduction of dendro, transformative reactions are no longer considered weird or niche,
+    but actually buff and chad, something that can carry a team to complete the abyss.    
   </p>
 
 
