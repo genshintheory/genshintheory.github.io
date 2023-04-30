@@ -116,6 +116,13 @@
     So ignoring any further reaction bonus, there is an upper limit on transformative reaction damage.
     Assuming res multiplier of 0.9, level multiplier of 1446.85, the above becomes
     $$d_t = 1446.85*17*0.9*RC = 22136.8 (RC)$$
+    So for example, hyperbloom can reach up to 66k damage per hit.
+    Because the EM scaling of transformative reactions is sublinear, they can saturate the upper limit
+    or hit diminishing returns very fast once one gets around 1k EM.
+  </p><p>
+    But a more important limit involves the damage sequence and aoe limit:
+    there is a limit on the number of times an enemy can be damaged by reactions like bloom, hyperbloom, burgeon (2 times per enemy per 0.5s).
+    Moreover there is an aoe limit on how many times an enemy can be damaged by reactions like swirl (2 times per enemy).
   </p>
 
 
