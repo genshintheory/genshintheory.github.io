@@ -81,6 +81,19 @@
     But they are affected by RES.
     By contrast, amplifying reactions can crit and factor in defense as well.
   </p><p>
+    The damage multiplier for amplifying reactions is
+    $$d_a = \text{reaction multiplier}\times (1 + 2.78 EM / (1400+EM) + \text{reaction bonus})$$
+    The reaction multiplier (RM) is:
+  </p>
+  <ul>
+    <li>2 if hydro vapes or pyro melts</li>
+    <li>1.5 if pyro vapes or cryo melts</li>
+  </ul>
+  <p>At 0 EM, the multiplier is just 2 or 1.5.
+    And this is multiplied to the damage of the triggering attack.
+    With more EM, the multiplier can increase.
+  </p>
+  <p>
     The damage formula for transformative reactions is
     $$d_t = \text{level multiplier}\times \text{reaction multiplier}\times 
     (1+16 EM / (2000+EM) + \text{reaction bonus}) \times \text{RES multiplier}$$
