@@ -62,7 +62,8 @@
   So what if you have multiple instances of damage?
   Say there are hits \(Y_1, Y_2, Y_3, \ldots, Y_n \)
   each with fixed crit r, d.
-  Then each of these are Bernoulli variables with say base damage \(x_i\).
+  Then each of these are Bernoulli variables with say base damage \(x_i\)
+  $$Y_i = X_i(1+dBer(r)).$$
   We assume they are independent and identically distributed (iid).
   The sum of damage is
   $$Y = \sum Y_i = (\sum x_i)(1 + d^2Ber(r)) = X(1 + d^2Ber(r)).$$
@@ -77,7 +78,7 @@
   As \(n \to \infty\) the sample variance \(s_n \) above goes to 0.
   So the more hits there are, the closer the average damage is to the expected damage.
   In other words, one big nuke will have more volatility in damage (can miss the crit),
-  whereas dps that is split into many parts (like Xiao C6 E, Scaramouche C6, Cyno, etc.)
+  whereas dps that is split into many parts (like Xiao C6 E, Dehya Q, Scaramouche C6, Scaramouche Q, Cyno C6, Cyno dustbolts, etc.)
   will have less volatility and tend closer to the average expected damage.
 </p><p>
   The above is related to the law of large numbers (LLN),
