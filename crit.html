@@ -69,7 +69,7 @@
   The variance of this is
   $$\sigma^2 = X^2 d^2 r(1-r)$$
 </p><p>
-  The average damage is
+  The average damage (sample average) is
   $$\bar{Y} = Y / n.$$
   The variance of this is
   $$Var(\bar{Y}) = X^2 d^2r(1-r)/n^2 = (\sigma / n)^2.$$
@@ -79,6 +79,12 @@
   In other words, one big nuke will have more volatility in damage (can miss the crit),
   whereas dps that is split into many parts (like Xiao C6 E, Scaramouche C6, Cyno, etc.)
   will have less volatility and tend closer to the average expected damage.
+</p><p>
+  The above is related to the law of large numbers (LLN),
+  where the sample average tends to the expected average of the underlying distribution
+  as the number of samples approaches infinity.
+  The LLN applies here as we are dealing with iid Bernoulli variables with finite expectation and variance 
+  (they are discrete and Lebesgue integrable using simple functions).
 </p>
 
 
