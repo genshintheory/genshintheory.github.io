@@ -46,5 +46,17 @@
   That's why having crit rate is important.
 </p>
 
+
+<h2>Variance</h2>
+<p>Recall formula for expected damage is
+  $$E(Y) = (1-r)x + r(1+d)x = (1+rd)x$$
+  given crit rate r, d and base damage x.
+  So the damage Y is a bernoulli variable 
+  $$Y = x+dBer(r).$$
+  The variance is just
+  $$Var(Y) = d^2 r(1-r).$$
+</p>
+
+
 </body>
 </html>
