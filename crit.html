@@ -25,6 +25,8 @@
   
 <div class="mw-parser-output">
 
+
+<h2>Ascension</h2>
 <p>Among dps characters, some ascend with crit rate and some ascend with crit damage.
   By default most characters start with 5% crit rate and 50% crit damage.
   Crit rate characters can reach 24.2% crit rate at level 80-90,
@@ -60,9 +62,10 @@
   So what if you have multiple instances of damage?
   Say there are hits \(Y_1, Y_2, Y_3, \ldots, Y_n \)
   each with fixed crit r, d.
-  Then each of these are Bernoulli variables each with say base damage \(x_i\).
+  Then each of these are Bernoulli variables with say base damage \(x_i\).
+  We assume they are independent and identically distributed (iid).
   The sum of damage is
-  $$\sum Y_i = (\sum x_i)(1 + ndBer(r)).$$
+  $$Y = \sum Y_i = (\sum x_i)(1 + d^2Ber(r)) = X(1 + d^2Ber(r)).$$
 </p>
 
 
