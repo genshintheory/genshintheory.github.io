@@ -52,9 +52,17 @@
   $$E(Y) = (1-r)x + r(1+d)x = (1+rd)x$$
   given crit rate r, d and base damage x.
   So the damage Y is a bernoulli variable 
-  $$Y = x+dBer(r).$$
+  $$Y = x(1+dBer(r)).$$
   The variance is just
-  $$Var(Y) = d^2 r(1-r).$$
+  $$Var(Y) = x^2 d^2 r(1-r).$$
+  This is for one instance of damage.
+</p><p>
+  So what if you have multiple instances of damage?
+  Say there are hits \(Y_1, Y_2, Y_3, \ldots, Y_n \)
+  each with fixed crit r, d.
+  Then each of these are Bernoulli variables each with say base damage \(x_i\).
+  The sum of damage is
+  $$\sum Y_i = (\sum x_i)(1 + ndBer(r)).$$
 </p>
 
 
