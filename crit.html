@@ -72,9 +72,9 @@
   The average damage (sample average) is
   $$\bar{Y} = Y / n.$$
   The variance of this is
-  $$Var(\bar{Y}) = X^2 d^2r(1-r)/n^2 = (\sigma / n)^2.$$
+  $$s_n^2 = Var(\bar{Y}) = X^2 d^2r(1-r)/n^2 = (\sigma / n)^2.$$
 </p><p>
-  As \(n \to \infty\) the sample variance above goes to 0.
+  As \(n \to \infty\) the sample variance \(s_n \) above goes to 0.
   So the more hits there are, the closer the average damage is to the expected damage.
   In other words, one big nuke will have more volatility in damage (can miss the crit),
   whereas dps that is split into many parts (like Xiao C6 E, Scaramouche C6, Cyno, etc.)
@@ -91,6 +91,9 @@
   which states that the distribution of the sample average approaches a gaussian in the limit of large n.
   As we are dealing with Bernoulli variables, the sum of Bernoulli variables is a binomial random variable.
   Then the special case of the CLT, the De Moivre-Laplace theorem applies.
+  Specifically
+  $$\frac{1}{s_n} \sum_i (Y_i - E(Y_i)) \to N(0, 1)$$
+  converges in distribution.
 </p>
 
 
