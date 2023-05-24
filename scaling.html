@@ -37,19 +37,19 @@
   In fact for most single target abilities (like Xingqiu's rainswords or Hu Tao's charged attacks),
   the scaling is sublinear (scaling with \(A/n\)).
 </p><p>
-Things like Albedo's Q and Ganyu's Q are bounded above by a linear function.
-Ganyu's Q spawns at most ~50 icicles. If each icicle hits n enemies there are 50n instances of damage, which is linear.
-It only appears quadratic \(10n^2\) for \(n \le 5\) but for more than 5 enemies, it is no longer quadratic but linear,
-bounded above by \(50n\).
-Ayato's Q is similar, being bounded above by a linear function.
-People say these abilities have 'pseudo-quadratic' scaling.
-They are no longer quadratic if there are too many enemies.
+  Things like Albedo's Q and Ganyu's Q are bounded above by a linear function.
+  Ganyu's Q spawns at most ~50 icicles. If each icicle hits n enemies there are 50n instances of damage, which is linear.
+  It only appears quadratic \(10n^2\) for \(n \le 5\) but for more than 5 enemies, 
+  it is no longer quadratic but linear, being bounded above by \(50n\).
+  Ayato's Q and Heizou's Q are similar, being bounded above by a linear function.
+  People say these abilities have 'pseudo-quadratic' scaling.
+  They are no longer quadratic if there are too many enemies.
 </p><p>
-By contrast, Childe has actual quadratic scaling.
-However large n is, Childe's riptide damage will scale with \(n^2\). 
-This cannot be bounded above by any linear function.
-And that's why Ganyu and Ayato are inferior to Childe.
-Ganyu and Ayato are fake, whereas Childe is real.
+  By contrast, Childe has actual quadratic scaling.
+  However large n is, Childe's riptide damage will scale with \(n^2\). 
+  This cannot be bounded above by any linear function.
+  And that's why Ganyu and Ayato are inferior to Childe.
+  Ganyu and Ayato are fake, whereas Childe is real.
 </p><p>
   So technically, only Childe has true quadratic scaling.
   But this may change with future characters.
