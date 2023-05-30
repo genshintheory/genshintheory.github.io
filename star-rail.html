@@ -143,8 +143,12 @@
     $$\text{SPD} = \text{Base SPD} (1 + \text{SPD%}) + \text{flat SPD}$$
   </p><p>
     The action value is defined as
-    $$v = 10000 / s$$
-    where s is the speed. So for the trailblazer the action value is 100.
+    $$v = 10000 / s = c / s$$
+    where s is the speed and we defined the constant \(c = 10000\). 
+    So for the trailblazer the action value is 100.
+  </p><p>
+    Action advancement / delay affects the action value as follows
+    $$v_1 = v_0 - (c / s)(\text{Action advancement %} - \text{Action delay %})$$
   </p>
 
 
