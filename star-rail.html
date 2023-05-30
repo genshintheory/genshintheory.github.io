@@ -142,11 +142,12 @@
     Speed is calculated as
     $$\text{SPD} = \text{Base SPD} (1 + \text{SPD%}) + \text{flat SPD}$$
   </p><p>
-    The action value is defined as
+    The base action value is defined as
     $$v = 10000 / s = c / s$$
     where s is the speed and we defined the constant \(c = 10000\). 
     So for the trailblazer the action value is 100.
     The entity with the lowest action value goes first, and their action value is subtracted from everybody else's action values.
+    After the entity attacks, their action value is reset to the base value.
     <!-- Tiebreaker? -->
   </p><p>
     Action advancement / delay affects the action value as follows
