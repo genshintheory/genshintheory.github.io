@@ -188,8 +188,26 @@
     we reset the action value \(v_{t+1}(i) = c/s_{t+1}(i) \).
     If there are speed or action modifiers, we will apply those as well using the formulae above.
     And thus the vector \(v_t\) describes the time evolution of action values for all entities in battle.
+  </p><p>
+    What range would an action value be in after the first subtraction?
+    Obviously we can use the formulae above to compute everything exactly, but what if we just want an approximation?
+    We can derive an estimate using the taylor series (first order approximation):
+    $$v(i) = c/s(i) = c/(s(j) + \epsilon) \approx c/s(j) - \epsilon c/s(j)^2 = v(j) - \epsilon c/s(j)^2$$
+    where we assume \(s(i), s(j)\) the speeds of two entites differ by a small amount \(\epsilon \).
+    The power series gives us a linear approximation relating the two actions values when the speeds differ.
+    Suppose \(s(j) = 100\) like the trailblazer. Then recalling \(c = 10000 \) we have
+    $$v(i) \approx v(j) - \epsilon = 100 - \epsilon$$
+    In other words, if the speed differs by a small amount \(\epsilon \) from 100,
+    then the action value will also deviate by a small amount \(\epsilon \) from 100.
+    The reason the equations simplify nicely is because the game chose a convenient constant \(c = 10000 = 100^2 \)
+    related to the trailblazer's speed of 100.
+  </p><p>
+    So suppose there are just two entities i, j and that \(\epsilon > 0\) so that i is faster than j.
+    Then after the first subtraction the action value for j will become \(v(j) \approx \epsilon \).
+    Now \(\epsilon \) is small compared to 100, which means the action value \(v(j)\) 
+    will probably be in a range of less than 10 after the first subtraction.
   </p>
-  <!-- example -->
+  <!-- example: jing yuan LL -->
 
 
   <h2>Story</h2>
