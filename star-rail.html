@@ -143,16 +143,22 @@
     $$\text{SPD} = \text{Base SPD} (1 + \text{SPD%}) + \text{flat SPD}$$
   </p><p>
     The base action value is defined as
-    $$v = 10000 / s = c / s$$
+    $$v_b = 10000 / s = c / s$$
     where s is the speed and we defined the constant \(c = 10000\). 
     So for the trailblazer the action value is 100.
     The entity with the lowest action value goes first, and their action value is subtracted from everybody else's action values.
-    After the entity attacks, their action value is reset to the base value.
+    After the entity attacks, their action value is reset to the base value \(v_b \).
     <!-- Tiebreaker? -->
+  </p><p>
+    Speed modifiers affect the action value as follows
+    $$v_1 = v_0 (s_1 / s_0)$$
+    so it just scales the current action value.
+    Here \(s_1\) is the new speed and \(s_0\) is the old speed.
   </p><p>
     Action advancement / delay affects the action value as follows
     $$v_1 = v_0 - (c / s)(\text{Action advancement %} - \text{Action delay %})$$
   </p>
+  <!-- example -->
 
 
   <h2>Story</h2>
