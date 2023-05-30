@@ -161,13 +161,18 @@
     $$v_1 = v_0 - (c / s_0)(\text{Action advancement %} - \text{Action delay %})$$
     To understand this, imagine \(v_0 = c/s_0 = v_b \) is the base action value with no subtraction.
     Then the formula becomes
-    $$v_1 = (c / s_0)(1 - \text{Action advancement %} + \text{Action delay %})$$
-    So if there is 100% action advancement (with no delay / retardation), the action value becomes 0.
+    $$v_1 = v_b (1 - \text{Action advancement %} + \text{Action delay %})$$
+    So this is just another way to scale the action value.
+  </p><p>
+    For example, if there is 100% action advancement (with no delay / retardation), the action value becomes 0.
     Otherwise, if subtraction occurs and we have \(v_0 < v_b\), a 100% advancement can even lead to a negative action value.
     Negative action values do not really break any mathematical laws.
     It is just that when subtraction occurs, we are subtracting the lowest action value, 
     so this process will typically leave other action values non-negative.
     Thus, a negative action value can put you first in line and make you act quicker (assuming other entities are not given the same effect).
+  </p><p>
+    Note that above, a decrease in speed or action delay can cause the action value to increase.
+    If we combine both the effects of speed modification and action modification, we have
   </p>
   <!-- example -->
 
