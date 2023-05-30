@@ -146,6 +146,8 @@
     $$v = 10000 / s = c / s$$
     where s is the speed and we defined the constant \(c = 10000\). 
     So for the trailblazer the action value is 100.
+    The entity with the lowest action value goes first, and their action value is subtracted from everybody else's action values.
+    <!-- Tiebreaker? -->
   </p><p>
     Action advancement / delay affects the action value as follows
     $$v_1 = v_0 - (c / s)(\text{Action advancement %} - \text{Action delay %})$$
