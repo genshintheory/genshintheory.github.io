@@ -182,6 +182,10 @@
     So Star Rail combat follows discrete dynamics.
     Let \(v_t(i) \) denote the action value at time t of entity i.
     Initially we have \( v_0(i) = c / s_0(i) \).
+    At each time step, we update the action value as follows:
+    $$v_{t+1}(i) = v_t(i) - \min_j v_t(j)$$
+    and if \(v_t(i) = 0\) (meaning i had the minimum action value) 
+    we reset the action value \(v_{t+1}(i) = c/s_{t+1}(i) \).
   </p>
   <!-- example -->
 
