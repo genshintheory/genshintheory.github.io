@@ -154,10 +154,12 @@
     $$v_1 = v_0 (s_1 / s_0)$$
     so it just scales the current action value.
     Here \(s_1\) is the new speed and \(s_0\) is the original speed.
+    To understand this, imagine \(v_0 = c/s_0 = v_b \) is the base action value (so no subtraction has happened yet).
+    Then we have \(v_1 = c/s_1 \) which is just what the base value would have been if we use the new speed.
   </p><p>
     Action advancement / delay affects the action value as follows
     $$v_1 = v_0 - (c / s_0)(\text{Action advancement %} - \text{Action delay %})$$
-    To understand this, imagine \(v_0 = c/s_0 = v_b \) is the base action value (so no subtraction has happened yet).
+    To understand this, imagine \(v_0 = c/s_0 = v_b \) is the base action value with no subtraction.
     Then the formula becomes
     $$v_1 = (c / s_0)(1 - \text{Action advancement %} + \text{Action delay %})$$
     So if there is 100% action advancement (with no delay / retardation), the action value becomes 0.
