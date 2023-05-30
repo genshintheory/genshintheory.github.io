@@ -176,6 +176,12 @@
     $$v_1 = v_0 (s_1 / s_0) - (c / s_0)(\text{Action advancement %} - \text{Action delay %})$$
     Again if we imagine \(v_0 = c/s_0 = v_b \), the above simplifies to
     $$v_1 = v_b (s_1 / s_0 - \text{Action advancement %} + \text{Action delay %})$$
+    In other words, the speed modification can act as a kind of action advancement / delay
+    where the percentage is related to the ratio of the new speed with the old speed.
+  </p><p>
+    So Star Rail combat follows discrete dynamics.
+    Let \(v_t(i) \) denote the action value at time t of entity i.
+    Initially we have \( v_0(i) = c / s_0(i) \).
   </p>
   <!-- example -->
 
