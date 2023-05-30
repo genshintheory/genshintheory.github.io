@@ -95,9 +95,11 @@
     This is determined by speed and action value.
     Speed is a base stat that all characters and enemies have.
     For some characters it is higher, while for others it is lower.
-    Speed can be modified by different abilities, traces, enemy effects, etc.
+    Speed can be modified by different abilities, traces, relics, enemy effects, etc.
     The trailblazer's speed is 100 (which is constant even as you level them up),
     and other characters' speeds are within the neighborhood of 100, roughly \(\pm 20 \).
+    Speed is calculated as
+    $$\text{SPD} = \text{Base SPD} (1 + \text{SPD%}) + \text{flat SPD}$$
   </p>
 
   <p>
