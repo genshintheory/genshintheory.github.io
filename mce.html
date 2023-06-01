@@ -42,6 +42,16 @@
     With probability .72 one will transition to state 2 (with 12% increased probability to proc wind arrow).
     And so on.
   </p><p>
+    From this, one can define a transition matrix P where \(P_{ij}\) is the probability of transitioning from state i to j.
+    For the above this matrix looks like:
+    $$P = \begin{pmatrix}
+    .16 & .84 & \\
+    .28 & 0 & .72 & \\
+    .4 & 0 & 0 & .6 & \\
+    .52 & 0 & 0 & 0 & .48 & \\
+    .64 & 0 & 0 & 0 & 0 & .36 & \\
+    .76 & 0 & 0 & 0 & 0 & 0 & .24 &
+    \end{pmatrix}$$
   </p>
 
   </body>
