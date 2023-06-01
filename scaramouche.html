@@ -287,28 +287,33 @@
     $$y = 1.4x_n = 613.788$$
   </p><p>
     We will not assume hydro infusion (as was the case when computing C0 base dps).
-    When 20 points are restored (100 to 120) 
-    we assume that we can multiply dps by 1.2 (in reality this is an approximation). 
-    $$z_n = 1.2y = 736.5456$$
-    This is around 1.7 times more dps than c0 NA/CA dps,
-    which is quite good for a C6.
+    When 20 points are restored (100 to 120) we cannot assume that we can multiply dps by 1.2 
+    (using 1.2 as an approximation gives an overestimate). 
+    The reason is because when the wanderer has more points, he will stay in the air longer, which increases his rotation time.
+    As derived below (hydro buff section), the actual multiplier in damage will be around 1.067, so
+    <!-- $$z_n = 1.2y = 736.5456$$ -->
+    $$z_n = 1.067y = 654.911796$$
+    This is around 1.5 times more dps than c0 NA/CA dps, which is quite good for a C6.
   </p><p>
     The total dps is around (ignoring C1, C3, C4, C5 effects)
-    $$x_6 = z_n + x_e + x_p + x_q = 1108.5699$$
+    <!-- $$x_6 = z_n + x_e + x_p + x_q = 1108.5699$$ -->
+    $$x_6 = z_n + x_e + x_p + x_q = 1026.365236$$
     In reality this will be higher due to C3, C5 increasing talents levels.    
   </p><p>
     Lv13 E will multiply NA by 161.42% so
     The dps from NA spam is
     $$x_n = 452.71*1.6142*2.016*5/16 = 460.38162366$$
     Then
-    $$z_n = 1.2(1.4x_n) = 773.44$$
+    <!-- $$z_n = 1.067(1.4x_n) = 773.44$$ -->
+    $$z_n = 1.067(1.4x_n) = 687.7180694233$$
     The skill damage from using E is
     $$x_e = 1.616*202.3/16 = 20.4323$$
     Lv13 Q has dps of
     $$x_q = (312.8*5)*(1.616+2)/15 = 377.02826666667$$
     The plunge dps does not change.
     The total dps is around
-    $$x_6 = z_n + x_e + x_p + x_q \approx 1206.3$$
+    <!-- $$x_6 = z_n + x_e + x_p + x_q \approx 1206.3$$ -->
+    $$x_6 = z_n + x_e + x_p + x_q \approx 1120.6$$
   </p><p>
     Note the above does not consider the dream wind arrow damage or absorption buffs like pyro, hydro, or cryo buff.
     Electro buff just makes it easier to spam his Q on cd, which is what we assume above anyways (full efficiency).
