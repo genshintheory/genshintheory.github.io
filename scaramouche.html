@@ -88,7 +88,7 @@
   <h2>Talents</h2>
   <p>Wanderer's NA and CA have good AoE.
     His E allows him to levitate and gives him a blue stamina bar, entering the windfavored (优风倾姿) state.
-    At the end of his E (when he runs out of blue stamina),
+    At the end of his E (when he runs out of blue stamina / kuugoryoku points),
     he can do a plunge attack for an extra instance of damage.
     After his E ends, it goes into a 6s cd.
   </p><p>
@@ -280,7 +280,7 @@
   <p>The C6 will make all NA do an extra instance of damage (40% of original).
     This increases his NA damage 1.4 times (comparable to Raiden C2).
     The C6 heavily favors Scaramouche using pure NA spam (as opposed to weaving in CA).
-    Moreover, the C6 will also restore up to 20 stamina points to him
+    Moreover, the C6 will also restore up to 20 points to him
     (thereby increasing 100 to 120 without hydro infusion or 120 to 140 with hydro infusion).
   </p><p>
     Recall the dps from NA spam at C0 (specifically 5 NA combos):
@@ -289,6 +289,7 @@
     $$y = 1.4x_n = 613.788$$
   </p>
 
+<!-- approximation -->
   <p>
     We will not assume hydro infusion (as was the case when computing C0 base dps).
     When 20 points are restored (100 to 120) we assume NA dps increases by 20% (as an approximation).
@@ -305,6 +306,7 @@
     In reality this will be higher due to C3, C5 increasing talents levels.    
   </p>
 
+<!-- detailed calc -->
   <p>
     Lv13 E will multiply NA by 161.42% so
     The dps from NA spam is
@@ -313,8 +315,9 @@
     $$z_n = 1.2(1.4x_n) = 773.44$$
     <!-- $$z_n = 1.067(1.4x_n) = $$ -->
     The skill damage from using E is
-    $$x_e = 1.616*202.3/16 = 20.4323$$
-    The plunge dps does not change.
+    $$x_e = 1.616*202.3/18 = 18.1620444444$$
+    The plunge dps actually decreases due to longer rotation
+    $$x_p = 280.57*2.016/18 = 31.42384$$
     <!-- ^ this is modified for hydro buff/c6, longer rotation of 18s, 20s -->
   </p><p>
     Lv13 Q has dps of
@@ -400,6 +403,7 @@
     $$x_h = 1.8x_n*16/20 = 1.44 x_n$$
     <!-- or 44%. This is close to 40%. -->
     <!-- So it seems the percent increase in Kuugoryoku points is roughly equal to the percent increase in dps. -->
+    <!-- This is NOT true in general as above we added atk spd buffs as well, see below. -->
   </p>
 
   <p>
