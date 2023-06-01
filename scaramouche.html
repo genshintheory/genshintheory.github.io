@@ -415,13 +415,21 @@
     $$F(t) / F(0) = (1+t/10)/(1+t/16) \le 1 + t/10$$
     This ratio is always more than 1.
     Thus the percent increase in dps is bounded above by the percent increase in Kuugoryoku points.
+    In fact we can derive a tighter upper bound.
+    In the limit as \(t\to \infty \) the above ratio approaches 1.6 from below, so
+    $$F(t) / F(0) < 1.6$$
   </p><p>
     The reason we computed 24% and 44% above is because we factored atk spd buffs,
-    so say he can do NA combo faster than every 2s.
-    Moreover, we were computing the following ratio:
-    $$F(t) / 5$$
-    <!-- Thus the percent increase in dps will always be a more than the percent increase in Kuugoryoku points. -->
-    <!-- As seen above for t=2, 4, the percent increase in dps is slightly higher than 20% and 40%. -->
+    so say he can do a full NA combo every u < 2 seconds.    
+    The number of NA combos he can do per rotation is
+    $$F(t, u) = ((10+t)/u)/(16+t)$$
+    Moreover, we were computing the following ratio (comparing with 5 NA combos in 10s):
+    $$F(t, u) / F(0, 2) = (2/u)(1+t/10)/(1+t/16)$$
+    The increase in Kuugoryoku points is given by 1+t/10,
+    so the ratio between the percent increase in dps and increase in points is
+    $$(2/u)/(1+t/16)$$
+    Treating the numerator as constant, for large t the ratio can become less than 1 and approach 0.
+    So in general one cannot use the percent increase in points to estimate the percent increase in dps.
   </p>
 
 
