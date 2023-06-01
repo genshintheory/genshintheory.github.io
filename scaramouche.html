@@ -292,7 +292,7 @@
   <p>
     We will not assume hydro infusion (as was the case when computing C0 base dps).
     When 20 points are restored (100 to 120) we assume NA dps increases by 20% (as an approximation).
-    The reason is may not exactly be 1.2 is because when the wanderer has more points, 
+    The reason it may not exactly be 1.2 is because when the wanderer has more points, 
     he will stay in the air longer, which increases his rotation time.
     A more precise multiplier is derived below (hydro buff section), but it turns out to be close to 20%,
     which justifies using 1.2 as an approximation:
@@ -392,13 +392,13 @@
     There will be 14s on-field time with a 20s cd.
     We assume that if he can do 5 NA combos in 10s, 
     then he can do 7 NA combos in 14s if we ignore atk spd buffs.    
-    The increase in dps is around
+    The increase in dps (compared to 5 NA combo) is around
     $$x_h = 1.4x_n*16/20 = 1.12 x_n$$ 
   </p><p>
     If we factor in the 10% atk spd from C1 and 10% atk spd from 4p Desert Chronicle, we get 20% atk spd.
     Suppose then he can do ~9 NA combos in 14s.
     <!-- If we factor 20% atk spd from C1 and 4p Chronicle, suppose he can then do ~9 NA combos in 14s. -->
-    In this case the mv increase becomes
+    In this case the mv increase (compared to 5 NA combo) becomes
     $$x_h = 1.8x_n*16/20 = 1.44 x_n$$
     <!-- or 44%. This is close to 40%. -->
     <!-- So it seems the percent increase in Kuugoryoku points is roughly equal to the percent increase in dps. -->
@@ -413,6 +413,13 @@
     $$F(t) = ((10+t)/2)/(16+t)$$
     The dps multiplier (compared to 10s midair dps) is
     $$F(t) / F(0) = (1+t/10)/(1+t/16) \le 1 + t/10$$
+    This ratio is always more than 1.
+    Thus the percent increase in dps is bounded above by the percent increase in Kuugoryoku points.
+  </p><p>
+    The reason we computed 24% and 44% above is because we factored atk spd buffs,
+    so say he can do NA combo faster than every 2s.
+    Moreover, we were computing the following ratio:
+    $$F(t) / 5$$
     <!-- Thus the percent increase in dps will always be a more than the percent increase in Kuugoryoku points. -->
     <!-- As seen above for t=2, 4, the percent increase in dps is slightly higher than 20% and 40%. -->
   </p>
