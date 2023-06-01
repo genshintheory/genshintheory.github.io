@@ -359,11 +359,21 @@
     $$x_h = 1.8x_n*16/20 = 1.44 x_n$$
     or 44%. This is close to 40%.
     So it seems the percent increase in Kuugoryoku points is roughly equal to the percent increase in dps.
+  </p><p>
+    In general suppose wanderer is in the air for 10+t seconds.
+    He can do one full NA combo every 2 seconds.
+    Thus he can do \((10+t)/2 = 5+t/2 \) NA combos.
+    <!-- Compared to t=0, this gives 1+t/10 times more NA damage. -->
+    The length of rotation is 16+t.
+    The number of NA combos he can do per rotation is
+    $$F(t) = ((10+t)/2)/(16+t)$$
+    The dps multiplier (compared to 10s midair dps) is
+    $$F(t) / F(0) = $$
   </p>
 
 
   <p>
-    From above, it seems every 10 Kuugoryoku points correspond to 1s in air.
+    From above, it seems every 10 Kuugoryoku points correspond to 1s in air (while idle).
     This is assuming no sprinting/accelerating around.
   </p>
 
