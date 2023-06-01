@@ -287,34 +287,35 @@
     $$y = 1.4x_n = 613.788$$
   </p><p>
     We will not assume hydro infusion (as was the case when computing C0 base dps).
-    When 20 points are restored (100 to 120) we cannot assume that we can multiply dps by 1.2 
-    (using 1.2 as an approximation gives an overestimate). 
-    The reason is because when the wanderer has more points, he will stay in the air longer, which increases his rotation time.
-    As derived below (hydro buff section), the actual multiplier in damage will be around 1.067, so
-    <!-- $$z_n = 1.2y = 736.5456$$ -->
-    $$z_n = 1.067y = 654.911796$$
+    When 20 points are restored (100 to 120) we assume NA dps increases by 20% (as an approximation).
+    The reason is may not exactly be 1.2 is because when the wanderer has more points, 
+    he will stay in the air longer, which increases his rotation time.
+    A more precise multiplier is derived below (hydro buff section), but it turns out to be close to 20%,
+    which justifies using 1.2 as an approximation:
+    $$z_n = 1.2y = 736.5456$$
+    <!-- $$z_n = 1.067y = 654.911796$$ -->
     This is around 1.5 times more dps than c0 NA/CA dps, which is quite good for a C6.
   </p><p>
     The total dps is around (ignoring C1, C3, C4, C5 effects)
-    <!-- $$x_6 = z_n + x_e + x_p + x_q = 1108.5699$$ -->
-    $$x_6 = z_n + x_e + x_p + x_q = 1026.365236$$
+    $$x_6 = z_n + x_e + x_p + x_q = 1108.5699$$
+    <!-- $$x_6 = z_n + x_e + x_p + x_q = 1026.365236$$ -->
     In reality this will be higher due to C3, C5 increasing talents levels.    
   </p><p>
     Lv13 E will multiply NA by 161.42% so
     The dps from NA spam is
     $$x_n = 452.71*1.6142*2.016*5/16 = 460.38162366$$
     Then
-    <!-- $$z_n = 1.067(1.4x_n) = 773.44$$ -->
-    $$z_n = 1.067(1.4x_n) = 687.7180694233$$
+    $$z_n = 1.067(1.4x_n) = 773.44$$
+    <!-- $$z_n = 1.067(1.4x_n) = 687.7180694233$$ -->
     The skill damage from using E is
     $$x_e = 1.616*202.3/16 = 20.4323$$
     Lv13 Q has dps of
     $$x_q = (312.8*5)*(1.616+2)/15 = 377.02826666667$$
     The plunge dps does not change.
     The total dps is around
-    <!-- $$x_6 = z_n + x_e + x_p + x_q \approx 1206.3$$ -->
-    $$x_6 = z_n + x_e + x_p + x_q \approx 1120.6$$
-    In other words, C3 and C5 together contribute abount 100 mv.
+    $$x_6 = z_n + x_e + x_p + x_q \approx 1206.3$$
+    <!-- $$x_6 = z_n + x_e + x_p + x_q \approx 1120.6$$ -->
+    In other words, C3 and C5 together contribute about 100 mv.
   </p><p>
     Note the above does not consider the dream wind arrow damage or absorption buffs like pyro, hydro, or cryo buff.
     Electro buff just makes it easier to spam his Q on cd, which is what we assume above anyways (full efficiency).
@@ -346,7 +347,8 @@
     The increased rotation time causes a dampening effect.
     So the increase in mv is less than 40%:
     $$x_h = 1.4x_n*16/18 = 1.24 x_n$$
-    The increase is actually around 24%.    
+    The increase is actually around 24%. 
+    So using 20% as an approximation is somewhat justified.   
     <!-- An percent increase in Kuugoryoku points gives is roughly equal to the percent increase in dps. -->
   </p><p>
     Staying midair for 12s corresponds to Bennett's 12s burst and C0 Faruzan's burst.
