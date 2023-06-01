@@ -60,11 +60,11 @@
     The above matrix P is an example of a stochastic matrix (where the rows add up to 1).
     What we want to find is the stationary distribution \(\pi \) of the matrix,
     solving the eigenvalue problem
-    $$\pi = P \pi$$
+    $$\pi = P^t \pi$$
     Then \(\pi_i \) tells us the percent of time spent in state i.
     Then \(\pi_0 \) tells us the portion of transitions that activate the wind arrows.
     This involves to solving the following system of equations
-    $$(P - 1) \pi = 0$$
+    $$(P^t - 1) \pi = 0$$
   </p>
 
   </body>
