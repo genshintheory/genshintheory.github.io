@@ -314,10 +314,8 @@
     Then
     $$z_n = 1.2(1.4x_n) = 773.44$$
     <!-- $$z_n = 1.067(1.4x_n) = $$ -->
-    The skill damage from using E is
-    $$x_e = 1.616*202.3/18 = 18.1620444444$$
-    The plunge dps actually decreases (compared to 10s midair) due to longer rotation
-    $$x_p = 280.57*2.016/18 = 31.42384$$
+    The dps from initial E hit and plunge skill actually decreases (compared to 10s midair) due to longer rotation
+    $$x_e + x_p = (202.3*1.616 + 280.57*2.016)/18 = 49.5858844444$$
     <!-- ^ this is modified for hydro buff/c6, longer rotation of 18s, 20s -->
   </p><p>
     Lv13 Q has dps of
@@ -410,12 +408,12 @@
     $$x_n = 452.71*1.6142*2.016*9/20 = 662.9495380704$$
     Then
     $$z_n = 1.4x_n = 928.1293532986$$
-    The skill damage from using E is
-    $$x_e = 1.616*202.3/20 = 16.34584$$
-    The plunge dps for the longer rotation is
-    $$x_p = 280.57*2.016/20 = 28.281456$$
+    The dps from initial E hit plus plunge plus using CA to activate 4p Desert is:
+    <!-- $$x_e + x_p = 44.627296$$ -->
+    $$x_e + x_p + x_c = (202.3*1.616 + 280.57*2.016 + 237.74*1.616)/20 = 63.836688$$
     The total dps is around
-    $$x_6 = z_n + x_e + x_p + x_q \approx 1350$$
+    <!-- $$x_6 = z_n + (x_e + x_p) + x_q \approx 1350$$ -->
+    $$x_6 = z_n + (x_e + x_p + x_c) + x_q \approx 1369$$
   </p>
 
   <p>
