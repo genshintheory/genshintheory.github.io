@@ -16,6 +16,7 @@
 
 <link rel="stylesheet" href="css/table.css">
 <link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+<!-- consider different favicon for hsr -->
 
 <title>Honkai: Star Rail</title>
 
@@ -141,95 +142,6 @@
     But Star Rail also has another form of end-game content: the Simulated Universe (SU).
     Having something like Simulated Universe that resets weekly and gives primogems in Genshin would be a fantastic idea.
   </p>
-
-  <h3>Speed and order of events</h3>
-  <p>
-    Being turn-based what decides the order of events?
-    This is determined by speed and action value.
-    Speed is a base stat that all characters and enemies have.
-    For some characters it is higher, while for others it is lower.
-    Speed can be modified by different abilities, traces, relics, enemy effects, etc.
-    The trailblazer's speed is 100 (which is constant even as you level them up),
-    and other characters' speeds are within the neighborhood of 100, roughly \(\pm 20 \).
-    Speed is calculated as
-    $$\text{SPD} = \text{Base SPD} (1 + \text{SPD%}) + \text{flat SPD}$$
-  </p><p>
-    The base action value is defined as
-    $$v_b = 10000 / s = c / s$$
-    where s is the speed and we defined the constant \(c = 10000\). 
-    So for the trailblazer the action value is 100.
-    The entity with the lowest action value goes first, and their action value is subtracted from everybody else's action values.
-    After the entity attacks, their action value is reset to the base value \(v_b \).
-    <!-- Tiebreaker? -->
-  </p><p>
-    Speed modifiers affect the action value as follows
-    $$v_1 = v_0 (s_1 / s_0)$$
-    so it just scales the current action value.
-    Here \(s_1\) is the new speed and \(s_0\) is the original speed.
-    To understand this, imagine \(v_0 = c/s_0 = v_b \) is the base action value (so no subtraction has happened yet).
-    Then we have \(v_1 = c/s_1 \) which is just what the base value would have been if we use the new speed.
-  </p><p>
-    Action advancement / delay affects the action value as follows
-    $$v_1 = v_0 - (c / s_0)(\text{Action advancement %} - \text{Action delay %})$$
-    To understand this, imagine \(v_0 = c/s_0 = v_b \) is the base action value with no subtraction.
-    Then the formula becomes
-    $$v_1 = (c / s_0) (1 - \text{Action advancement %} + \text{Action delay %}) = v_b (1 - \text{Action advancement %} + \text{Action delay %})$$
-    So this is just another way to scale the action value.
-  </p><p>
-    For example, if there is 100% action advancement (with no delay / retardation), the action value becomes 0.
-    Otherwise, if subtraction occurs and we have \(v_0 < v_b\), a 100% advancement can even lead to a negative action value.
-    Negative action values do not really break any mathematical laws.
-    It is just that when subtraction occurs, we are subtracting the lowest action value, 
-    so this process will typically leave other action values non-negative.
-    Thus, a negative action value can put you first in line and make you act quicker (assuming other entities are not given the same effect).
-  </p><p>
-    Note that above, a decrease in speed or action delay can cause the action value to increase.
-    If we combine both the effects of speed modification and action modification, we have
-    $$v_1 = v_0 (s_1 / s_0) - (c / s_0)(\text{Action advancement %} - \text{Action delay %})$$
-    Again if we imagine \(v_0 = c/s_0 = v_b \), the above simplifies to
-    $$v_1 = v_b (s_1 / s_0 - \text{Action advancement %} + \text{Action delay %})$$
-    In other words, the speed modification can act as a kind of action advancement / delay
-    where the percentage is related to the ratio of the new speed with the old speed.
-  </p><p>
-    So Star Rail combat follows discrete dynamics.
-    Let \(v_t(i) \) denote the action value at time t of entity i.
-    Initially we have \( v_0(i) = c / s_0(i) \).
-    At each time step, we update the action value as follows:
-    $$v_{t+1}(i) = v_t(i) - \min_j v_t(j)$$
-    and if \(v_t(i) = 0\) (meaning i had the minimum action value) 
-    we reset the action value \(v_{t+1}(i) = c/s_{t+1}(i) \).
-    If there are speed or action modifiers, we will apply those as well using the formulae above.
-    And thus the vector \(v_t\) describes the time evolution of action values for all entities in battle.
-  </p><p>
-    What range would an action value be in after the first subtraction?
-    Obviously we can use the formulae above to compute everything exactly, but what if we just want an approximation?
-    We can derive an estimate using the taylor series (first order approximation):
-    $$v(i) = c/s(i) = c/(s(j) + \epsilon) \approx c/s(j) - \epsilon c/s(j)^2 = v(j) - \epsilon c/s(j)^2$$
-    where we assume \(s(i), s(j)\) the speeds of two entites differ by a small amount \(\epsilon \).
-    The power series gives us a linear approximation relating the two actions values when the speeds differ.
-    Suppose \(s(j) = 100\) like the trailblazer. Then recalling \(c = 10000 \) we have
-    $$v(i) \approx v(j) - \epsilon = 100 - \epsilon$$
-    In other words, if the speed differs by a small amount \(\epsilon \) from 100,
-    then the action value will also deviate by a small amount \(\epsilon \) from 100.
-    The reason the equations simplify nicely is because the game chose a convenient constant \(c = 10000 = 100^2 \)
-    related to the trailblazer's speed of 100.
-  </p><p>
-    So suppose there are just two entities i, j and that \(\epsilon > 0\) so that i is faster than j.
-    Then after the first subtraction the action value for j will become \(v_1(j) \approx \epsilon \).
-    Now suppose \(\epsilon < 10 \) is small compared to 100, then the action value \(v_1(j) < 10\) 
-    will be in a range of less than 10 after the first subtraction.
-  </p><p>
-    The exact formula for the difference in action values will be
-    $$v(j) - v(i) = c(s(i) - s(j))/(s(i) s(j)) = c \epsilon / (s(i) s(j)) = 100 \epsilon / s(i) < \epsilon$$
-    Now this holds so long as i is faster than j, so \(s(i) > s(j) = 100\).
-    And this hold true in general, not just for small \(\epsilon \), but even large deviations.
-    That is the deviation in speed will give an upper bound in the deviation in action value.
-    When the deviation in speed is small, then the taylor expansion above tells us that 
-    the deviation in action value will be similar in value (in the neighborhood) to the deviation in speed.
-  </p>
-  <!-- geometric series, bound. or just do algebra. -->
-  <!-- asta speed buff, estimate effect -->
-  <!-- example: jing yuan LL base spd 60 (av ~ 167), increase 10 each time gains hit-->
 
 
   <h2>Story</h2>
