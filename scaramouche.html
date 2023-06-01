@@ -104,7 +104,10 @@
 
   <p>
     One of Scara's passives buffs him in E mode when he comes into contact with different elements:
-    pyro buffs his atk, cryo buffs his crit rate, electro gives him energy, hydro extends the duration.
+    pyro buffs his atk (+30% atk), 
+    cryo buffs his crit rate (+20% cr), 
+    electro gives him energy (restore .8 energy for self per NA/CA, proc at most once per .2s), 
+    hydro extends the duration (gives 20 more kuugoryoku points).
   </p>
   <p>
     Generally, it is advised to use the q within the e (near the end of the e).
@@ -277,11 +280,11 @@
   </p>
 
   <h3>C6</h3>
-  <p>The C6 will make all NA do an extra instance of damage (40% of original).
+  <p>The C6 will make the NA (Kuugo: Fushoudan) do an extra instance of damage (40% of original) while in E.
     This increases his NA damage 1.4 times (comparable to Raiden C2).
     The C6 heavily favors Scaramouche using pure NA spam (as opposed to weaving in CA).
-    Moreover, the C6 will also restore up to 20 points to him
-    (thereby increasing 100 to 120 without hydro infusion or 120 to 140 with hydro infusion).
+    Moreover, the C6 will make his NA restore up to 20 points to him when he falls below 40 Kuugoryoku points
+    (thereby increasing point cap from 100 to 120 without hydro infusion or 120 to 140 with hydro infusion).
   </p><p>
     Recall the dps from NA spam at C0 (specifically 5 NA combos):
     $$x_n = 438.42$$
@@ -444,10 +447,26 @@
     So in general one cannot use the percent increase in points to estimate the percent increase in dps.
   </p>
 
-
   <p>
     From above, it seems every 10 Kuugoryoku points correspond to 1s in air (while idle).
     This is assuming no sprinting/accelerating around.
+  </p>
+
+
+  <h3>Pyro buff</h3>
+  <p>In many Scaramouche teams, he will be used with Bennett so he can gain the pyro buff of 30% atk.</p>
+
+
+  <h3>Electro buff</h3>
+  <p>Theoretically, if he can restore .8 energy per .2s, that is 4 energy per second.
+    If he stays midair for 10s, he can restore 40 energy.
+    Given he has a 60 cost burst, this makes it easier for him to spam his burst on cd.
+    We assume this energy restoration works similarly to Raiden's burst (like mother like son)
+    and that it is not affected by ER (or else that would be too broken, just give him 150% ER and he can reach full energy).
+    See <a href='energy.html'>energy</a> for details.
+  </p><p>
+    However achieving the max of 4 energy per second is almost a pipe dream.
+    It becomes easier to achieve with C6 as the extra Kuugo Fushoudan hits with 40% scaling count as NA damage.
   </p>
 
 
