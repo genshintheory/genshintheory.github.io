@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+    
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+<title>Markov Chain Effect</title>
+
+  </head>
+  
+<body>
+  <div id="includedContent"></div>
+  
+  <h2>Scaramouche passive</h2>
+  <p>Scaramouche has a passive called Gales of Reverie where the probability of activating wind arrows increases with each NA/CA hit.
+    The base probability is 16% per hit.
+    If a hit does not activate the wind arrows, the probability increases by 12%.
+  </p><p>
+    The question becomes: how does one calculate dps from this? What is the expected damage from this?
+    It turns out this uses a markov chain.
+    We will call such effect 'markov chain effects' (MC effect).
+    The EO set from the chasm is another example of a markov chain effect.
+  </p><p>
+  </p>
+
+  </body>
+</html>
