@@ -283,7 +283,7 @@
     Moreover, the C6 will also restore up to 20 stamina points to him
     (thereby increasing 100 to 120 without hydro infusion or 120 to 140 with hydro infusion).
   </p><p>
-    Recall the dps from NA spam at C0:
+    Recall the dps from NA spam at C0 (specifically 5 NA combos):
     $$x_n = 438.42$$
     Now multiply this by 1.4 (for C6 effect)
     $$y = 1.4x_n = 613.788$$
@@ -367,19 +367,23 @@
     The increased rotation time causes a dampening effect.
     $$x_h = 1.2x_n*16/18 = 1.067 x_n$$
     So the increase from the hydro buff is about 6.7% at C0.
-  </p><p>
+  </p>
+
+  <p>
     Now consider C1 with hydro buff.
-    If we factor in the 10% atk spd from C1 and 10% atk spd from 4p Desert Chronicle, we get 20% atk spd.
-    He can then do his NA combo 7 times in 12s.
-    So the increase in mv is:
+    <!-- If we factor in the 10% atk spd from C1 and 10% atk spd from 4p Desert Chronicle, we get 20% atk spd. -->
+    If we factor in the 10% atk spd from C1, he can then do his NA combo 7 times in 12s.
+    So the increase in mv is (compared to 5 NA combo):
     $$x_h = 1.4x_n*16/18 = 1.24 x_n$$
     The increase is actually around 24%. 
     The C6 effect also gives 20 Kuugoryoku points (like hydro buff),
     so using 20% as an approximation is somewhat justified for that.
   </p>
+
   <p>
     Staying midair for 12s corresponds to Bennett's 12s burst and C0 Faruzan's burst.
-  </p><p>
+  </p>
+  <p>
     His C6 gives 20 more points, bringing the total to 140 when combined with hydro buff.
     So at most Scaramouche can stay midair ~14s, which corresponds to the buff of his Tulaytullah weapon.
     Whether it is C0 or C6 Scaramouche, he can always be buffed by C2 Faruzan's 18s burst
@@ -387,21 +391,23 @@
   </p><p>
     There will be 14s on-field time with a 20s cd.
     We assume that if he can do 5 NA combos in 10s, 
-    then he can do 7 NA combos in 14s.    
+    then he can do 7 NA combos in 14s if we ignore atk spd buffs.    
     The increase in dps is around
     $$x_h = 1.4x_n*16/20 = 1.12 x_n$$ 
   </p><p>
     If we factor in the 10% atk spd from C1 and 10% atk spd from 4p Desert Chronicle, we get 20% atk spd.
-    He can then do ~9 NA combos in 14s.
-    In this case
+    Suppose then he can do ~9 NA combos in 14s.
+    <!-- If we factor 20% atk spd from C1 and 4p Chronicle, suppose he can then do ~9 NA combos in 14s. -->
+    In this case the mv increase becomes
     $$x_h = 1.8x_n*16/20 = 1.44 x_n$$
-    or 44%. This is close to 40%.
+    <!-- or 44%. This is close to 40%. -->
     <!-- So it seems the percent increase in Kuugoryoku points is roughly equal to the percent increase in dps. -->
-  </p><p>
+  </p>
+
+  <p>
     In general suppose wanderer is in the air for 10+t seconds.
-    He can do one full NA combo every 2 seconds.
+    He can do one full NA combo every 2 seconds (no atk spd buffs).
     Thus he can do \((10+t)/2 = 5+t/2 \) NA combos.
-    <!-- Compared to t=0, this gives 1+t/10 times more NA damage. -->
     The length of rotation is 16+t.
     The number of NA combos he can do per rotation is
     $$F(t) = ((10+t)/2)/(16+t)$$
