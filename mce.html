@@ -32,7 +32,7 @@
   </p><p>
     The question becomes: how does one calculate dps from this? What is the expected damage from this?
     It turns out this uses a markov chain.
-    We will call such effect 'markov chain effects' (MC effect).
+    We will call this an example of a 'markov chain effect' (MC effect).
     The EO set from the chasm is another example of a markov chain effect.
   </p><p>
     To define the markov chain, start with the initial state 0.
@@ -64,8 +64,10 @@
     $$\pi = P^t \pi$$
     Then \(\pi_i \) tells us the percent of time spent in state i.
     Then \(\pi_0 \) tells us the portion of transitions that activate descent.
-    This involves to solving the following system of equations
+    This involves solving the following system of equations
     $$(P^t - 1) \pi = 0$$
+    We also require the probabilities to sum to 1:
+    $$\sum_i \pi_i = 1$$
   </p>
 
   </body>
