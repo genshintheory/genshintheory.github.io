@@ -69,6 +69,30 @@
     We also require the probabilities to sum to 1:
     $$\sum_i \pi_i = 1$$
   </p>
+  <p>
+    The matrix equation gives the following system:
+    $$\begin{align}
+    .12\pi_6 - \pi_7 = 0 \\
+    .24\pi_5 - \pi_6 = 0 \\
+    .36\pi_4 - \pi_5 = 0 \\
+    \ldots \\
+    .84\pi_0 - \pi_1 = 0
+    \end{align}
+    $$
+  </p><p>
+    Using the normalization condition:
+    $$1 = \sum_i \pi_i = \pi_0 (1 + .84(1 + .72(1 + .6(1 + .48(1 + .36(1 + .24(1 + .12))))))) \approx 3.06 \pi_0$$
+    Solving this gives
+    $$\pi_0 \approx .33$$
+    In other words, around 1/3 of the time we will activate descent.
+  </p>
+
+
+  <h3>EO set</h3>
+  <p>The EO set from the chasm also uses a MCE.
+    Via a similar method as that above, we have that roughly 1/2 of the time the effect is activated.
+    In other words, the combat designers 
+  </p>
 
 
   <h2>Monte Carlo simulation</h2>
