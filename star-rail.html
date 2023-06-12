@@ -247,7 +247,9 @@
     so they are the ones who get attacked more often.
   </p><p>
     A simple model for calculating the probability a character is attacked is:
-    $$$$
+    $$p_i = T_i / \sum_j T_j$$
+    where \(T_i \) is the taunt value of character i, the denominator is the sum of taunt values over the team,
+    and \(p_i \) is the probability that character i is attacked.
   </p>
 
 
