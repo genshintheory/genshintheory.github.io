@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--<link rel="import" href="header.html">-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+<link rel="stylesheet" href="css/table.css">
+<link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+<!-- consider different favicon for hsr -->
+
+<title>Silver Wolf</title>
+
+  </head>
+  
+<body>
+  <div id="includedContent"></div>
+
+  <p>Damage is calculated as 
+    base damage 
+    times damage bonus
+    times crit multiplier 
+    times defense multiplier
+    times res multiplier 
+    times vulnerability
+    times broken/toughness multiplier.
+  </p><p>
+    Most of these are similar to their counterparts in Genshin.
+    The new multipliers are the last two:
+    vulnerability is a multiplicative damage increase.
+    Characters like Jing Yuan, Himeko, etc. have skills that can increase damage taken/increase enemy vulnerability.
+    The toughness multiplier is related to whether their toughness gauge (armor) is broken or not.
+    If it is not broken, all damage is multiplied by 0.9.
+  </p>
+
+  
+  </body>
+</html>
