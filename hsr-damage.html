@@ -48,6 +48,16 @@
     The basic result is that if the character is lv90 and enemy is lv90,
     then the def multiplier is around 1/2 (so it halves the damage).
     The enemy's defense scales with their level, as in Genshin.
+  </p><p>
+    Resistance is calculated a bit differently in star rail, compared to Genshin.
+    The formula is a bit simplier.
+    The res multiplier is just 1 minus the res of the target plus the res penetration of the attack.
+    This 'res penetration' is akin to res shred / res ignoring.
+    But it should be noted that the HSR formula is linear.
+    There is no nonlinear tapering relationship for res >= 100%.
+    In fact if an enemy has over 100% res that could reduce the multiplier to 0.
+    So that keeps HSR elemental res within a more bounded range.
+    Typically, enemies will have 0, 20, or 40% res to different elements.
   </p>
 
   
