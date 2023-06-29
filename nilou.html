@@ -266,7 +266,7 @@
     By contrast for 'asymmetric' reactions like swirl, vape, melt, spread, aggravate, 
     it is clearer who is the one proccing the reaction (clearer what is the forward direction).
   </p>
-  
+
   <p>
     The Golden Chalice effect starts after the 3rd step of her E and lasts for 30s.
     During this time, bloom will produce bountiful cores that explode immediately and have larger aoe.
@@ -282,12 +282,17 @@
     From her other passive, the conversion rate is 9% dmg bonus per 1k points above 30k.
     So bloom gets 180% dmg bonus (the max dmg bonus is 400% which is achieved at around 74-75k hp).
     Thus the bountiful core will do
-    $$d = 2893.70*(1 + m + 1.8)*.9 = 9276.4$$
-    (true) damage. To convert this to mv we divide by 4050, so the above is around 229% mv
-    $$x_t = 229$$
+    <!-- $$d = 2893.70*(1 + m + 1.8)*.9 = 9276.4$$ -->
+    $$d = 2893.70*(1 + m + 1.8)*.9 = 10732.7067522936$$    
+    in (true) damage. To convert this to mv we divide by 4050, so the above is around
+    <!-- $$x_t = 229$$ -->
+    $$x_t = 265$$
     That is assuming Nilou herself creates one core every second.
     In practice, say Nilou can create two cores per second.
-    Then the dps is 229*2=458%, which is actually decent (better than Ganyu).
+    Then the dps is 
+    <!-- 229*2=458%,  -->
+    265*2 = 530%,
+    which is actually decent (better than Ganyu).
   </p><p>
     Note due to damage sequence, bloom has a limit of how many times it can damage an enemy within a second:
     two instances of damage per 0.5s (or 4 instances per second).
@@ -324,6 +329,17 @@
     (so it is not like Nilou's water ring can create 6 or 8 cores simultaneously when there are more enemies).
     Also note her C1 gives the water ring 100% uptime.
   </p>
+
+  <p>In general, characters that apply their element more frequently can proc more reactions (and get their EM factored in).
+    For example, EM Childe (with riptide, stringless), when paired in Nilou teams, 
+    can apply hydro more frequently and thus proc bloom more frequently than the off-field water ring.
+    Alhaitham (with his E mirror hits) can apply dendro very frequently and proc a lot of blooms.
+  </p><p>
+    On a separate note, Cyno attacks very frequently with his NA and buffed E dustbolts (at c6 he gets more dustbolts), 
+    so he can potentially proc more hyperblooms than off-field Kuki E or Raiden E.
+    In fact it seems one purpose of Cyno's c6 is to proc more reactions (aggravate or hyperbloom), thereby increasing damage.
+  </p>
+
   <p>To play Nilou as a bloom dps, you only need to build hp and em on her.
     It is that simple.
     Her E and Q scale with her hp and can crit,
