@@ -242,6 +242,7 @@
     For an enemy with 10% dendro res, the res multiplier is .9.
     With the Golden Chalice effect, all party members get 100 EM.
     If you use Nilou's signature Khaj weapon, she can give more EM to other party members.
+  </p><p>
     It may not be the case that Nilou herself procs bloom all the time.
     Her teammates could be the ones proccing bloom, in which case their EM is factored in.
     To be conservative, let's assume that we have just 100 EM above.
@@ -249,7 +250,14 @@
     $$m = 0.7619047619$$ 
     or nearly doubling the damage.
     Note if everyone has 300 EM then the em bonus is 2.0869565217 (or nearly tripling the damage).
+  </p><p>
+    Also from dendro resonance (which Nilou teams will usually have),
+    the team gets an extra 50 EM plus 30 EM (for 6s at a time) from triggering bloom reactions.
+    So this means an extra 80 EM for a total of around 180 EM (as a conservative lower bound).
+    The EM bonus is then
+    $$m = 1.3211009174$$
   </p>
+
   <p>In general, if you want to base team damage on a 
     'symmetric' or 'bidirectional' transformative reaction like
     electro-charged, overloaded, superconduct, burning, or bloom, 
@@ -258,6 +266,7 @@
     By contrast for 'asymmetric' reactions like swirl, vape, melt, spread, aggravate, 
     it is clearer who is the one proccing the reaction (clearer what is the forward direction).
   </p>
+  
   <p>
     The Golden Chalice effect starts after the 3rd step of her E and lasts for 30s.
     During this time, bloom will produce bountiful cores that explode immediately and have larger aoe.
