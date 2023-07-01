@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--<link rel="import" href="header.html">-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+<link rel="stylesheet" href="css/table.css">
+<link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+<!-- consider different favicon for hsr -->
+
+<title>Luocha</title>
+
+  </head>
+  
+<body>
+  <div id="includedContent"></div>
+
+  <h2>Automatic / reactive healing</h2>
+  <p>
+    Luocha tends to work favorably with the destruction path
+    as well as characters that use a lot of follow-up attacks (Jing Yuan, Himeko, Svarog).
+  </p>
+  <p>The reactive healer: Luocha is a healer that reacts to when characters fall below a certain hp threshold.
+    When he gains 2 stacks of abyss flower, he deploys a field. 
+    When the field is active and characters deal damage, they heal the whole party.
+    As of version 3.8, Luocha has no analog in Genshin.
+    When Jean uses NA she can heal the whole party.
+    When Mika uses his Q, he grants a similar effect where characters' NA heal the whole team.
+    But there is currently no healer that has a Mika-like effect without needing Q (and that applies to whenever damage is dealt, not just NA).
+  </p><p>
+    A simple idea for making a Luocha analog (call it LC) in Genshin could be:
+    whenever a character's hp falls below 33%, LC heals that character using whatever formula and gains 1 stack of abyss.
+    This effect can be triggered once every 10-15s.
+    Healing will also remove any debuff on that character (Genshin currently lacks as many debuffs as HSR).
+    The E skill has a similar effect, providing healing to a chosen character
+    (in Genshin one cannot usually select which character receives the healing, 
+    but one can try to make an effect where the healing occurs after 2s to whichever character is on-field, giving time to switch to another character if needed;
+    otherwise one can do a healing over time like Yaoyao / Barbara / Kuki E).
+    Using E will also grant 1 stack of abyss.
+    Once 2 stacks of abyss are obtained, LC will deploy a field / grant an effect to the team where whenever any party member deals damage, they heal the whole party.
+    This effect can last 10-15s.
+    And then LC's Q can debuff the enemy while dealing aoe damage.
+  </p><p>
+    Ok that's cool, but is there a need for this kind of healer when characters like kokomi and baizhu exist?
+    Maybe.
+  </p>
+  <p>
+    Qiqi is unique in that she can reduce enemy atk. There are few abilities that do this in the game.
+    However, HSR has several abilities (nihility class) that can debuff the enemy and remove their atk, dmg bonus buffs.
+    Silver Wolf's basic attacks shred enemy def, atk, spd.
+    Luocha's burst removes buffs from all enemies.
+  </p>
+
+
+  <h2>Introducing more debuffs into Genshin</h2>
+  <p>Every so often, elemental nodes appear in the abyss, granting buffs to certain enemies.
+    These buffs could be removed by applying a suitable elemental gauge.
+    In the past there used to be debuffs that would reduce character energy (electro) or extend their cd (hydro).
+    These could be removed via certain abilities that apply an element to the character itself (thereby cleansing them).
+    These include Xinyan E, Kirara E, etc.
+    There was also once a corrosion debuff, one of the best things introduced into the game.
+  </p>
+  <p>These debuffs are some of the most interesting spiral abyss effects and made the game richer.
+    One can introduce more kinds of debuffs such as atk reduction, def reduction, res shred, speed reduction.
+    HSR has so many debuffs that can be applied to characters.
+    Even Kafka can manipulate and make characters attack each other.
+  </p>
+
+  
+  </body>
+</html>
