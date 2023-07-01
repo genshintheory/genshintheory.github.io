@@ -76,11 +76,15 @@
     So we have an iterative algorithm.
     Compute the \(x_i\) as above and heal the party members using that.
     For each party member, take the sum of any excess healing
-    $$\sum \max(h_i + x_i - z_i, 0)$$
+    $$X' = \sum \max(h_i + x_i - z_i, 0)$$
+    Then update the \(h_i \to h_i' = h_i + x_i \).
+    Recompute the \(x_i \) using \(X' \) and the new \(h_i' \) variables.
+    Then repeat the process.
   </p><p>
     The above we call 'need-based healing', 'egalitarianism', or even 'socialism'.
     We are essentially constructing a function mapping \(f(X, h_i) \to x_i \).
     Perhaps one can create a neural network that learns from many examples so that when it sees the input it can output the \(h_i\).
+    The above function is nonlinear and involves several relu units.
   </p>
   <p>
     We do not look at percentage hp lost.
