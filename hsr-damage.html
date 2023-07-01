@@ -80,8 +80,9 @@
     A simple idea for incorporating reactions is to look at the TCG card game in Genshin.
     For example, if pyro is applied to a card, and then anemo is applied, it will create a swirl reaction, dealing damage to surrounding enemies.
     Similarly, in star rail, one can implement a similar kind of 'reaction':
-    if one applies fire to an enemy, the fire status will stick on the enemy,
-    if wind is then applied, it will swirl and deal damage to adjacent targets.
+    if one applies fire to an enemy, the fire status will stick on the enemy (for say 2 turns),
+    if wind is then applied, it will swirl, remove the fire status, 
+    and deal fire damage to adjacent targets (and deplete fire weakness on the shield if any).
   </p><p>
     Similarly, lightning swirl and ice swirl can be implemented.
     Moreover, the overloaded reaction can also be transferred: lightning + fire deals aoe fire damage.
@@ -92,11 +93,13 @@
     on how these two non-Genshin elements react with other elements, if at all.
   </p>
 
+  <p>The flip side to this is that enemies can also deal reaction damage on the player.</p>
+
 
   <h2>Resonance?</h2>
   <p>Because of Silver Wolf, mono teams can be the norm in HSR.
     Resonances can give more uniqueness to the elements.
-    The following are inherited from Genshin:
+    Much of the following is inherited from Genshin:
   </p>
   <ul>
     <li>Double lightning: increase ER, energy generation, lightning reactions produce extra energy</li>
