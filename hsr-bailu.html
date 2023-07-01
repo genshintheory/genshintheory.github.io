@@ -40,6 +40,7 @@
     For example, say the healer E will heal a total amount of X.
     The X gets distributed between the 4 party members in proportion to those that need the healing the most.
   </p>
+
   <p>Algorithm / Formula (max cap):
     Let X be the total healing amount and \(h_i \) be the hp of the party members.
     Take the character with the highest current hp (not max hp). Call this highest current hp \(M = \max h_i \).
@@ -72,8 +73,10 @@
     If \(h_i + x_i > z_i \) then we have overflow healing.
     We then redistribute this excess healing to others.
   </p><p>
-
-    turn into iterative algorithm? could do simulation, but what's the point when can use closed formula.
+    So we have an iterative algorithm.
+    Compute the \(x_i\) as above and heal the party members using that.
+    For each party member, take the sum of any excess healing
+    $$\sum \max(h_i + x_i - z_i, 0)$$
   </p><p>
     We do not look at percentage hp lost.
     One party member could have 20k out of 80k hp (25%), but the other members have 10k out of 20k hp (50%).
