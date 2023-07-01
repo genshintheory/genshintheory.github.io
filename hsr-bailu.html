@@ -82,6 +82,11 @@
     Then update the \(h_i \to h_i' = h_i + x_i \).
     Recompute the \(x_i \) using \(X' \) and the new \(h_i' \) variables, excluding any members at full hp.
     Then repeat the process until X' is reduced to 0 or all party members are at full hp.
+  </p><p>
+    This worst case complexity of this algorithm is \(O(n^2) \), 
+    corresponding to the case where each step heals exactly one ally to full hp,
+    giving a geometric series \(n+(n-1)+\ldots + 1 ~ O(n^2) \).
+    However, in HSR \(n\ge 4\) so the computation is constant time.
   </p>
 
   <p>
