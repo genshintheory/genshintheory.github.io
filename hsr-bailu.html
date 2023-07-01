@@ -66,9 +66,12 @@
     $$x_i = (\min(X, R) + \sum_{k \neq j} h_k)/(n-1) - h_i + \max(X-R, 0)/n$$
   </p><p>
     Note this generalizes to any number of party members.
-
     Above we ignored overflow healing or healing over the max hp.
     But if there is overflow, then add that to the excess healing remaining.
+    Let \(z_i \) be the max hp of member i.
+    If \(h_i + x_i > z_i \) then we have overflow healing.
+    We then redistribute this excess healing to others.
+  </p><p>
 
     turn into iterative algorithm? could do simulation, but what's the point when can use closed formula.
   </p><p>
