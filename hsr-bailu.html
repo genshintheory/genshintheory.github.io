@@ -51,15 +51,26 @@
     Suppose member i gets healing amount \(x_i \ge 0 \) where \( \sum x_i = X \).
     Perhaps one can formulate an optimization problem on how to allocate the \(x_i \) while optimizing a certain objective function.
   </p><p>
+    Note that \(h_j-h_i = r_i\) is the difference between member i's hp and the max current hp.
     If 
     $$X \le \sum_i (h_j - h_i) = R$$
     then heal each member except j for an amount 
     $$x_i = (X + \sum_{k \neq j} h_k)/(n-1) - h_i $$
-
+    If 
+    $$X > R$$
+    then all party members can be healed to \(h_j\) and there is excess healing \(X-R\) left.
+    Distribute this excess healing evenly (or based on proportion of max hp).
+    Then the formula becomes
+    $$x_i = (R + \sum_{k \neq j} h_k)/(n-1) - h_i + (X-R)/n$$
+    The general formula is
+    $$x_i = (\min(X, R) + \sum_{k \neq j} h_k)/(n-1) - h_i + \max(X-R, 0)/n$$
+  </p><p>
     Note this generalizes to any number of party members.
 
-    overflow healing
-    turn into iterative algorithm? could do simulation, but what's the point when can use closed-form algorithm
+    Above we ignored overflow healing or healing over the max hp.
+    But if there is overflow, then add that to the excess healing remaining.
+
+    turn into iterative algorithm? could do simulation, but what's the point when can use closed formula.
   </p><p>
     We do not look at percentage hp lost.
     One party member could have 20k out of 80k hp (25%), but the other members have 10k out of 20k hp (50%).
