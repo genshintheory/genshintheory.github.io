@@ -59,7 +59,7 @@
     $$x_i = (X + \sum_{k \neq j} h_k)/(n-1) - h_i $$
     If 
     $$X > R$$
-    then all party members can be healed to \(h_j\) and there is excess healing \(X-R\) left.
+    then all party members can be healed to \(M = h_j\) and there is excess healing \(X-R\) left.
     Distribute this excess healing evenly (or based on proportion of max hp).
     Then the formula becomes
     $$x_i = (R + \sum_{k \neq j} h_k)/(n-1) - h_i + (X-R)/n$$
@@ -81,7 +81,7 @@
     $$X' = \sum \max(h_i + x_i - z_i, 0)$$
     Then update the \(h_i \to h_i' = h_i + x_i \).
     Recompute the \(x_i \) using \(X' \) and the new \(h_i' \) variables, excluding any members at full hp.
-    Then repeat the process.
+    Then repeat the process until X' is reduced to 0 or all party members are at full hp.
   </p>
 
   <p>
