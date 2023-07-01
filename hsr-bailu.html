@@ -43,12 +43,25 @@
   <p>Algorithm / Formula (max cap):
     Let X be the total healing amount and \(h_i \) be the hp of the party members.
     Take the character with the highest current hp (not max hp). Call this highest current hp \(M = \max h_i \).
-    This generalizes to any number of party members.
+    The idea is to bring the rest of the party members as close to M hp as possible.
+    And once everyone is at M, then heal all equally with whatever healing is remaining.
+  </p><p>
+    Let there be n total party members (in HSR we usually have n=4).
+    Let \( j = \argmax h_i \) be the member with the highest current hp.
+    Suppose member i gets healing amount \(x_i \ge 0 \) where \( \sum x_i = X \).
+    Perhaps one can formulate an optimization problem on how to allocate the \(x_i \) while optimizing a certain objective function.
+  </p><p>
+    If 
+    $$X > \sum_i (h_j - h_i)$$
+    Note this generalizes to any number of party members.
+
+    overflow healing
+    turn into iterative algorithm? could do simulation, but what's the point when can use closed-form algorithm
   </p><p>
     We do not look at percentage hp lost.
     One party member could have 20k out of 80k hp (25%), but the other members have 10k out of 20k hp (50%).
     In this case the healing would go to the party members with 10k hp as they have smaller absolute value of hp.
-    The above we call 'need-based healing'.
+    The above we call 'need-based healing', 'egalitarianism', or even 'socialism'.
   </p>
 
   
