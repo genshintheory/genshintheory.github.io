@@ -52,7 +52,10 @@
     Perhaps one can formulate an optimization problem on how to allocate the \(x_i \) while optimizing a certain objective function.
   </p><p>
     If 
-    $$X > \sum_i (h_j - h_i)$$
+    $$X \le \sum_i (h_j - h_i) = R$$
+    then heal each member except j for an amount 
+    $$x_i = (X + \sum_{k \neq j} h_k)/(n-1) - h_i $$
+
     Note this generalizes to any number of party members.
 
     overflow healing
