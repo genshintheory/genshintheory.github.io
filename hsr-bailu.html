@@ -43,10 +43,12 @@
   <p>Algorithm / Formula (max cap):
     Let X be the total healing amount and \(h_i \) be the hp of the party members.
     Take the character with the highest current hp (not max hp). Call this highest current hp \(M = \max h_i \).
+    This generalizes to any number of party members.
   </p><p>
     We do not look at percentage hp lost.
     One party member could have 20k out of 80k hp (25%), but the other members have 10k out of 20k hp (50%).
     In this case the healing would go to the party members with 10k hp as they have smaller absolute value of hp.
+    The above we call 'need-based healing'.
   </p>
 
   
