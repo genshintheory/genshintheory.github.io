@@ -65,8 +65,10 @@
     $$x_i = (R + \sum_{k \neq j} h_k)/(n-1) - h_i + (X-R)/n$$
     The general formula is
     $$x_i = (\min(X, R) + \sum_{k \neq j} h_k)/(n-1) - h_i + \max(X-R, 0)/n$$
-  </p><p>
     Note this generalizes to any number of party members.
+  </p>
+
+  <p>
     Above we ignored overflow healing or healing over the max hp.
     But if there is overflow, then add that to the excess healing remaining.
     Let \(z_i \) be the max hp of member i.
@@ -78,9 +80,11 @@
     For each party member, take the sum of any excess healing
     $$X' = \sum \max(h_i + x_i - z_i, 0)$$
     Then update the \(h_i \to h_i' = h_i + x_i \).
-    Recompute the \(x_i \) using \(X' \) and the new \(h_i' \) variables.
+    Recompute the \(x_i \) using \(X' \) and the new \(h_i' \) variables, excluding any members at full hp.
     Then repeat the process.
-  </p><p>
+  </p>
+
+  <p>
     The above we call 'need-based healing', 'egalitarianism', or even 'socialism'.
     We are essentially constructing a function mapping \(f(X, h_i) \to x_i \).
     Perhaps one can create a neural network that learns from many examples so that when it sees the input it can output the \(h_i\).
