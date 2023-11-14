@@ -628,6 +628,37 @@
   </p>
 
 
+  <h2>Calculations</h2>
+  <p>Her E has 3 creatures.
+    Say in 20s, the horse hits 12 times, the usher hits 6 times, and the crab hits 4 times.
+    Also she has some more aoe on her hydro app, unlike Yelan/XQ (who are more ST).
+  </p><p>
+    Suppose lv10 E ousia mode. The initial cast does aoe dmg.
+    In 20s the scaling is
+    $$14.16+5.82*12+10.73*6+14.92*4 = 208.06 \text{ % HP}$$
+    or around 2080.6% atk scaling.
+    Suppose she has hydro goblet and 4p golden troupe for 116.6% dmg bonus on E.
+    The mv in a 20s rotation is about
+    $$x_e = 2.166*2080.6/20 = 225.32898$$
+    atk scaling.
+  </p><p>
+    This is actually around Albedo level and off-field full EM support-build Nahida (not dmg build Nahida, which can do more damage).
+    But this is to be expected of an off-field sub-dps with 100% uptime.
+  </p><p>
+    Note the above does not count any possible vapes or buffs from her own Q.
+  </p><p>
+    But most importantly we ignored the 1.4 times buff she can get if she continuously drains party hp.
+    So as long as all party members are above 50% hp, her dps can be
+    $$z_e = 1.4x_e = 315.460572$$
+    Now this is getting more competitive.
+  </p><p>
+    But wait, there is more. Her passive converts hp to more dmg bonus.
+    At 40k hp, she can reach the max 28% dmg bonus on E.
+    In a typical build suppose she has 30k hp for 21% dmg bonus.
+    The dps is
+    $$z_e = 1.4*(2.166+.21)*2080.6/20 = 346.045392$$
+  </p>
+
   
   </body>
 </html>
