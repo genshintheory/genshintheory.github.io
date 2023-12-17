@@ -224,6 +224,13 @@
     So Gilded is the best and most comprehensive set for Cyno.
   </p>
 
+  <p>Do EM sands, electro goblet, crit circlet, especially if using Scarlet Sands.
+    For hyperbloom, a case can be made for full EM, but even then the crit route is usually preferred.
+    Sometimes ATK sands is a viable substitute.
+    But for optimal Cyno dps with reactions and his signature, EM sands is usually better.
+  </p>
+
+
   <h2>Weapons</h2>
   <p>Sand king is his bis by far. The EM to ATK conversion is quite high.
     PJWS is his next bis.
@@ -434,7 +441,8 @@
     Suppose Cyno has 2000 atk.
     Then the flat dmg of one dust bolt is 2000+1000=3000 or equivalently 150% scaling each.
     The e dps is then
-    $$z_e = (282*1.466 + 4*(282*1.816 + 3*150*1.466))/18 = 283.37$$
+    $$z_e = (282*1.466 + 4*(282*1.816 + 3*150*1.466))/20 = 255.033$$
+    <!-- $$z_e = (282*1.466 + 4*(282*1.816 + 3*150*1.466))/18 = 283.37$$ -->
     <!-- consider Bennett 3k atk (or Scarlet Sand buff) -->
   </p><p>
     When 'renormalizing' for Bennett's buff,
@@ -450,14 +458,17 @@
     It is even possible to do more than 5 hits.
     But for simplicity we assume between every pair of Es he will do a 5-hit NA combo.
     So he will do the full combo 4 times.
-  </p><p>
+  </p>
+  <p>
     For a lv 10 Q the full combo has 987% total scaling.
     His na are also buffed by 150% of his EM.
     For 400 EM this is 600 flat dmg per NA.
+    <!-- If he has 2000 atk then the effective scaling is
+    $$x_a = (2000*9.87 + 5*600)/2000 = 11.37 = 1137\%$$ -->
+    If we renormalize for Bennett's buff (if we assume he uses Bennett or Scarlet Sands), the effective scaling is
+    $$x_a = (3000*9.87 + 5*600)/3000 = 10.87 = 1087\%$$
     If he has 2000 atk then the effective scaling is
     $$x_a = (2000*9.87 + 5*600)/2000 = 11.37 = 1137\%$$
-    If we renormalize for Bennett's buff, the effective scaling is
-    $$x_a = (3000*9.87 + 5*600)/3000 = 10.87 = 1087\%$$
     So the em scaling can increase the overall na dmg by a bit more than 10%.
   </p><p>
     The dps from na is then
