@@ -586,6 +586,7 @@
     you would need the DMC (15s q with C2) or Collei (up to 9s q).
     It is possible future dendro characters may also work.
   </p>
+
   <p>
     For Cyno, suppose he does the 7-hit NA combo 4 times (once before each E).
     Assuming a 3-hit ICD, this means 10 of the 28 hits can proc aggravate 
@@ -595,7 +596,9 @@
     This is around \(b/3000 = 125\)% extra scaling.
     If he procs it 10 times that is 1250% extra scaling.
     Within 20 seconds that is around 62.5 mv.
-    If Cyno has 46.6% electro dmg bonus that is 91.625% more dps.
+    If Cyno has 46.6% electro dmg bonus that is 
+    $$r_n = 91.625$$ 
+    more mv / dps.
   </p><p>
     Now consider the procs on his E.
     As his E are spaced out by 4s (more than 2.5s), each mortuary rite can proc aggravate.
@@ -605,11 +608,14 @@
     If we add one more unbuffed E at the beginning that is 9 aggravates.
     But note four of these will be buffed (get 35% dmg bonus) while the rest are unbuffed.
     The dps is then
-    $$125*(4*1.816 + 5*1.466)/20 = 91.2125$$
+    $$r_e = 125*(4*1.816 + 5*1.466)/20 = 91.2125$$
   </p><p>
     So if we add all the aggravate additive damage,
-    that is around 180% extra dps at c0.
-  </p><p>
+    that is around 
+    $$z_r = r_n + r_e = 182.8375$$ 
+    extra dps at c0.
+  </p>
+  <p>
     C1 will make Cyno attack faster and proc some more aggravates.
   </p><p>
     C2 will give him 50% dmg bonus. For NA procs that is
