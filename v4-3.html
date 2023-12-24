@@ -112,7 +112,11 @@
 </p><p>
   Suppose we just care about the player's xy coordinates.
   Suppose a player i's position in 2-space is given by \(u_i \in R^2 \).
-  Suppose the ball's position is given by \(v \).
+  Suppose the ball's position is given by \(v \in R^2 \).
+  The ball will move in the direction given by:
+  $$\sum_i (v-u_i)$$
+  To write the dynamics
+  $$v(t+dt) = v(t) + \sum_i (v-u_i)$$
 </p>
 
 
