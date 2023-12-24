@@ -112,15 +112,18 @@
 </p><p>
   Suppose we just care about the player's xy coordinates.
   Suppose a player i's position in 2-space is given by \(u_i \in R^2 \).
-  Suppose the ball's position is given by \(v \in R^2 \).
+  Suppose the ball's position is given by \(x \in R^2 \).
   The ball will move in the direction given by:
-  $$\sum_i (v-u_i)$$
+  $$\sum_i (x-u_i)$$
+</p><p>
   To write the dynamics
-  $$v(t+dt) = v(t) + dt \frac{\sum_i (v(t)-u_i(t))}{\sum_i |v(t)-u_i(t)|}$$
+  $$x(t+dt) = x(t) + dt \frac{\sum_i (x(t)-u_i(t))}{\sum_i |x(t)-u_i(t)|}$$
   where dt is an 'infinitesimal'.
-  The above difference equation can be readily programmed into a discrete form, taking dt to be a suitably small icd/fps/clocking interval.
-  We can also take the continuous case and write the differential equation:
-  $$\frac{dv}{dt} = \frac{\sum_i (v(t)-u_i(t))}{\sum_i |v(t)-u_i(t)|}$$
+  The above difference equation can be readily programmed into a discrete form for computers, 
+  taking dt to be a suitably small icd/fps/clocking interval.
+</p><p>
+  We can also take the continuous limit and write the differential equation:
+  $$\frac{dx}{dt} = \frac{\sum_i (x(t)-u_i(t))}{\sum_i |x(t)-u_i(t)|}$$
   We normalize so that the ball has constant speed.
   It is just that its direction can change due to the movements of the other players u.
 </p>
