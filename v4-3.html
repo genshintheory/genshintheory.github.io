@@ -116,7 +116,13 @@
   The ball will move in the direction given by:
   $$\sum_i (v-u_i)$$
   To write the dynamics
-  $$v(t+dt) = v(t) + dt \sum_i (v(t)-u_i(t))$$
+  $$v(t+dt) = v(t) + dt \frac{\sum_i (v(t)-u_i(t))}{\sum_i |v(t)-u_i(t)|}$$
+  where dt is an 'infinitesimal'.
+  The above difference equation can be readily programmed into a discrete form, taking dt to be a suitably small icd/fps/clocking interval.
+  We can also take the continuous case and write the differential equation:
+  $$\frac{dv}{dt} = \frac{\sum_i (v(t)-u_i(t))}{\sum_i |v(t)-u_i(t)|}$$
+  We normalize so that the ball has constant speed.
+  It is just that its direction can change due to the movements of the other players u.
 </p>
 
 
