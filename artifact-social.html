@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--<link rel="import" href="header.html">-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+<link rel="stylesheet" href="css/table.css">
+<link rel="icon" type="image/x-icon" href="img/Site-favicon.ico"/>
+
+<title>Pick rates</title>
+
+  </head>
+  
+<body>
+  <div id="includedContent"></div>
+
+
+<h2>Statistical sampling</h2>
+<p>
+  Also the artifact level up menu is optimized.
+  We now get to see recommended artifact sets as well (and pick rate): 
+  showing which 2p/4p combos are used as well as the main stats for the sands/goblet/circlet.
+  The way they sampled is from the most 'recent' players.
+  There may be more to the sampling statistics too.
+  For example, new players who just got a character may not have the proper artifacts for them.
+  So some algorithm may be needed to filter out and only sample players that have sufficiently well-built characters.
+  How this is defined may take some thought.
+</p><p>
+  One way to do this is to select a sample of players that used the character to successfully clear floor 12 of abyss.
+  This can immediately filter out the players that at least put some time into building the character.
+  This sample is probably large enough? How many Genshin accounts are there worldwide?
+  If there are 10k accounts that cleared floor 12 of abyss, then the sample is probably large enough.
+  One can then construct appropriate confidence intervals or use whatever statistical methods.
+  And if one wants to be more selective with the sample, 
+  one can select those that got 9 stars in floor 12 or all 36 stars in the spiral abyss.
+</p><p>
+  Perhaps one may also account for how different characters may be used more or less to clear floor 12.
+  For example, Bennett may be used more for floor 12 clears compared to some other characters.
+  Moreover, it may be that hyperbloom teams are used more often than some other teams to clear floor 12.
+  What happens is that when showing the statistics to users,
+  the underlying population size (denominator) may not be the same for each character,
+  or if it is then some way to make the denominator the same for all characters
+  (for example take 10k accounts for each character, or take the minimum of all characters).
+</p><p>
+  Moreover, the underlying population may not be the same for each character.
+  The artifact statistics for each character may be based on a different sample each time (rather than the same sample)
+  as one cannot expect the same group of people to have the same exact characters.
+  Some people will have certain characters, while others will have different ones.
+  And accounts that have all Genshin characters are in the minority.
+</p><p>
+  Of course, in the end, the sample may just be a cherry-picked group of people.
+</p>
+
+<p>The artifact set stats are more useful for characters that can be built multiple ways.
+  For characters like Venti, it is expected that most players will build him with the vv set.
+  But for other characters like Ganyu, that can be built melt (4p WT) or freeze (4p Blizzard),
+  it may be interesting to see the artifact set distribution rates to see what 'others' are doing.
+</p><p>
+  And thus, character builds can become social experiments.
+  Does seeing how other people build a character influence the decision on how a new player builds a character?
+  For example, if a newbie sees that say 60% (just making up the number for sake or argument) of people build Ganyu on 4p WT,
+  would that player be more likely to build Ganyu on WT as opposed to Blizzard?
+  And if the trend continues and more and more new players build Ganyu on WT, 
+  would we eventually reach the stable equilibrium point where almost all players build Ganyu on WT?
+</p><p>
+  Or could it be that Genshin leadership is guiding the playerbase with an 'iron hand',
+  selecting the samples to encourage more players to build Ganyu in a certain way as opposed to another?
+</p>
+
+  
+  </body>
+</html>
