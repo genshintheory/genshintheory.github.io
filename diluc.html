@@ -76,14 +76,23 @@
     We assume we can spam his burst on cooldown (possible since it only costs 40 energy),
     so that he has a perpetual pyro infusion.
     One of his passives also gives his infusion a 20% extra Pyro DMG Bonus, so the DMG Bonus hits 81.6%.
-    Crimson 4p can give 22.5% DMG Bonus after 3 E uses for 104.3% DMG Bonus.
+    Crimson 4p can give 22.5% DMG Bonus after 3 E uses for 104.3% DMG Bonus for 10s.
   </p><p>
     His Es do not have ICD so they can each vaporize.
     The DPS is
-    $$((((177+170)*1.816+(177+176)*1.891+(177+232)*1.966)*1.5)+2*810.73*1.966)/10=634.044$$
+    <!-- $$((((177+170)*1.816+(177+176)*1.891+(177+232)*1.966)*1.5)+2*810.73*1.966)/10=634.044$$ -->
+    <!-- $$((((177+170)*1.816+(177+176)*1.891+(177+232)*1.966)*1.5)+2*810.73*2.043)/10=646.5$$ -->
+    $$x = (((177+1.5*170)*1.816+(177+1.5*176)*1.891+(177+1.5*232)*1.966)+2*810.73*2.043)/10=596.3$$
     This DPS is higher than a C1 Hu Tao and does not even factor in his elemental burst damage.
     It also does not factor possible vaporizations on his normal attacks.
+  </p><p>
+    But now suppose he vapes some of his NA.
+    His NA has 3-hit icd, so assume he vapes each 3rd NA.
+    On average this gives a
+    $$(1+1+1.5)/3 = 1.167$$
+    times increase in NA damage.
   </p>
+
 
   <h3>Dragonstrike dps</h3>
   <p>Suppose Diluc somehow magically has easy access to plunge (e.g. via Albedo E).
@@ -93,6 +102,20 @@
     Suppose Diluc can vape each high plunge.
     Suppose he can do, say 8 high plunges after Q infusion.
     Why 8? No real reason, just seemed like a convenient number to pick.
+  </p>
+
+  <p>Would Eula dragonstrike work?
+    It could.
+    But Eula likes to NA to build stacks faster on her nuke.
+  </p>
+
+
+  <p>As of 4.3, except for Diluc, the game lacks 5* aoe pyro dps.
+    Dehya's Q has good aoe, but it is on her Q.
+    All this shows is how valuable Diluc still is after all these years.
+    Yes Diluc NA/E swings have some aoe,
+    but we are looking for more aoe like Alhaitham, Noctis, Xiao.
+    You can at least start with Alhaitham level aoe, which is on the high end for sword dps.
   </p>
 
   
