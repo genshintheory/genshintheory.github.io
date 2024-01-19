@@ -160,6 +160,9 @@
     So if one detonates 5 seeds with pyro simultaneously, it will deal at most 2 instances of damage (2*610.8=1221.6) per enemy.
   </p><p>
     But hyperbloom is single target, meaning 5 sprawling shots will be distributed across the enemies.
+    The <a href=scaling.html>scaling</a> is sublinear.
+    For 1 or 2 enemies, hyperbloom can deal 2 instances per enemy every .5s.
+    But for 3 or more enemies, it will be less (each enemy would need 2 hyperblooms but if there are 3 or more that needs 6 or more seeds, which exceeds the global limit).
   </p>
   <p>What decides if we get 1 or 2 seeds per proc?
 
