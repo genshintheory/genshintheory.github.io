@@ -704,6 +704,23 @@
     We will ignore this for now and assume no aggravates and just hyperblooms.
     Just note that the actual dps may be higher than what is calculated below.
   </p><p>
+    Given Nahida and Furina's rate of app, we will assume at least 1-2 seeds every 2.5s.
+    In reality it could be faster (as Nahida's passive making E proc faster with electro),
+    but at the very least we expect 2.5s.
+    Let's start with 1 seed per 2.5s.
+    In 20s, that is 8 seeds.
+  </p><p>
+    As above we assume Cyno has 400 EM and procs all the hyperblooms 
+    (it is possible he is paired with say 1k EM Kuki, in which case Kuki gets some procs, leading to some more damage).
+    Hyperbloom damage is then 15915.35 (see <a href=elements.html>elements</a> for formula).
+    Dividing by 4050 gives equivalent scaling of 392.97160494% (which we round to 393%).
+    Eight of these gives hyperbloom dps of
+    $$x_h(1, 400) = 393*8/20 = 157.2$$
+    Note this will increase with more EM and seeds.
+    Also dps does not include possible aggravates in quickbloom setups.
+  </p><p>
+    For example, if we get 2 seeds per 2.5s (perhaps in aoe situations)
+    $$x_h(2, 400) = 2*393*8/20 = 314.4$$
   </p>
 
 
