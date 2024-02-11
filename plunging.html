@@ -70,9 +70,14 @@
   </p><p>
     We assume 100% uptime on XY burst, Bennett burst.
     We do not assume Furina burst (as that would need 3 bursts on 100% uptime, which could be on the more cope side in practice).
-    Ideally, the dps character (4th slot) can do dps outside of burst (like AA/E dps) for flexibility.
-    We assume 8 plunges in XY's burst, and we assume each vapes.
+    Ideally, the dps character (4th slot) can do dps outside of burst (like AA/E dps) for flexibility and efficiency.
+    We assume 8 plunges in XY's burst (has 18s cd), and we assume each plunge vapes.
     We assume 0 EM.
+    The rotation is 18s, and the dps is
+    <!-- $$x = 8*1.5*(1.616+.15)*400/18 = 470.9333333333$$
+    without factoring in XY's buff.
+    Now factor the extra 200% scaling -->
+    $$x = 8*1.5*(1.616+.15)*(400+200)/18 = 706.4$$
   </p>
 
   
